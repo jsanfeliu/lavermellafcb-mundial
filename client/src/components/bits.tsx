@@ -1,7 +1,7 @@
-import { ReactNode } from "react";
+import { ReactNode, useState, useEffect, useRef } from "react";
 import { TEAMS, FLAG, TeamId, Match, matchProbability, flagIsGeneric } from "@/data/mundial";
 import { useLiveData } from "@/hooks/useLiveResults";
-import { Wifi, WifiOff } from "lucide-react";
+import { Wifi, WifiOff, RefreshCw } from "lucide-react";
 
 export function pct(x: number) {
   return `${Math.round(x * 100)}%`;
@@ -179,6 +179,68 @@ export function LiveStatusChip({ className = "" }: { className?: string }) {
     >
       {isLoading ? <Wifi className="h-3 w-3 animate-pulse" /> : <WifiOff className="h-3 w-3" />}
       {isLoading ? "Carregant resultats…" : "Sense connexió · mode llavor"}
+    </span>
+  );
+}
+
+// Botó per refrescar manualment les dades en viu (cache-busting via el hook).
+// Mostra estat de càrrega i un missatge transitori d'èxit/error. La variant
+// "hero" s'adapta a fons foscos (com la capçalera del tauler).
+export function RefreshButton({
+  className = "",
+  variant = "default",
+}: {
+  className?: string;
+  variant?: "default" | "hero";
+}) {
+  const { refresh, isRefreshing, fetchStatus } = useLiveData();
+  const [feedback, setFeedback] = useState<null | "ok" | "fail">(null);
+  const wasRefreshing = useRef(false);
+
+  // Quan acaba un refetch, mostra un missatge transitori segons el resultat.
+  useEffect(() => {
+    if (wasRefreshing.current && !isRefreshing) {
+      setFeedback(fetchStatus === "error" ? "fail" : "ok");
+      const id = setTimeout(() => setFeedback(null), 2500);
+      return () => clearTimeout(id);
+    }
+    wasRefreshing.current = isRefreshing;
+  }, [isRefreshing, fetchStatus]);
+
+  const btnCls =
+    variant === "hero"
+      ? "border-white/20 bg-white/10 text-white backdrop-blur hover:bg-white/20"
+      : "border-border bg-card text-foreground hover-elevate";
+
+  return (
+    <span className={`inline-flex items-center gap-2 ${className}`}>
+      <button
+        type="button"
+        onClick={() => refresh()}
+        disabled={isRefreshing}
+        data-testid="refresh-data-button"
+        aria-label="Actualitzar dades"
+        className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-[11px] font-medium transition-colors disabled:opacity-60 ${btnCls}`}
+      >
+        <RefreshCw className={`h-3.5 w-3.5 ${isRefreshing ? "animate-spin" : ""}`} />
+        {isRefreshing ? "Actualitzant…" : "Actualitzar dades"}
+      </button>
+      {feedback === "ok" && (
+        <span
+          className={`text-[11px] font-medium ${variant === "hero" ? "text-emerald-300" : "text-chart-3"}`}
+          data-testid="refresh-feedback-ok"
+        >
+          Actualitzat
+        </span>
+      )}
+      {feedback === "fail" && (
+        <span
+          className={`text-[11px] font-medium ${variant === "hero" ? "text-rose-300" : "text-chart-4"}`}
+          data-testid="refresh-feedback-fail"
+        >
+          Sense connexió
+        </span>
+      )}
     </span>
   );
 }

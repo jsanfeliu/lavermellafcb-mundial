@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { Layout, PageHeader } from "@/components/Layout";
-import { ProbBar, TeamLabel, TeamFlag, StatusPill, formatDate, MatchBarcelonaTime, LiveStatusChip } from "@/components/bits";
+import { ProbBar, TeamLabel, TeamFlag, StatusPill, formatDate, MatchBarcelonaTime, LiveStatusChip, RefreshButton } from "@/components/bits";
 import { Match } from "@/data/mundial";
 import { useLiveData } from "@/hooks/useLiveResults";
 import { MapPin, Clock, Tv } from "lucide-react";
@@ -149,6 +149,7 @@ export default function Calendari() {
               Calendari complet carregat d'ESPN (+{liveAddedCount})
             </span>
           )}
+          <RefreshButton />
         </p>
 
         <div className="mb-6 flex flex-wrap gap-2" role="tablist" aria-label="Filtres del calendari">

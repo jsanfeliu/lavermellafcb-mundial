@@ -31,17 +31,20 @@ export interface LiveDataValue {
   live: LiveResults | null;
   isLive: boolean;          // hi ha dades reals carregades
   isLoading: boolean;
+  isRefreshing: boolean;    // refetch manual en curs
+  fetchStatus: "success" | "error" | "idle"; // resultat de la darrera petició
   fetchedAt: string | null; // ISO de la darrera actualització d'ESPN
   matches: Match[];         // MATCHES amb resultats reals fusionats + partits ESPN
   spainMatches: Match[];    // partits d'Espanya (fusionats)
   liveAddedCount: number;   // partits afegits des d'ESPN no presents a la llavor
   finishedCount: number;    // partits acabats al conjunt fusionat
+  refresh: () => void;      // força una recàrrega (cache-busting)
 }
 
 const LiveDataContext = createContext<LiveDataValue | null>(null);
 
 export function LiveDataProvider({ children }: { children: ReactNode }) {
-  const { data, isLoading } = useQuery({
+  const { data, isLoading, isFetching, status, refetch } = useQuery({
     queryKey: ["results-live"],
     queryFn: fetchLiveResults,
     // Refresca periòdicament per reflectir partits en directe; sense cache vell.
@@ -58,17 +61,24 @@ export function LiveDataProvider({ children }: { children: ReactNode }) {
     const spainMatches = isLive ? spainMatchesFrom(matches) : SPAIN_MATCHES;
     const liveAddedCount = matches.filter((m) => m.fromLive).length;
     const finishedCount = matches.filter((m) => m.status === "finished").length;
+    // Si la petició ha acabat però no ha retornat dades (offline/fitxer absent),
+    // ho tractem com a error de cara a la interfície.
+    const fetchStatus: LiveDataValue["fetchStatus"] =
+      status === "pending" ? "idle" : status === "error" || (!isLoading && !live) ? "error" : "success";
     return {
       live,
       isLive,
       isLoading,
+      isRefreshing: isFetching,
+      fetchStatus,
       fetchedAt: live?.fetched_at ?? null,
       matches,
       spainMatches,
       liveAddedCount,
       finishedCount,
+      refresh: () => { void refetch(); },
     };
-  }, [data, isLoading]);
+  }, [data, isLoading, isFetching, status, refetch]);
 
   return <LiveDataContext.Provider value={value}>{children}</LiveDataContext.Provider>;
 }
@@ -81,11 +91,14 @@ export function useLiveData(): LiveDataValue {
       live: null,
       isLive: false,
       isLoading: false,
+      isRefreshing: false,
+      fetchStatus: "idle",
       fetchedAt: null,
       matches: MATCHES,
       spainMatches: SPAIN_MATCHES,
       liveAddedCount: 0,
       finishedCount: MATCHES.filter((m) => m.status === "finished").length,
+      refresh: () => {},
     };
   }
   return ctx;

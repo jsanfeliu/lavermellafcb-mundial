@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Layout, PageHeader } from "@/components/Layout";
-import { Card, Stat, ProbBar, TeamLabel, TeamFlag, StatusPill, DemoNote, LiveStatusChip, pct, formatDate, toBarcelona } from "@/components/bits";
+import { Card, Stat, ProbBar, TeamLabel, TeamFlag, StatusPill, DemoNote, LiveStatusChip, RefreshButton, pct, formatDate, toBarcelona } from "@/components/bits";
 import { useOutlook } from "@/hooks/useOutlook";
 import { useLiveData } from "@/hooks/useLiveResults";
 import {
@@ -41,6 +41,7 @@ export default function Dashboard() {
                     {TOURNAMENT.hosts} · {formatDate(TOURNAMENT.start)} – {formatDate(TOURNAMENT.end)} 2026
                   </span>
                   <LiveStatusChip />
+                  <RefreshButton variant="hero" />
                 </div>
                 <h1 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">
                   El camí d'<span className="text-amber-300">Espanya</span> cap a la final

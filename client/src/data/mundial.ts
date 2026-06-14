@@ -11,14 +11,18 @@
 //    Espanya–Cap Verd · dl 15 juny 2026 · 12:00 · Atlanta Stadium · M14
 //    Espanya–Aràbia Saudita · dg 21 juny 2026 · 12:00 · Atlanta Stadium · M38
 //    https://fifaworldcup26.suites.fifa.com
-//  Espanya juga al GRUP H amb Cap Verd, Aràbia Saudita i Uruguai. Composició i
-//  calendari del grup CONTRASTATS per fonts periodístiques (no marcats com a
-//  "FIFA oficial"):
+//  Espanya juga al GRUP H amb Cap Verd, Aràbia Saudita i Uruguai.
+//  COMPOSICIÓ DELS 12 GRUPS: CONTRASTADA amb UEFA i Britannica.
+//    UEFA:       https://es.uefa.com
+//    Britannica: https://www.britannica.com/sports/2026-FIFA-World-Cup-Teams
+//  Detall del Grup H també a MLS Soccer i DAZN:
 //    MLS Soccer: https://www.mlssoccer.com/news/2026-fifa-world-cup-group-h-preview-spain-cape-verde-saudi-arabia-uruguay
-//    DAZN (US):  https://www.dazn.com/en-US/news/soccer/2026-world-cup-group-h-spain-cape-verde-saudi-arabia-uruguay/caegcl3n499u1tyga3z9ezpe4
 //    DAZN (ES):  https://www.dazn.com/es-ES/news/f%C3%BAtbol/espana-mundial-2026-rivales-partidos-calendario-resultados/6staso5jyl9x1ldq47tpq8oot
-//  La resta de seleccions per grup són una llavor de demostració realista
-//  (caps de sèrie i nivells coherents), NO el sorteig oficial.
+//  HORES: emmagatzemades en hora LOCAL de la seu (+ zona horària `tz`); la
+//  interfície les converteix a hora de Barcelona (Europe/Madrid).
+//  TV ESPAÑA: tots els partits per DAZN; els d'Espanya també per RTVE en obert.
+//  El CALENDARI concret (dates/hores fora del Grup H) i les probabilitats són
+//  una llavor de demostració, NO el calendari oficial complet.
 // =====================================================================
 
 export const TOURNAMENT = {
@@ -59,15 +63,17 @@ export const FLAG: Record<string, string> = {
   ESP: "🇪🇸", CPV: "🇨🇻", KSA: "🇸🇦", MEX: "🇲🇽",
   CAN: "🇨🇦", USA: "🇺🇸", ARG: "🇦🇷", BRA: "🇧🇷",
   FRA: "🇫🇷", ENG: "🏴", POR: "🇵🇹", NED: "🇳🇱",
-  GER: "🇩🇪", BEL: "🇧🇪", CRO: "🇭🇷", ITA: "🇮🇹",
+  GER: "🇩🇪", BEL: "🇧🇪", CRO: "🇭🇷",
   URU: "🇺🇾", COL: "🇨🇴", JPN: "🇯🇵", KOR: "🇰🇷",
-  MAR: "🇲🇦", SEN: "🇸🇳", SUI: "🇨🇭", DEN: "🇩🇰",
-  ECU: "🇪🇨", AUS: "🇦🇺", IRN: "🇮🇷", SRB: "🇷🇸",
-  NGA: "🇳🇬", GHA: "🇬🇭", EGY: "🇪🇬", CIV: "🇨🇮",
-  POL: "🇵🇱", AUT: "🇦🇹", TUR: "🇹🇷", UKR: "🇺🇦",
-  QAT: "🇶🇦", PAN: "🇵🇦", CRC: "🇨🇷", JAM: "🇯🇲",
-  PER: "🇵🇪", PAR: "🇵🇾", NZL: "🇳🇿", TUN: "🇹🇳",
+  MAR: "🇲🇦", SEN: "🇸🇳", SUI: "🇨🇭",
+  ECU: "🇪🇨", AUS: "🇦🇺", IRN: "🇮🇷",
+  GHA: "🇬🇭", EGY: "🇪🇬", CIV: "🇨🇮",
+  AUT: "🇦🇹", TUR: "🇹🇷",
+  QAT: "🇶🇦", PAN: "🇵🇦",
+  PAR: "🇵🇾", NZL: "🇳🇿", TUN: "🇹🇳",
   ALG: "🇩🇿", UZB: "🇺🇿", JOR: "🇯🇴", SCO: "🏴",
+  RSA: "🇿🇦", CZE: "🇨🇿", BIH: "🇧🇦", HAI: "🇭🇹",
+  CUW: "🇨🇼", IRQ: "🇮🇶", NOR: "🇳🇴", COD: "🇨🇩", SWE: "🇸🇪",
 };
 
 // El "🏴" pelat (sense subetiquetes regionals, com Escòcia o Anglaterra) es mostra
@@ -98,7 +104,6 @@ export const TEAMS: Record<TeamId, Team> = {
   GER: { id: "GER", name: "Alemanya", code: "GER", confed: "UEFA", fifaRank: 9, strength: 84 },
   BEL: { id: "BEL", name: "Bèlgica", code: "BEL", confed: "UEFA", fifaRank: 8, strength: 84 },
   CRO: { id: "CRO", name: "Croàcia", code: "CRO", confed: "UEFA", fifaRank: 10, strength: 82 },
-  ITA: { id: "ITA", name: "Itàlia", code: "ITA", confed: "UEFA", fifaRank: 11, strength: 82 },
   URU: { id: "URU", name: "Uruguai", code: "URU", confed: "CONMEBOL", fifaRank: 15, strength: s(15) },
   COL: { id: "COL", name: "Colòmbia", code: "COL", confed: "CONMEBOL", fifaRank: 13, strength: s(13) },
   JPN: { id: "JPN", name: "Japó", code: "JPN", confed: "AFC", fifaRank: 17, strength: s(17) },
@@ -106,24 +111,16 @@ export const TEAMS: Record<TeamId, Team> = {
   MAR: { id: "MAR", name: "Marroc", code: "MAR", confed: "CAF", fifaRank: 12, strength: 80 },
   SEN: { id: "SEN", name: "Senegal", code: "SEN", confed: "CAF", fifaRank: 18, strength: s(18) },
   SUI: { id: "SUI", name: "Suïssa", code: "SUI", confed: "UEFA", fifaRank: 19, strength: s(19) },
-  DEN: { id: "DEN", name: "Dinamarca", code: "DEN", confed: "UEFA", fifaRank: 21, strength: s(21) },
   ECU: { id: "ECU", name: "Equador", code: "ECU", confed: "CONMEBOL", fifaRank: 24, strength: s(24) },
   AUS: { id: "AUS", name: "Austràlia", code: "AUS", confed: "AFC", fifaRank: 25, strength: s(25) },
   IRN: { id: "IRN", name: "Iran", code: "IRN", confed: "AFC", fifaRank: 20, strength: s(20) },
-  SRB: { id: "SRB", name: "Sèrbia", code: "SRB", confed: "UEFA", fifaRank: 33, strength: s(33) },
-  NGA: { id: "NGA", name: "Nigèria", code: "NGA", confed: "CAF", fifaRank: 41, strength: s(41) },
   GHA: { id: "GHA", name: "Ghana", code: "GHA", confed: "CAF", fifaRank: 68, strength: s(68) },
   EGY: { id: "EGY", name: "Egipte", code: "EGY", confed: "CAF", fifaRank: 36, strength: s(36) },
   CIV: { id: "CIV", name: "Costa d'Ivori", code: "CIV", confed: "CAF", fifaRank: 40, strength: s(40) },
-  POL: { id: "POL", name: "Polònia", code: "POL", confed: "UEFA", fifaRank: 28, strength: s(28) },
   AUT: { id: "AUT", name: "Àustria", code: "AUT", confed: "UEFA", fifaRank: 22, strength: s(22) },
   TUR: { id: "TUR", name: "Turquia", code: "TUR", confed: "UEFA", fifaRank: 27, strength: s(27) },
-  UKR: { id: "UKR", name: "Ucraïna", code: "UKR", confed: "UEFA", fifaRank: 30, strength: s(30) },
   QAT: { id: "QAT", name: "Qatar", code: "QAT", confed: "AFC", fifaRank: 37, strength: s(37) },
   PAN: { id: "PAN", name: "Panamà", code: "PAN", confed: "CONCACAF", fifaRank: 39, strength: s(39) },
-  CRC: { id: "CRC", name: "Costa Rica", code: "CRC", confed: "CONCACAF", fifaRank: 54, strength: s(54) },
-  JAM: { id: "JAM", name: "Jamaica", code: "JAM", confed: "CONCACAF", fifaRank: 56, strength: s(56) },
-  PER: { id: "PER", name: "Perú", code: "PER", confed: "CONMEBOL", fifaRank: 46, strength: s(46) },
   PAR: { id: "PAR", name: "Paraguai", code: "PAR", confed: "CONMEBOL", fifaRank: 45, strength: s(45) },
   NZL: { id: "NZL", name: "Nova Zelanda", code: "NZL", confed: "OFC", fifaRank: 87, strength: s(87) },
   TUN: { id: "TUN", name: "Tunísia", code: "TUN", confed: "CAF", fifaRank: 49, strength: s(49) },
@@ -131,26 +128,38 @@ export const TEAMS: Record<TeamId, Team> = {
   UZB: { id: "UZB", name: "Uzbekistan", code: "UZB", confed: "AFC", fifaRank: 57, strength: s(57) },
   JOR: { id: "JOR", name: "Jordània", code: "JOR", confed: "AFC", fifaRank: 64, strength: s(64) },
   SCO: { id: "SCO", name: "Escòcia", code: "SCO", confed: "UEFA", fifaRank: 35, strength: s(35) },
+  RSA: { id: "RSA", name: "Sud-àfrica", code: "RSA", confed: "CAF", fifaRank: 60, strength: s(60) },
+  CZE: { id: "CZE", name: "Txèquia", code: "CZE", confed: "UEFA", fifaRank: 42, strength: s(42) },
+  BIH: { id: "BIH", name: "Bòsnia i Hercegovina", code: "BIH", confed: "UEFA", fifaRank: 67, strength: s(67) },
+  HAI: { id: "HAI", name: "Haití", code: "HAI", confed: "CONCACAF", fifaRank: 84, strength: s(84) },
+  CUW: { id: "CUW", name: "Curaçao", code: "CUW", confed: "CONCACAF", fifaRank: 90, strength: s(90) },
+  IRQ: { id: "IRQ", name: "Iraq", code: "IRQ", confed: "AFC", fifaRank: 58, strength: s(58) },
+  NOR: { id: "NOR", name: "Noruega", code: "NOR", confed: "UEFA", fifaRank: 26, strength: s(26) },
+  COD: { id: "COD", name: "RD Congo", code: "COD", confed: "CAF", fifaRank: 56, strength: s(56) },
+  SWE: { id: "SWE", name: "Suècia", code: "SWE", confed: "UEFA", fifaRank: 34, strength: s(34) },
 };
 
-// 12 grups · llavor demo. Espanya al Grup H amb Cap Verd, Aràbia Saudita i
-// Uruguai (composició contrastada per fonts periodístiques: MLS Soccer i DAZN;
-// vegeu nota de fonts a sota). Els partits Espanya–Cap Verd (M14) i
-// Espanya–Aràbia Saudita (M38) estan documentats per la pàgina de suites FIFA.
-// La resta de grups són una llavor de demostració realista, NO el sorteig oficial.
+// 12 grups del Mundial 2026. La composició dels grups està CONTRASTADA amb fonts
+// (UEFA i Britannica); vegeu URLs a sota. Espanya és al Grup H amb Cap Verd,
+// Aràbia Saudita i Uruguai. Els partits Espanya–Cap Verd (M14) i Espanya–Aràbia
+// Saudita (M38) estan documentats per la pàgina de suites FIFA (font FIFA).
+//   UEFA:       https://es.uefa.com
+//   Britannica: https://www.britannica.com/sports/2026-FIFA-World-Cup-Teams
+// El CALENDARI concret (dates/hores) i les probabilitats segueixen sent una
+// llavor de demostració, NO el calendari oficial complet.
 export const GROUPS: GroupSeed[] = [
-  { id: "A", label: "Grup A", teams: ["MEX", "KOR", "POL", "NZL"] },
-  { id: "B", label: "Grup B", teams: ["CAN", "BEL", "ECU", "JOR"] },
-  { id: "C", label: "Grup C", teams: ["USA", "NED", "EGY", "PAN"] },
-  { id: "D", label: "Grup D", teams: ["ARG", "AUT", "ALG", "JAM"] },
-  { id: "E", label: "Grup E", teams: ["FRA", "JPN", "SEN", "SCO"] },
-  { id: "F", label: "Grup F", teams: ["ENG", "QAT", "GHA", "PER"] },
-  { id: "G", label: "Grup G", teams: ["BRA", "SUI", "IRN", "CRC"] },
+  { id: "A", label: "Grup A", teams: ["MEX", "RSA", "KOR", "CZE"] },
+  { id: "B", label: "Grup B", teams: ["CAN", "BIH", "QAT", "SUI"] },
+  { id: "C", label: "Grup C", teams: ["BRA", "MAR", "HAI", "SCO"] },
+  { id: "D", label: "Grup D", teams: ["USA", "PAR", "AUS", "TUR"] },
+  { id: "E", label: "Grup E", teams: ["GER", "CUW", "CIV", "ECU"] },
+  { id: "F", label: "Grup F", teams: ["NED", "JPN", "SWE", "TUN"] },
+  { id: "G", label: "Grup G", teams: ["BEL", "EGY", "IRN", "NZL"] },
   { id: "H", label: "Grup H", teams: ["ESP", "CPV", "KSA", "URU"] },
-  { id: "I", label: "Grup I", teams: ["POR", "COL", "TUR", "UZB"] },
-  { id: "J", label: "Grup J", teams: ["GER", "DEN", "NGA", "TUN"] },
-  { id: "K", label: "Grup K", teams: ["CRO", "AUS", "CIV", "PAR"] },
-  { id: "L", label: "Grup L", teams: ["ITA", "SRB", "MAR", "UKR"] },
+  { id: "I", label: "Grup I", teams: ["FRA", "SEN", "IRQ", "NOR"] },
+  { id: "J", label: "Grup J", teams: ["ARG", "ALG", "AUT", "JOR"] },
+  { id: "K", label: "Grup K", teams: ["POR", "COD", "UZB", "COL"] },
+  { id: "L", label: "Grup L", teams: ["ENG", "CRO", "GHA", "PAN"] },
 ];
 
 export const SPAIN_GROUP_ID = "H";
@@ -161,8 +170,9 @@ export interface Match {
   id: string;          // codi FIFA tipus "M14"
   group: string;       // "H"
   round: 1 | 2 | 3;    // jornada de la fase de grups
-  date: string;        // ISO data
-  time: string;        // hora local de la seu
+  date: string;        // ISO data (a la seu, hora local)
+  time: string;        // hora LOCAL de la seu (HH:MM)
+  tz: string;          // zona horària IANA de la seu (per convertir a Barcelona)
   home: TeamId;
   away: TeamId;
   venue: string;
@@ -171,36 +181,63 @@ export interface Match {
   homeGoals?: number;
   awayGoals?: number;
   official?: boolean;  // true si la dada prové d'una font FIFA citada
+  tv?: string;         // emissora(es) — TV España
 }
+
+// Zones horàries IANA de les seus del Mundial 2026 (per ciutat).
+export const VENUE_TZ: Record<string, string> = {
+  "Atlanta": "America/New_York",
+  "Miami": "America/New_York",
+  "Nova Jersey": "America/New_York",
+  "Boston": "America/New_York",
+  "Filadèlfia": "America/New_York",
+  "Toronto": "America/Toronto",
+  "Houston": "America/Chicago",
+  "Dallas": "America/Chicago",
+  "Kansas City": "America/Chicago",
+  "Ciutat de Mèxic": "America/Mexico_City",
+  "Guadalajara": "America/Mexico_City",
+  "Los Angeles": "America/Los_Angeles",
+  "San Francisco": "America/Los_Angeles",
+  "Vancouver": "America/Vancouver",
+};
+
+// Emissores (TV España). Tots els partits del Mundial 2026 s'emeten per DAZN a
+// Espanya; RTVE n'emet una selecció (inclosos els d'Espanya) en obert.
+//   Fonts: DAZN ES, Goal.com, Sporting News ES.
+export const TV_SPAIN = "RTVE (La 1 / RTVE Play) + DAZN Mundial"; // partits d'Espanya
+export const TV_DEFAULT = "DAZN Mundial";
 
 // Calendari de la fase de grups (llavor). Els 2 partits d'Espanya amb codi i
 // seu reals (font FIFA: M14 i M38). La resta del Grup H està contrastada per
-// fonts periodístiques (MLS Soccer, DAZN); les hores són locals de la seu.
+// fonts periodístiques (MLS Soccer, DAZN). Les hores `time` són LOCALS de la
+// seu (es converteixen a hora de Barcelona a la interfície via `tz`). El camp
+// `tv` indica l'emissora a Espanya (DAZN per a tots; RTVE+DAZN per a Espanya).
 export const MATCHES: Match[] = [
   // ---- Jornada 1 (Grup H) ----
-  { id: "M14", group: "H", round: 1, date: "2026-06-15", time: "12:00", home: "ESP", away: "CPV", venue: "Mercedes-Benz Stadium", city: "Atlanta", status: "upcoming", official: true },
-  { id: "M13", group: "H", round: 1, date: "2026-06-15", time: "18:00", home: "KSA", away: "URU", venue: "Hard Rock Stadium", city: "Miami", status: "upcoming" },
+  { id: "M14", group: "H", round: 1, date: "2026-06-15", time: "12:00", tz: "America/New_York", home: "ESP", away: "CPV", venue: "Mercedes-Benz Stadium", city: "Atlanta", status: "upcoming", official: true, tv: TV_SPAIN },
+  { id: "M13", group: "H", round: 1, date: "2026-06-15", time: "18:00", tz: "America/New_York", home: "KSA", away: "URU", venue: "Hard Rock Stadium", city: "Miami", status: "upcoming", tv: TV_DEFAULT },
   // ---- Jornada 2 (Grup H) ----
-  { id: "M38", group: "H", round: 2, date: "2026-06-21", time: "12:00", home: "ESP", away: "KSA", venue: "Mercedes-Benz Stadium", city: "Atlanta", status: "upcoming", official: true },
-  { id: "M39", group: "H", round: 2, date: "2026-06-21", time: "18:00", home: "URU", away: "CPV", venue: "Hard Rock Stadium", city: "Miami", status: "upcoming" },
+  { id: "M38", group: "H", round: 2, date: "2026-06-21", time: "12:00", tz: "America/New_York", home: "ESP", away: "KSA", venue: "Mercedes-Benz Stadium", city: "Atlanta", status: "upcoming", official: true, tv: TV_SPAIN },
+  { id: "M39", group: "H", round: 2, date: "2026-06-21", time: "18:00", tz: "America/New_York", home: "URU", away: "CPV", venue: "Hard Rock Stadium", city: "Miami", status: "upcoming", tv: TV_DEFAULT },
   // ---- Jornada 3 (Grup H) ----
-  { id: "M62", group: "H", round: 3, date: "2026-06-26", time: "19:00", home: "CPV", away: "KSA", venue: "NRG Stadium", city: "Houston", status: "upcoming" },
-  { id: "M63", group: "H", round: 3, date: "2026-06-26", time: "19:00", home: "URU", away: "ESP", venue: "Estadio Akron", city: "Guadalajara", status: "upcoming" },
+  { id: "M62", group: "H", round: 3, date: "2026-06-26", time: "19:00", tz: "America/Chicago", home: "CPV", away: "KSA", venue: "NRG Stadium", city: "Houston", status: "upcoming", tv: TV_DEFAULT },
+  { id: "M63", group: "H", round: 3, date: "2026-06-26", time: "19:00", tz: "America/Mexico_City", home: "URU", away: "ESP", venue: "Estadio Akron", city: "Guadalajara", status: "upcoming", tv: TV_SPAIN },
 
   // ---- Altres grups · mostres de jornada 1 (demostració) ----
-  { id: "M01", group: "A", round: 1, date: "2026-06-11", time: "19:00", home: "MEX", away: "KOR", venue: "Estadio Azteca", city: "Ciutat de Mèxic", status: "upcoming" },
-  { id: "M02", group: "A", round: 1, date: "2026-06-12", time: "16:00", home: "POL", away: "NZL", venue: "Estadio Akron", city: "Guadalajara", status: "upcoming" },
-  { id: "M03", group: "B", round: 1, date: "2026-06-12", time: "13:00", home: "CAN", away: "JOR", venue: "BMO Field", city: "Toronto", status: "upcoming" },
-  { id: "M04", group: "B", round: 1, date: "2026-06-12", time: "19:00", home: "BEL", away: "ECU", venue: "BC Place", city: "Vancouver", status: "upcoming" },
-  { id: "M05", group: "C", round: 1, date: "2026-06-13", time: "13:00", home: "USA", away: "PAN", venue: "SoFi Stadium", city: "Los Angeles", status: "upcoming" },
-  { id: "M06", group: "C", round: 1, date: "2026-06-13", time: "16:00", home: "NED", away: "EGY", venue: "Levi's Stadium", city: "San Francisco", status: "upcoming" },
-  { id: "M07", group: "D", round: 1, date: "2026-06-13", time: "19:00", home: "ARG", away: "JAM", venue: "MetLife Stadium", city: "Nova Jersey", status: "upcoming" },
-  { id: "M08", group: "D", round: 1, date: "2026-06-14", time: "13:00", home: "AUT", away: "ALG", venue: "Gillette Stadium", city: "Boston", status: "upcoming" },
-  { id: "M09", group: "E", round: 1, date: "2026-06-14", time: "16:00", home: "FRA", away: "JPN", venue: "AT&T Stadium", city: "Dallas", status: "upcoming" },
-  { id: "M10", group: "F", round: 1, date: "2026-06-14", time: "19:00", home: "QAT", away: "GHA", venue: "NRG Stadium", city: "Houston", status: "upcoming" },
-  { id: "M11", group: "G", round: 1, date: "2026-06-14", time: "21:00", home: "BRA", away: "CRC", venue: "Arrowhead Stadium", city: "Kansas City", status: "upcoming" },
-  { id: "M12", group: "G", round: 1, date: "2026-06-15", time: "15:00", home: "SUI", away: "IRN", venue: "Lincoln Financial Field", city: "Filadèlfia", status: "upcoming" },
-  { id: "M16", group: "F", round: 1, date: "2026-06-15", time: "09:00", home: "ENG", away: "PER", venue: "BMO Field", city: "Toronto", status: "upcoming" },
+  { id: "M01", group: "A", round: 1, date: "2026-06-11", time: "19:00", tz: "America/Mexico_City", home: "MEX", away: "KOR", venue: "Estadio Azteca", city: "Ciutat de Mèxic", status: "upcoming", tv: TV_DEFAULT },
+  { id: "M02", group: "A", round: 1, date: "2026-06-12", time: "16:00", tz: "America/Mexico_City", home: "RSA", away: "CZE", venue: "Estadio Akron", city: "Guadalajara", status: "upcoming", tv: TV_DEFAULT },
+  { id: "M03", group: "B", round: 1, date: "2026-06-12", time: "13:00", tz: "America/Toronto", home: "CAN", away: "BIH", venue: "BMO Field", city: "Toronto", status: "upcoming", tv: TV_DEFAULT },
+  { id: "M04", group: "B", round: 1, date: "2026-06-12", time: "19:00", tz: "America/Vancouver", home: "SUI", away: "QAT", venue: "BC Place", city: "Vancouver", status: "upcoming", tv: TV_DEFAULT },
+  { id: "M05", group: "C", round: 1, date: "2026-06-13", time: "13:00", tz: "America/Los_Angeles", home: "BRA", away: "SCO", venue: "SoFi Stadium", city: "Los Angeles", status: "upcoming", tv: TV_DEFAULT },
+  { id: "M06", group: "C", round: 1, date: "2026-06-13", time: "16:00", tz: "America/Los_Angeles", home: "MAR", away: "HAI", venue: "Levi's Stadium", city: "San Francisco", status: "upcoming", tv: TV_DEFAULT },
+  { id: "M07", group: "D", round: 1, date: "2026-06-13", time: "19:00", tz: "America/New_York", home: "USA", away: "TUR", venue: "MetLife Stadium", city: "Nova Jersey", status: "upcoming", tv: TV_DEFAULT },
+  { id: "M08", group: "D", round: 1, date: "2026-06-14", time: "13:00", tz: "America/New_York", home: "PAR", away: "AUS", venue: "Gillette Stadium", city: "Boston", status: "upcoming", tv: TV_DEFAULT },
+  { id: "M09", group: "E", round: 1, date: "2026-06-14", time: "16:00", tz: "America/Chicago", home: "GER", away: "ECU", venue: "AT&T Stadium", city: "Dallas", status: "upcoming", tv: TV_DEFAULT },
+  { id: "M10", group: "F", round: 1, date: "2026-06-14", time: "19:00", tz: "America/Chicago", home: "NED", away: "JPN", venue: "NRG Stadium", city: "Houston", status: "upcoming", tv: TV_DEFAULT },
+  { id: "M11", group: "G", round: 1, date: "2026-06-14", time: "21:00", tz: "America/Chicago", home: "BEL", away: "NZL", venue: "Arrowhead Stadium", city: "Kansas City", status: "upcoming", tv: TV_DEFAULT },
+  { id: "M12", group: "G", round: 1, date: "2026-06-15", time: "15:00", tz: "America/New_York", home: "EGY", away: "IRN", venue: "Lincoln Financial Field", city: "Filadèlfia", status: "upcoming", tv: TV_DEFAULT },
+  { id: "M16", group: "F", round: 1, date: "2026-06-15", time: "09:00", tz: "America/Toronto", home: "SWE", away: "TUN", venue: "BMO Field", city: "Toronto", status: "upcoming", tv: TV_DEFAULT },
 ];
 
 // ---------------------------------------------------------------------

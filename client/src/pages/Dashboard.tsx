@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Layout, PageHeader } from "@/components/Layout";
-import { Card, Stat, ProbBar, TeamLabel, TeamFlag, StatusPill, DemoNote, pct, formatDate } from "@/components/bits";
+import { Card, Stat, ProbBar, TeamLabel, TeamFlag, StatusPill, DemoNote, pct, formatDate, toBarcelona } from "@/components/bits";
 import { useOutlook } from "@/hooks/useOutlook";
 import {
   SPAIN_MATCHES,
@@ -12,11 +12,12 @@ import {
   TOURNAMENT,
   TEAMS,
 } from "@/data/mundial";
-import { ArrowRight, MapPin, Clock, Flag, TrendingUp } from "lucide-react";
+import { ArrowRight, MapPin, Clock, Flag, TrendingUp, Tv } from "lucide-react";
 
 export default function Dashboard() {
   const outlook = useOutlook();
   const next = SPAIN_MATCHES.find((m) => m.status !== "finished") ?? SPAIN_MATCHES[0];
+  const nextBcn = toBarcelona(next.date, next.time, next.tz);
   const nextProb = matchProbability(next.home, next.away);
   const spainFirstId = next.home === "ESP" ? next.home : next.away;
   const standings = computeStandings(SPAIN_GROUP_ID);
@@ -88,12 +89,23 @@ export default function Dashboard() {
                   </div>
                 </div>
                 <div className="space-y-1.5 text-sm text-muted-foreground sm:text-right">
-                  <div className="flex items-center gap-1.5 sm:justify-end">
-                    <Clock className="h-4 w-4" /> {formatDate(next.date)} · {next.time}
+                  <div className="flex items-center gap-1.5 font-semibold text-foreground sm:justify-end">
+                    <Clock className="h-4 w-4 text-primary" /> {nextBcn.dateLabel} · {nextBcn.time}h
+                    <span className="rounded bg-primary/15 px-1.5 py-0.5 text-[10px] font-medium text-primary">
+                      h. Barcelona{nextBcn.nextDay ? " (+1 dia)" : ""}
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-1.5 text-xs sm:justify-end">
+                    Hora local: {next.time} ({next.city})
                   </div>
                   <div className="flex items-center gap-1.5 sm:justify-end">
                     <MapPin className="h-4 w-4" /> {next.venue}, {next.city}
                   </div>
+                  {next.tv && (
+                    <div className="flex items-center gap-1.5 sm:justify-end">
+                      <Tv className="h-4 w-4" /> {next.tv}
+                    </div>
+                  )}
                   <StatusPill status={next.status} />
                 </div>
               </div>
@@ -161,7 +173,9 @@ export default function Dashboard() {
                   >
                     <div className="flex items-center justify-between">
                       <span className="text-xs font-medium text-muted-foreground">Jornada {m.round}</span>
-                      <span className="text-xs tnum text-muted-foreground">{formatDate(m.date)}</span>
+                      <span className="text-xs tnum text-muted-foreground">
+                        {(() => { const b = toBarcelona(m.date, m.time, m.tz); return `${b.dateLabel} · ${b.time}h`; })()}
+                      </span>
                     </div>
                     <div className="mt-2 flex items-center gap-2">
                       <span className="rounded bg-primary/15 px-1.5 py-0.5 text-xs font-semibold text-primary">ES</span>

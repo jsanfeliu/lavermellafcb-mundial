@@ -164,3 +164,70 @@ export function formatDate(iso: string) {
   const d = new Date(iso + "T00:00:00");
   return d.toLocaleDateString("ca-ES", { weekday: "short", day: "numeric", month: "short" });
 }
+
+// ---------------------------------------------------------------------
+//  Hora de Barcelona (Europe/Madrid) a partir de l'hora local de la seu.
+//  Les dades guarden la data/hora en hora LOCAL de la seu + zona horària
+//  IANA (`tz`). Convertim a l'instant UTC i el reformatem a Barcelona.
+// ---------------------------------------------------------------------
+const BCN_TZ = "Europe/Madrid";
+
+// Desplaçament (ms) d'una zona horària respecte a UTC per a un instant donat.
+function tzOffsetMs(date: Date, timeZone: string): number {
+  const dtf = new Intl.DateTimeFormat("en-US", {
+    timeZone,
+    year: "numeric", month: "2-digit", day: "2-digit",
+    hour: "2-digit", minute: "2-digit", second: "2-digit",
+    hour12: false,
+  });
+  const p: Record<string, number> = {};
+  for (const { type, value } of dtf.formatToParts(date)) {
+    if (type !== "literal") p[type] = Number(value);
+  }
+  const asUTC = Date.UTC(p.year, p.month - 1, p.day, p.hour === 24 ? 0 : p.hour, p.minute, p.second);
+  return asUTC - date.getTime();
+}
+
+// Instant UTC d'una data/hora local ("2026-06-15", "12:00") en una zona `tz`.
+function instantFromLocal(dateIso: string, time: string, tz: string): Date {
+  const [h, m] = time.split(":").map(Number);
+  const naiveUTC = new Date(`${dateIso}T${time.length === 5 ? time : "00:00"}:00Z`);
+  naiveUTC.setUTCHours(h, m, 0, 0);
+  // Resta el desplaçament de la seu per obtenir l'instant UTC real.
+  const offset = tzOffsetMs(naiveUTC, tz);
+  return new Date(naiveUTC.getTime() - offset);
+}
+
+export interface BarcelonaTime {
+  time: string;       // "18:00"
+  dateLabel: string;  // "dl. 15 juny"
+  nextDay: boolean;   // cau de matinada del dia següent respecte a la seu
+}
+
+// Converteix l'hora local de la seu a hora de Barcelona.
+export function toBarcelona(dateIso: string, time: string, tz: string): BarcelonaTime {
+  const instant = instantFromLocal(dateIso, time, tz);
+  const timeStr = new Intl.DateTimeFormat("ca-ES", {
+    timeZone: BCN_TZ, hour: "2-digit", minute: "2-digit", hour12: false,
+  }).format(instant);
+  const dateLabel = new Intl.DateTimeFormat("ca-ES", {
+    timeZone: BCN_TZ, weekday: "short", day: "numeric", month: "short",
+  }).format(instant);
+  // Dia (a Barcelona) vs dia de la seu, per detectar canvi de jornada.
+  const bcnDay = new Intl.DateTimeFormat("en-CA", {
+    timeZone: BCN_TZ, year: "numeric", month: "2-digit", day: "2-digit",
+  }).format(instant);
+  const nextDay = bcnDay > dateIso;
+  return { time: timeStr, dateLabel, nextDay };
+}
+
+// Etiqueta compacta d'hora de Barcelona per a una fila de partit.
+export function MatchBarcelonaTime({ match, className = "" }: { match: Match; className?: string }) {
+  const b = toBarcelona(match.date, match.time, match.tz);
+  return (
+    <span className={`tnum ${className}`}>
+      {b.time}
+      {b.nextDay && <sup className="ml-0.5 text-[9px] font-semibold text-amber-500 dark:text-amber-400">+1 dia</sup>}
+    </span>
+  );
+}

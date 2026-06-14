@@ -1,8 +1,8 @@
 import { useMemo, useState } from "react";
 import { Layout, PageHeader } from "@/components/Layout";
-import { ProbBar, TeamLabel, TeamFlag, StatusPill, formatDate } from "@/components/bits";
+import { ProbBar, TeamLabel, TeamFlag, StatusPill, formatDate, MatchBarcelonaTime, toBarcelona } from "@/components/bits";
 import { MATCHES, Match } from "@/data/mundial";
-import { MapPin, Clock } from "lucide-react";
+import { MapPin, Clock, Tv } from "lucide-react";
 
 type Filter = "spain" | "all" | "today" | "upcoming";
 
@@ -51,8 +51,13 @@ function MatchRow({ m }: { m: Match }) {
               {m.homeGoals}–{m.awayGoals}
             </span>
           ) : (
-            <span className="rounded bg-secondary px-2 py-1 text-xs font-semibold tnum text-secondary-foreground">
-              {m.time}
+            <span className="inline-flex flex-col items-center">
+              <span className="rounded bg-primary/15 px-2 py-1 text-sm font-bold tnum text-primary">
+                <MatchBarcelonaTime match={m} />
+              </span>
+              <span className="mt-0.5 text-[10px] font-medium uppercase tracking-wide text-muted-foreground">
+                h. Barcelona
+              </span>
             </span>
           )}
         </div>
@@ -64,11 +69,17 @@ function MatchRow({ m }: { m: Match }) {
 
       <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted-foreground">
         <span className="flex items-center gap-1">
-          <Clock className="h-3.5 w-3.5" /> {formatDate(m.date)} · {m.time}
+          <Clock className="h-3.5 w-3.5" /> Hora local: {m.time} ({m.city})
         </span>
         <span className="flex items-center gap-1">
           <MapPin className="h-3.5 w-3.5" /> {m.venue}, {m.city}
         </span>
+        {m.tv && (
+          <span className="flex items-center gap-1" data-testid={`tv-${m.id}`}>
+            <Tv className="h-3.5 w-3.5" />
+            <span className={spain ? "font-medium text-foreground" : ""}>{m.tv}</span>
+          </span>
+        )}
       </div>
 
       {m.status !== "finished" && (
@@ -108,6 +119,15 @@ export default function Calendari() {
           title="Calendari del Mundial"
           subtitle="Fase de grups · filtra per Espanya, tots, avui o pròxims partits."
         />
+
+        <p className="mb-5 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted-foreground">
+          <span className="rounded bg-primary/10 px-2 py-0.5 font-medium text-primary">
+            Horaris en hora de Barcelona
+          </span>
+          <span className="inline-flex items-center gap-1">
+            <Tv className="h-3.5 w-3.5" /> TV España · DAZN Mundial (tots) · RTVE en obert (Espanya)
+          </span>
+        </p>
 
         <div className="mb-6 flex flex-wrap gap-2" role="tablist" aria-label="Filtres del calendari">
           {FILTERS.map((f) => (

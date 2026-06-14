@@ -108,7 +108,7 @@ function MatchRow({ m }: { m: Match }) {
 
 export default function Calendari() {
   const [filter, setFilter] = useState<Filter>("spain");
-  const { matches } = useLiveData();
+  const { matches, liveAddedCount } = useLiveData();
 
   const filtered = useMemo(() => {
     let list = [...matches];
@@ -144,6 +144,11 @@ export default function Calendari() {
             <Tv className="h-3.5 w-3.5" /> TV España · DAZN Mundial (tots) · RTVE en obert (Espanya)
           </span>
           <LiveStatusChip />
+          {liveAddedCount > 0 && (
+            <span className="rounded bg-chart-3/15 px-2 py-0.5 font-medium text-chart-3" data-testid="espn-complete-note">
+              Calendari complet carregat d'ESPN (+{liveAddedCount})
+            </span>
+          )}
         </p>
 
         <div className="mb-6 flex flex-wrap gap-2" role="tablist" aria-label="Filtres del calendari">

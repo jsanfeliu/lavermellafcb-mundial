@@ -254,9 +254,22 @@ export function toBarcelona(dateIso: string, time: string, tz: string): Barcelon
   return { time: timeStr, dateLabel, nextDay };
 }
 
-// Etiqueta compacta d'hora de Barcelona per a una fila de partit.
+// Hora de Barcelona a partir d'un instant UTC (per a partits d'origen ESPN).
+export function barcelonaFromUtc(iso: string): BarcelonaTime {
+  const instant = new Date(iso);
+  const timeStr = new Intl.DateTimeFormat("ca-ES", {
+    timeZone: BCN_TZ, hour: "2-digit", minute: "2-digit", hour12: false,
+  }).format(instant);
+  const dateLabel = new Intl.DateTimeFormat("ca-ES", {
+    timeZone: BCN_TZ, weekday: "short", day: "numeric", month: "short",
+  }).format(instant);
+  return { time: timeStr, dateLabel, nextDay: false };
+}
+
+// Etiqueta compacta d'hora de Barcelona per a una fila de partit. Si el partit
+// porta un instant UTC real (origen ESPN), el fem servir directament.
 export function MatchBarcelonaTime({ match, className = "" }: { match: Match; className?: string }) {
-  const b = toBarcelona(match.date, match.time, match.tz);
+  const b = match.dateUtc ? barcelonaFromUtc(match.dateUtc) : toBarcelona(match.date, match.time, match.tz);
   return (
     <span className={`tnum ${className}`}>
       {b.time}

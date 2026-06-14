@@ -32,8 +32,10 @@ export interface LiveDataValue {
   isLive: boolean;          // hi ha dades reals carregades
   isLoading: boolean;
   fetchedAt: string | null; // ISO de la darrera actualització d'ESPN
-  matches: Match[];         // MATCHES amb resultats reals fusionats
+  matches: Match[];         // MATCHES amb resultats reals fusionats + partits ESPN
   spainMatches: Match[];    // partits d'Espanya (fusionats)
+  liveAddedCount: number;   // partits afegits des d'ESPN no presents a la llavor
+  finishedCount: number;    // partits acabats al conjunt fusionat
 }
 
 const LiveDataContext = createContext<LiveDataValue | null>(null);
@@ -54,6 +56,8 @@ export function LiveDataProvider({ children }: { children: ReactNode }) {
     const isLive = !!live && live.events.length > 0;
     const matches = isLive ? mergeLiveResults(live, MATCHES) : MATCHES;
     const spainMatches = isLive ? spainMatchesFrom(matches) : SPAIN_MATCHES;
+    const liveAddedCount = matches.filter((m) => m.fromLive).length;
+    const finishedCount = matches.filter((m) => m.status === "finished").length;
     return {
       live,
       isLive,
@@ -61,6 +65,8 @@ export function LiveDataProvider({ children }: { children: ReactNode }) {
       fetchedAt: live?.fetched_at ?? null,
       matches,
       spainMatches,
+      liveAddedCount,
+      finishedCount,
     };
   }, [data, isLoading]);
 
@@ -78,6 +84,8 @@ export function useLiveData(): LiveDataValue {
       fetchedAt: null,
       matches: MATCHES,
       spainMatches: SPAIN_MATCHES,
+      liveAddedCount: 0,
+      finishedCount: MATCHES.filter((m) => m.status === "finished").length,
     };
   }
   return ctx;

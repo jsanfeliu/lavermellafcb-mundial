@@ -182,6 +182,12 @@ export interface Match {
   awayGoals?: number;
   official?: boolean;  // true si la dada prové d'una font FIFA citada
   tv?: string;         // emissora(es) — TV España
+  // Instant UTC real (ISO) quan la dada prové d'ESPN. Si hi és, la interfície
+  // mostra l'hora de Barcelona a partir d'aquest instant (no de `time`/`tz`).
+  dateUtc?: string;
+  // true si el partit s'ha generat a partir d'un esdeveniment d'ESPN que no era
+  // a la llavor (calendari complet carregat d'ESPN).
+  fromLive?: boolean;
 }
 
 // Zones horàries IANA de les seus del Mundial 2026 (per ciutat).
@@ -433,6 +439,17 @@ export function teamsOfGroup(groupId: string): Team[] {
   return GROUPS.find((g) => g.id === groupId)!.teams.map((t) => TEAMS[t]);
 }
 
+// Grup ("A"…"L") al qual pertany un equip, o null si no és a cap grup conegut.
+const TEAM_TO_GROUP: Record<TeamId, string> = (() => {
+  const map: Record<TeamId, string> = {};
+  for (const g of GROUPS) for (const t of g.teams) map[t] = g.id;
+  return map;
+})();
+
+export function groupOfTeam(teamId: TeamId): string | null {
+  return TEAM_TO_GROUP[teamId] ?? null;
+}
+
 export const SPAIN_MATCHES = MATCHES.filter(
   (m) => m.home === "ESP" || m.away === "ESP"
 ).sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time));
@@ -478,10 +495,22 @@ function teamPairKey(a: TeamId, b: TeamId) {
   return [a, b].sort().join("|");
 }
 
-// Fusiona els resultats reals d'ESPN sobre les dades llavor (MATCHES).
-// Coincideix per parella d'equips dins del mateix grup. Actualitza estat,
-// gols (orientats al sentit local/visitant de la llavor) i marca live/final.
-// Els partits sense dada viva es queden tal com estaven (upcoming).
+function liveStatus(ev: LiveEvent, fallback: MatchStatus): MatchStatus {
+  return ev.completed ? "finished" : ev.in_progress ? "live" : fallback;
+}
+
+// Data UTC (YYYY-MM-DD) a partir de l'ISO d'ESPN ("2026-06-11T19:00Z").
+function utcDatePart(iso: string): string {
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return iso.slice(0, 10);
+  return d.toISOString().slice(0, 10);
+}
+
+// Fusiona els resultats reals d'ESPN sobre les dades llavor (MATCHES) i, a més,
+// AFEGEIX partits d'ESPN que no eren a la llavor sempre que tots dos equips
+// pertanyin al mateix grup conegut. Així el calendari i la classificació
+// reflecteixen TOTS els partits de grup que ESPN pot mapejar, no només la llavor.
+// Coincideix per parella d'equips. Els gols s'orienten al sentit local/visitant.
 export function mergeLiveResults(live: LiveResults | null | undefined, base: Match[] = MATCHES): Match[] {
   if (!live || !Array.isArray(live.events)) return base;
 
@@ -492,13 +521,15 @@ export function mergeLiveResults(live: LiveResults | null | undefined, base: Mat
     byPair.set(teamPairKey(ev.home.id, ev.away.id), ev);
   }
 
-  return base.map((m) => {
-    const ev = byPair.get(teamPairKey(m.home, m.away));
+  // 1) Actualitza els partits llavor amb la seva dada viva (si n'hi ha).
+  const consumed = new Set<string>();
+  const merged: Match[] = base.map((m) => {
+    const key = teamPairKey(m.home, m.away);
+    const ev = byPair.get(key);
     if (!ev) return m;
+    consumed.add(key);
 
-    const status: MatchStatus = ev.completed ? "finished" : ev.in_progress ? "live" : m.status;
-
-    // Orienta els gols d'ESPN al sentit local/visitant de la nostra llavor.
+    const status = liveStatus(ev, m.status);
     let homeGoals = m.homeGoals;
     let awayGoals = m.awayGoals;
     if (ev.home.score != null && ev.away.score != null) {
@@ -506,7 +537,6 @@ export function mergeLiveResults(live: LiveResults | null | undefined, base: Mat
       homeGoals = sameOrientation ? ev.home.score : ev.away.score;
       awayGoals = sameOrientation ? ev.away.score : ev.home.score;
     }
-
     return {
       ...m,
       status,
@@ -514,6 +544,42 @@ export function mergeLiveResults(live: LiveResults | null | undefined, base: Mat
       awayGoals: status === "upcoming" ? m.awayGoals : awayGoals,
     };
   });
+
+  // 2) Afegeix partits d'ESPN no presents a la llavor (mateix grup conegut).
+  for (const ev of live.events) {
+    if (!ev.home.id || !ev.away.id) continue;
+    const key = teamPairKey(ev.home.id, ev.away.id);
+    if (consumed.has(key)) continue;
+    const gHome = groupOfTeam(ev.home.id);
+    const gAway = groupOfTeam(ev.away.id);
+    if (!gHome || gHome !== gAway) continue; // només partits de fase de grups dins d'un mateix grup
+    consumed.add(key);
+
+    const status = liveStatus(ev, "upcoming");
+    const hasScore = ev.home.score != null && ev.away.score != null;
+    const isSpain = ev.home.id === "ESP" || ev.away.id === "ESP";
+
+    merged.push({
+      id: `ESPN-${ev.espn_id}`,
+      group: gHome,
+      round: 1, // ESPN no dona jornada fiable per a aquests; per defecte J1
+      date: utcDatePart(ev.date_utc),
+      time: "00:00",
+      tz: "UTC",
+      dateUtc: ev.date_utc,
+      fromLive: true,
+      home: ev.home.id,
+      away: ev.away.id,
+      venue: ev.venue ?? "—",
+      city: ev.venue_city ?? "—",
+      status,
+      homeGoals: status === "upcoming" || !hasScore ? undefined : ev.home.score!,
+      awayGoals: status === "upcoming" || !hasScore ? undefined : ev.away.score!,
+      tv: isSpain ? TV_SPAIN : TV_DEFAULT,
+    });
+  }
+
+  return merged;
 }
 
 // Partits d'Espanya a partir d'un conjunt (per defecte la llavor estàtica).

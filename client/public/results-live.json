@@ -1,10 +1,10 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-14T21:42:01.862Z",
+  "fetched_at": "2026-06-14T22:53:39.368Z",
   "event_count": 104,
-  "completed_count": 9,
-  "in_progress_count": 1,
+  "completed_count": 10,
+  "in_progress_count": 0,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
   "events": [
@@ -236,11 +236,11 @@
     {
       "espn_id": "760425",
       "date_utc": "2026-06-14T20:00Z",
-      "status_name": "STATUS_SECOND_HALF",
-      "status_detail": "83'",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "AT&T Stadium",
       "venue_city": "Arlington, Texas",
       "home": {
@@ -255,7 +255,7 @@
         "displayName": "Japan",
         "shortDisplayName": "Japan",
         "abbreviation": "JPN",
-        "score": 1
+        "score": 2
       }
     },
     {

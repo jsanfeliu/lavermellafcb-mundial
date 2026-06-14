@@ -5,6 +5,7 @@ import { useOutlook } from "@/hooks/useOutlook";
 import {
   SPAIN_MATCHES,
   SPAIN_GROUP_ID,
+  GROUPS,
   computeStandings,
   matchProbability,
   teamsOfGroup,
@@ -20,6 +21,8 @@ export default function Dashboard() {
   const spainFirstId = next.home === "ESP" ? next.home : next.away;
   const standings = computeStandings(SPAIN_GROUP_ID);
   const groupTeams = teamsOfGroup(SPAIN_GROUP_ID);
+  const spainGroupLabel =
+    GROUPS.find((g) => g.id === SPAIN_GROUP_ID)?.label ?? `Grup ${SPAIN_GROUP_ID}`;
 
   return (
     <Layout>
@@ -108,7 +111,7 @@ export default function Dashboard() {
             </Card>
 
             {/* Estat del grup */}
-            <Card title={`Estat del ${SPAIN_GROUP_ID === "E" ? "Grup E" : SPAIN_GROUP_ID}`}>
+            <Card title={`Estat del ${spainGroupLabel}`}>
               <ul className="space-y-2" role="list">
                 {standings.map((row, i) => (
                   <li

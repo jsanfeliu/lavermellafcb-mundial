@@ -7,10 +7,16 @@
 //    https://gpcustomersupportfwc2026.tickets.fifa.com/hc/en-gb/articles/28784798873117
 //  Seu: Canadà, Mèxic i EUA · 11 juny – 19 juliol 2026 · 104 partits · 16 ciutats.
 //    https://inside.fifa.com/organisation/president/news/tournament-operation-center-world-cup-2026-miami-infatino
-//  Partits d'Espanya documentats a la pàgina de suites de la FIFA:
+//  Partits d'Espanya documentats a la pàgina de suites de la FIFA (font FIFA):
 //    Espanya–Cap Verd · dl 15 juny 2026 · 12:00 · Atlanta Stadium · M14
 //    Espanya–Aràbia Saudita · dg 21 juny 2026 · 12:00 · Atlanta Stadium · M38
 //    https://fifaworldcup26.suites.fifa.com
+//  Espanya juga al GRUP H amb Cap Verd, Aràbia Saudita i Uruguai. Composició i
+//  calendari del grup CONTRASTATS per fonts periodístiques (no marcats com a
+//  "FIFA oficial"):
+//    MLS Soccer: https://www.mlssoccer.com/news/2026-fifa-world-cup-group-h-preview-spain-cape-verde-saudi-arabia-uruguay
+//    DAZN (US):  https://www.dazn.com/en-US/news/soccer/2026-world-cup-group-h-spain-cape-verde-saudi-arabia-uruguay/caegcl3n499u1tyga3z9ezpe4
+//    DAZN (ES):  https://www.dazn.com/es-ES/news/f%C3%BAtbol/espana-mundial-2026-rivales-partidos-calendario-resultados/6staso5jyl9x1ldq47tpq8oot
 //  La resta de seleccions per grup són una llavor de demostració realista
 //  (caps de sèrie i nivells coherents), NO el sorteig oficial.
 // =====================================================================
@@ -127,29 +133,33 @@ export const TEAMS: Record<TeamId, Team> = {
   SCO: { id: "SCO", name: "Escòcia", code: "SCO", confed: "UEFA", fifaRank: 35, strength: s(35) },
 };
 
-// 12 grups · llavor demo. Espanya al Grup E (coherent amb M14 i M38).
+// 12 grups · llavor demo. Espanya al Grup H amb Cap Verd, Aràbia Saudita i
+// Uruguai (composició contrastada per fonts periodístiques: MLS Soccer i DAZN;
+// vegeu nota de fonts a sota). Els partits Espanya–Cap Verd (M14) i
+// Espanya–Aràbia Saudita (M38) estan documentats per la pàgina de suites FIFA.
+// La resta de grups són una llavor de demostració realista, NO el sorteig oficial.
 export const GROUPS: GroupSeed[] = [
   { id: "A", label: "Grup A", teams: ["MEX", "KOR", "POL", "NZL"] },
   { id: "B", label: "Grup B", teams: ["CAN", "BEL", "ECU", "JOR"] },
   { id: "C", label: "Grup C", teams: ["USA", "NED", "EGY", "PAN"] },
   { id: "D", label: "Grup D", teams: ["ARG", "AUT", "ALG", "JAM"] },
-  { id: "E", label: "Grup E", teams: ["ESP", "KSA", "CPV", "SCO"] },
-  { id: "F", label: "Grup F", teams: ["FRA", "URU", "QAT", "GHA"] },
+  { id: "E", label: "Grup E", teams: ["FRA", "JPN", "SEN", "SCO"] },
+  { id: "F", label: "Grup F", teams: ["ENG", "QAT", "GHA", "PER"] },
   { id: "G", label: "Grup G", teams: ["BRA", "SUI", "IRN", "CRC"] },
-  { id: "H", label: "Grup H", teams: ["ENG", "JPN", "SEN", "PER"] },
+  { id: "H", label: "Grup H", teams: ["ESP", "CPV", "KSA", "URU"] },
   { id: "I", label: "Grup I", teams: ["POR", "COL", "TUR", "UZB"] },
   { id: "J", label: "Grup J", teams: ["GER", "DEN", "NGA", "TUN"] },
   { id: "K", label: "Grup K", teams: ["CRO", "AUS", "CIV", "PAR"] },
   { id: "L", label: "Grup L", teams: ["ITA", "SRB", "MAR", "UKR"] },
 ];
 
-export const SPAIN_GROUP_ID = "E";
+export const SPAIN_GROUP_ID = "H";
 
 export type MatchStatus = "upcoming" | "live" | "finished";
 
 export interface Match {
   id: string;          // codi FIFA tipus "M14"
-  group: string;       // "E"
+  group: string;       // "H"
   round: 1 | 2 | 3;    // jornada de la fase de grups
   date: string;        // ISO data
   time: string;        // hora local de la seu
@@ -164,17 +174,18 @@ export interface Match {
 }
 
 // Calendari de la fase de grups (llavor). Els 2 partits d'Espanya amb codi i
-// seu reals (font FIFA). La resta són horaris de demostració coherents.
+// seu reals (font FIFA: M14 i M38). La resta del Grup H està contrastada per
+// fonts periodístiques (MLS Soccer, DAZN); les hores són locals de la seu.
 export const MATCHES: Match[] = [
-  // ---- Jornada 1 (Grup E) ----
-  { id: "M14", group: "E", round: 1, date: "2026-06-15", time: "12:00", home: "ESP", away: "CPV", venue: "Atlanta Stadium", city: "Atlanta", status: "upcoming", official: true },
-  { id: "M15", group: "E", round: 1, date: "2026-06-15", time: "18:00", home: "KSA", away: "SCO", venue: "Lumen Field", city: "Seattle", status: "upcoming" },
-  // ---- Jornada 2 (Grup E) ----
-  { id: "M38", group: "E", round: 2, date: "2026-06-21", time: "12:00", home: "ESP", away: "KSA", venue: "Atlanta Stadium", city: "Atlanta", status: "upcoming", official: true },
-  { id: "M39", group: "E", round: 2, date: "2026-06-21", time: "18:00", home: "SCO", away: "CPV", venue: "BC Place", city: "Vancouver", status: "upcoming" },
-  // ---- Jornada 3 (Grup E) ----
-  { id: "M62", group: "E", round: 3, date: "2026-06-25", time: "16:00", home: "ESP", away: "SCO", venue: "Mercedes-Benz Stadium", city: "Atlanta", status: "upcoming" },
-  { id: "M63", group: "E", round: 3, date: "2026-06-25", time: "16:00", home: "CPV", away: "KSA", venue: "Hard Rock Stadium", city: "Miami", status: "upcoming" },
+  // ---- Jornada 1 (Grup H) ----
+  { id: "M14", group: "H", round: 1, date: "2026-06-15", time: "12:00", home: "ESP", away: "CPV", venue: "Mercedes-Benz Stadium", city: "Atlanta", status: "upcoming", official: true },
+  { id: "M13", group: "H", round: 1, date: "2026-06-15", time: "18:00", home: "KSA", away: "URU", venue: "Hard Rock Stadium", city: "Miami", status: "upcoming" },
+  // ---- Jornada 2 (Grup H) ----
+  { id: "M38", group: "H", round: 2, date: "2026-06-21", time: "12:00", home: "ESP", away: "KSA", venue: "Mercedes-Benz Stadium", city: "Atlanta", status: "upcoming", official: true },
+  { id: "M39", group: "H", round: 2, date: "2026-06-21", time: "18:00", home: "URU", away: "CPV", venue: "Hard Rock Stadium", city: "Miami", status: "upcoming" },
+  // ---- Jornada 3 (Grup H) ----
+  { id: "M62", group: "H", round: 3, date: "2026-06-26", time: "19:00", home: "CPV", away: "KSA", venue: "NRG Stadium", city: "Houston", status: "upcoming" },
+  { id: "M63", group: "H", round: 3, date: "2026-06-26", time: "19:00", home: "URU", away: "ESP", venue: "Estadio Akron", city: "Guadalajara", status: "upcoming" },
 
   // ---- Altres grups · mostres de jornada 1 (demostració) ----
   { id: "M01", group: "A", round: 1, date: "2026-06-11", time: "19:00", home: "MEX", away: "KOR", venue: "Estadio Azteca", city: "Ciutat de Mèxic", status: "upcoming" },
@@ -185,11 +196,11 @@ export const MATCHES: Match[] = [
   { id: "M06", group: "C", round: 1, date: "2026-06-13", time: "16:00", home: "NED", away: "EGY", venue: "Levi's Stadium", city: "San Francisco", status: "upcoming" },
   { id: "M07", group: "D", round: 1, date: "2026-06-13", time: "19:00", home: "ARG", away: "JAM", venue: "MetLife Stadium", city: "Nova Jersey", status: "upcoming" },
   { id: "M08", group: "D", round: 1, date: "2026-06-14", time: "13:00", home: "AUT", away: "ALG", venue: "Gillette Stadium", city: "Boston", status: "upcoming" },
-  { id: "M09", group: "F", round: 1, date: "2026-06-14", time: "16:00", home: "FRA", away: "GHA", venue: "AT&T Stadium", city: "Dallas", status: "upcoming" },
-  { id: "M10", group: "F", round: 1, date: "2026-06-14", time: "19:00", home: "URU", away: "QAT", venue: "NRG Stadium", city: "Houston", status: "upcoming" },
+  { id: "M09", group: "E", round: 1, date: "2026-06-14", time: "16:00", home: "FRA", away: "JPN", venue: "AT&T Stadium", city: "Dallas", status: "upcoming" },
+  { id: "M10", group: "F", round: 1, date: "2026-06-14", time: "19:00", home: "QAT", away: "GHA", venue: "NRG Stadium", city: "Houston", status: "upcoming" },
   { id: "M11", group: "G", round: 1, date: "2026-06-14", time: "21:00", home: "BRA", away: "CRC", venue: "Arrowhead Stadium", city: "Kansas City", status: "upcoming" },
   { id: "M12", group: "G", round: 1, date: "2026-06-15", time: "15:00", home: "SUI", away: "IRN", venue: "Lincoln Financial Field", city: "Filadèlfia", status: "upcoming" },
-  { id: "M13", group: "H", round: 1, date: "2026-06-15", time: "09:00", home: "ENG", away: "PER", venue: "BMO Field", city: "Toronto", status: "upcoming" },
+  { id: "M16", group: "F", round: 1, date: "2026-06-15", time: "09:00", home: "ENG", away: "PER", venue: "BMO Field", city: "Toronto", status: "upcoming" },
 ];
 
 // ---------------------------------------------------------------------

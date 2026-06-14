@@ -1,0 +1,2612 @@
+{
+  "source": "ESPN public scoreboard",
+  "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
+  "fetched_at": "2026-06-14T08:25:43.062Z",
+  "event_count": 104,
+  "completed_count": 8,
+  "in_progress_count": 0,
+  "unmapped_teams": [],
+  "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
+  "events": [
+    {
+      "espn_id": "760415",
+      "date_utc": "2026-06-11T19:00Z",
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
+      "venue": "Estadio Banorte",
+      "venue_city": "Mexico City",
+      "home": {
+        "id": "MEX",
+        "displayName": "Mexico",
+        "shortDisplayName": "Mexico",
+        "abbreviation": "MEX",
+        "score": 2
+      },
+      "away": {
+        "id": "RSA",
+        "displayName": "South Africa",
+        "shortDisplayName": "South Africa",
+        "abbreviation": "RSA",
+        "score": 0
+      }
+    },
+    {
+      "espn_id": "760414",
+      "date_utc": "2026-06-12T02:00Z",
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
+      "venue": "Estadio Akron",
+      "venue_city": "Guadalajara",
+      "home": {
+        "id": "KOR",
+        "displayName": "South Korea",
+        "shortDisplayName": "South Korea",
+        "abbreviation": "KOR",
+        "score": 2
+      },
+      "away": {
+        "id": "CZE",
+        "displayName": "Czechia",
+        "shortDisplayName": "Czechia",
+        "abbreviation": "CZE",
+        "score": 1
+      }
+    },
+    {
+      "espn_id": "760416",
+      "date_utc": "2026-06-12T19:00Z",
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
+      "venue": "BMO Field",
+      "venue_city": "Toronto",
+      "home": {
+        "id": "CAN",
+        "displayName": "Canada",
+        "shortDisplayName": "Canada",
+        "abbreviation": "CAN",
+        "score": 1
+      },
+      "away": {
+        "id": "BIH",
+        "displayName": "Bosnia-Herzegovina",
+        "shortDisplayName": "Bosnia-Herz",
+        "abbreviation": "BIH",
+        "score": 1
+      }
+    },
+    {
+      "espn_id": "760417",
+      "date_utc": "2026-06-13T01:00Z",
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
+      "venue": "SoFi Stadium",
+      "venue_city": "Inglewood, California",
+      "home": {
+        "id": "USA",
+        "displayName": "United States",
+        "shortDisplayName": "USA",
+        "abbreviation": "USA",
+        "score": 4
+      },
+      "away": {
+        "id": "PAR",
+        "displayName": "Paraguay",
+        "shortDisplayName": "Paraguay",
+        "abbreviation": "PAR",
+        "score": 1
+      }
+    },
+    {
+      "espn_id": "760420",
+      "date_utc": "2026-06-13T19:00Z",
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
+      "venue": "Levi's Stadium",
+      "venue_city": "Santa Clara, California",
+      "home": {
+        "id": "QAT",
+        "displayName": "Qatar",
+        "shortDisplayName": "Qatar",
+        "abbreviation": "QAT",
+        "score": 1
+      },
+      "away": {
+        "id": "SUI",
+        "displayName": "Switzerland",
+        "shortDisplayName": "Switzerland",
+        "abbreviation": "SUI",
+        "score": 1
+      }
+    },
+    {
+      "espn_id": "760419",
+      "date_utc": "2026-06-13T22:00Z",
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
+      "venue": "MetLife Stadium",
+      "venue_city": "East Rutherford, New Jersey",
+      "home": {
+        "id": "BRA",
+        "displayName": "Brazil",
+        "shortDisplayName": "Brazil",
+        "abbreviation": "BRA",
+        "score": 1
+      },
+      "away": {
+        "id": "MAR",
+        "displayName": "Morocco",
+        "shortDisplayName": "Morocco",
+        "abbreviation": "MAR",
+        "score": 1
+      }
+    },
+    {
+      "espn_id": "760418",
+      "date_utc": "2026-06-14T01:00Z",
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
+      "venue": "Gillette Stadium",
+      "venue_city": "Foxborough, Massachusetts",
+      "home": {
+        "id": "HAI",
+        "displayName": "Haiti",
+        "shortDisplayName": "Haiti",
+        "abbreviation": "HAI",
+        "score": 0
+      },
+      "away": {
+        "id": "SCO",
+        "displayName": "Scotland",
+        "shortDisplayName": "Scotland",
+        "abbreviation": "SCO",
+        "score": 1
+      }
+    },
+    {
+      "espn_id": "760421",
+      "date_utc": "2026-06-14T04:00Z",
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
+      "venue": "BC Place",
+      "venue_city": "Vancouver",
+      "home": {
+        "id": "AUS",
+        "displayName": "Australia",
+        "shortDisplayName": "Australia",
+        "abbreviation": "AUS",
+        "score": 2
+      },
+      "away": {
+        "id": "TUR",
+        "displayName": "Türkiye",
+        "shortDisplayName": "Türkiye",
+        "abbreviation": "TUR",
+        "score": 0
+      }
+    },
+    {
+      "espn_id": "760422",
+      "date_utc": "2026-06-14T17:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Sun, June 14th at 1:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "NRG Stadium",
+      "venue_city": "Houston, Texas",
+      "home": {
+        "id": "GER",
+        "displayName": "Germany",
+        "shortDisplayName": "Germany",
+        "abbreviation": "GER",
+        "score": null
+      },
+      "away": {
+        "id": "CUW",
+        "displayName": "Curaçao",
+        "shortDisplayName": "Curaçao",
+        "abbreviation": "CUW",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760425",
+      "date_utc": "2026-06-14T20:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Sun, June 14th at 4:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "AT&T Stadium",
+      "venue_city": "Arlington, Texas",
+      "home": {
+        "id": "NED",
+        "displayName": "Netherlands",
+        "shortDisplayName": "Netherlands",
+        "abbreviation": "NED",
+        "score": null
+      },
+      "away": {
+        "id": "JPN",
+        "displayName": "Japan",
+        "shortDisplayName": "Japan",
+        "abbreviation": "JPN",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760423",
+      "date_utc": "2026-06-14T23:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Sun, June 14th at 7:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Lincoln Financial Field",
+      "venue_city": "Philadelphia, Pennsylvania",
+      "home": {
+        "id": "CIV",
+        "displayName": "Ivory Coast",
+        "shortDisplayName": "Ivory Coast",
+        "abbreviation": "CIV",
+        "score": null
+      },
+      "away": {
+        "id": "ECU",
+        "displayName": "Ecuador",
+        "shortDisplayName": "Ecuador",
+        "abbreviation": "ECU",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760424",
+      "date_utc": "2026-06-15T02:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Sun, June 14th at 10:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Estadio BBVA",
+      "venue_city": "Guadalupe",
+      "home": {
+        "id": "SWE",
+        "displayName": "Sweden",
+        "shortDisplayName": "Sweden",
+        "abbreviation": "SWE",
+        "score": null
+      },
+      "away": {
+        "id": "TUN",
+        "displayName": "Tunisia",
+        "shortDisplayName": "Tunisia",
+        "abbreviation": "TUN",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760428",
+      "date_utc": "2026-06-15T16:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Mon, June 15th at 12:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Mercedes-Benz Stadium",
+      "venue_city": "Atlanta, Georgia",
+      "home": {
+        "id": "ESP",
+        "displayName": "Spain",
+        "shortDisplayName": "Spain",
+        "abbreviation": "ESP",
+        "score": null
+      },
+      "away": {
+        "id": "CPV",
+        "displayName": "Cape Verde",
+        "shortDisplayName": "Cape Verde",
+        "abbreviation": "CPV",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760426",
+      "date_utc": "2026-06-15T19:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Mon, June 15th at 3:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Lumen Field",
+      "venue_city": "Seattle, Washington",
+      "home": {
+        "id": "BEL",
+        "displayName": "Belgium",
+        "shortDisplayName": "Belgium",
+        "abbreviation": "BEL",
+        "score": null
+      },
+      "away": {
+        "id": "EGY",
+        "displayName": "Egypt",
+        "shortDisplayName": "Egypt",
+        "abbreviation": "EGY",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760429",
+      "date_utc": "2026-06-15T22:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Mon, June 15th at 6:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Hard Rock Stadium",
+      "venue_city": "Miami Gardens, Florida",
+      "home": {
+        "id": "KSA",
+        "displayName": "Saudi Arabia",
+        "shortDisplayName": "Saudi Arabia",
+        "abbreviation": "KSA",
+        "score": null
+      },
+      "away": {
+        "id": "URU",
+        "displayName": "Uruguay",
+        "shortDisplayName": "Uruguay",
+        "abbreviation": "URU",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760427",
+      "date_utc": "2026-06-16T01:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Mon, June 15th at 9:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "SoFi Stadium",
+      "venue_city": "Inglewood, California",
+      "home": {
+        "id": "IRN",
+        "displayName": "Iran",
+        "shortDisplayName": "Iran",
+        "abbreviation": "IRN",
+        "score": null
+      },
+      "away": {
+        "id": "NZL",
+        "displayName": "New Zealand",
+        "shortDisplayName": "New Zealand",
+        "abbreviation": "NZL",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760432",
+      "date_utc": "2026-06-16T19:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Tue, June 16th at 3:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "MetLife Stadium",
+      "venue_city": "East Rutherford, New Jersey",
+      "home": {
+        "id": "FRA",
+        "displayName": "France",
+        "shortDisplayName": "France",
+        "abbreviation": "FRA",
+        "score": null
+      },
+      "away": {
+        "id": "SEN",
+        "displayName": "Senegal",
+        "shortDisplayName": "Senegal",
+        "abbreviation": "SEN",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760430",
+      "date_utc": "2026-06-16T22:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Tue, June 16th at 6:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Gillette Stadium",
+      "venue_city": "Foxborough, Massachusetts",
+      "home": {
+        "id": "IRQ",
+        "displayName": "Iraq",
+        "shortDisplayName": "Iraq",
+        "abbreviation": "IRQ",
+        "score": null
+      },
+      "away": {
+        "id": "NOR",
+        "displayName": "Norway",
+        "shortDisplayName": "Norway",
+        "abbreviation": "NOR",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760433",
+      "date_utc": "2026-06-17T01:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Tue, June 16th at 9:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "GEHA Field at Arrowhead Stadium",
+      "venue_city": "Kansas City, Missouri",
+      "home": {
+        "id": "ARG",
+        "displayName": "Argentina",
+        "shortDisplayName": "Argentina",
+        "abbreviation": "ARG",
+        "score": null
+      },
+      "away": {
+        "id": "ALG",
+        "displayName": "Algeria",
+        "shortDisplayName": "Algeria",
+        "abbreviation": "ALG",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760431",
+      "date_utc": "2026-06-17T04:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Wed, June 16th at 12:00 AM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Levi's Stadium",
+      "venue_city": "Santa Clara, California",
+      "home": {
+        "id": "AUT",
+        "displayName": "Austria",
+        "shortDisplayName": "Austria",
+        "abbreviation": "AUT",
+        "score": null
+      },
+      "away": {
+        "id": "JOR",
+        "displayName": "Jordan",
+        "shortDisplayName": "Jordan",
+        "abbreviation": "JOR",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760435",
+      "date_utc": "2026-06-17T17:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Wed, June 17th at 1:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "NRG Stadium",
+      "venue_city": "Houston, Texas",
+      "home": {
+        "id": "POR",
+        "displayName": "Portugal",
+        "shortDisplayName": "Portugal",
+        "abbreviation": "POR",
+        "score": null
+      },
+      "away": {
+        "id": "COD",
+        "displayName": "Congo DR",
+        "shortDisplayName": "Congo DR",
+        "abbreviation": "COD",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760437",
+      "date_utc": "2026-06-17T20:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Wed, June 17th at 4:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "AT&T Stadium",
+      "venue_city": "Arlington, Texas",
+      "home": {
+        "id": "ENG",
+        "displayName": "England",
+        "shortDisplayName": "England",
+        "abbreviation": "ENG",
+        "score": null
+      },
+      "away": {
+        "id": "CRO",
+        "displayName": "Croatia",
+        "shortDisplayName": "Croatia",
+        "abbreviation": "CRO",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760434",
+      "date_utc": "2026-06-17T23:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Wed, June 17th at 7:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "BMO Field",
+      "venue_city": "Toronto",
+      "home": {
+        "id": "GHA",
+        "displayName": "Ghana",
+        "shortDisplayName": "Ghana",
+        "abbreviation": "GHA",
+        "score": null
+      },
+      "away": {
+        "id": "PAN",
+        "displayName": "Panama",
+        "shortDisplayName": "Panama",
+        "abbreviation": "PAN",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760436",
+      "date_utc": "2026-06-18T02:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Wed, June 17th at 10:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Estadio Banorte",
+      "venue_city": "Mexico City",
+      "home": {
+        "id": "UZB",
+        "displayName": "Uzbekistan",
+        "shortDisplayName": "Uzbekistan",
+        "abbreviation": "UZB",
+        "score": null
+      },
+      "away": {
+        "id": "COL",
+        "displayName": "Colombia",
+        "shortDisplayName": "Colombia",
+        "abbreviation": "COL",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760438",
+      "date_utc": "2026-06-18T16:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Thu, June 18th at 12:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Mercedes-Benz Stadium",
+      "venue_city": "Atlanta, Georgia",
+      "home": {
+        "id": "CZE",
+        "displayName": "Czechia",
+        "shortDisplayName": "Czechia",
+        "abbreviation": "CZE",
+        "score": null
+      },
+      "away": {
+        "id": "RSA",
+        "displayName": "South Africa",
+        "shortDisplayName": "South Africa",
+        "abbreviation": "RSA",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760439",
+      "date_utc": "2026-06-18T19:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Thu, June 18th at 3:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "SoFi Stadium",
+      "venue_city": "Inglewood, California",
+      "home": {
+        "id": "SUI",
+        "displayName": "Switzerland",
+        "shortDisplayName": "Switzerland",
+        "abbreviation": "SUI",
+        "score": null
+      },
+      "away": {
+        "id": "BIH",
+        "displayName": "Bosnia-Herzegovina",
+        "shortDisplayName": "Bosnia-Herz",
+        "abbreviation": "BIH",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760440",
+      "date_utc": "2026-06-18T22:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Thu, June 18th at 6:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "BC Place",
+      "venue_city": "Vancouver",
+      "home": {
+        "id": "CAN",
+        "displayName": "Canada",
+        "shortDisplayName": "Canada",
+        "abbreviation": "CAN",
+        "score": null
+      },
+      "away": {
+        "id": "QAT",
+        "displayName": "Qatar",
+        "shortDisplayName": "Qatar",
+        "abbreviation": "QAT",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760441",
+      "date_utc": "2026-06-19T01:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Thu, June 18th at 9:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Estadio Akron",
+      "venue_city": "Guadalajara",
+      "home": {
+        "id": "MEX",
+        "displayName": "Mexico",
+        "shortDisplayName": "Mexico",
+        "abbreviation": "MEX",
+        "score": null
+      },
+      "away": {
+        "id": "KOR",
+        "displayName": "South Korea",
+        "shortDisplayName": "South Korea",
+        "abbreviation": "KOR",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760442",
+      "date_utc": "2026-06-19T19:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Fri, June 19th at 3:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Lumen Field",
+      "venue_city": "Seattle, Washington",
+      "home": {
+        "id": "USA",
+        "displayName": "United States",
+        "shortDisplayName": "USA",
+        "abbreviation": "USA",
+        "score": null
+      },
+      "away": {
+        "id": "AUS",
+        "displayName": "Australia",
+        "shortDisplayName": "Australia",
+        "abbreviation": "AUS",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760445",
+      "date_utc": "2026-06-19T22:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Fri, June 19th at 6:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Gillette Stadium",
+      "venue_city": "Foxborough, Massachusetts",
+      "home": {
+        "id": "SCO",
+        "displayName": "Scotland",
+        "shortDisplayName": "Scotland",
+        "abbreviation": "SCO",
+        "score": null
+      },
+      "away": {
+        "id": "MAR",
+        "displayName": "Morocco",
+        "shortDisplayName": "Morocco",
+        "abbreviation": "MAR",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760444",
+      "date_utc": "2026-06-20T00:30Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Fri, June 19th at 8:30 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Lincoln Financial Field",
+      "venue_city": "Philadelphia, Pennsylvania",
+      "home": {
+        "id": "BRA",
+        "displayName": "Brazil",
+        "shortDisplayName": "Brazil",
+        "abbreviation": "BRA",
+        "score": null
+      },
+      "away": {
+        "id": "HAI",
+        "displayName": "Haiti",
+        "shortDisplayName": "Haiti",
+        "abbreviation": "HAI",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760443",
+      "date_utc": "2026-06-20T03:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Fri, June 19th at 11:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Levi's Stadium",
+      "venue_city": "Santa Clara, California",
+      "home": {
+        "id": "TUR",
+        "displayName": "Türkiye",
+        "shortDisplayName": "Türkiye",
+        "abbreviation": "TUR",
+        "score": null
+      },
+      "away": {
+        "id": "PAR",
+        "displayName": "Paraguay",
+        "shortDisplayName": "Paraguay",
+        "abbreviation": "PAR",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760447",
+      "date_utc": "2026-06-20T17:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Sat, June 20th at 1:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "NRG Stadium",
+      "venue_city": "Houston, Texas",
+      "home": {
+        "id": "NED",
+        "displayName": "Netherlands",
+        "shortDisplayName": "Netherlands",
+        "abbreviation": "NED",
+        "score": null
+      },
+      "away": {
+        "id": "SWE",
+        "displayName": "Sweden",
+        "shortDisplayName": "Sweden",
+        "abbreviation": "SWE",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760448",
+      "date_utc": "2026-06-20T20:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Sat, June 20th at 4:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "BMO Field",
+      "venue_city": "Toronto",
+      "home": {
+        "id": "GER",
+        "displayName": "Germany",
+        "shortDisplayName": "Germany",
+        "abbreviation": "GER",
+        "score": null
+      },
+      "away": {
+        "id": "CIV",
+        "displayName": "Ivory Coast",
+        "shortDisplayName": "Ivory Coast",
+        "abbreviation": "CIV",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760446",
+      "date_utc": "2026-06-21T00:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Sat, June 20th at 8:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "GEHA Field at Arrowhead Stadium",
+      "venue_city": "Kansas City, Missouri",
+      "home": {
+        "id": "ECU",
+        "displayName": "Ecuador",
+        "shortDisplayName": "Ecuador",
+        "abbreviation": "ECU",
+        "score": null
+      },
+      "away": {
+        "id": "CUW",
+        "displayName": "Curaçao",
+        "shortDisplayName": "Curaçao",
+        "abbreviation": "CUW",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760449",
+      "date_utc": "2026-06-21T04:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Sun, June 20th at 12:00 AM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Estadio BBVA",
+      "venue_city": "Guadalupe",
+      "home": {
+        "id": "TUN",
+        "displayName": "Tunisia",
+        "shortDisplayName": "Tunisia",
+        "abbreviation": "TUN",
+        "score": null
+      },
+      "away": {
+        "id": "JPN",
+        "displayName": "Japan",
+        "shortDisplayName": "Japan",
+        "abbreviation": "JPN",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760453",
+      "date_utc": "2026-06-21T16:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Sun, June 21st at 12:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Mercedes-Benz Stadium",
+      "venue_city": "Atlanta, Georgia",
+      "home": {
+        "id": "ESP",
+        "displayName": "Spain",
+        "shortDisplayName": "Spain",
+        "abbreviation": "ESP",
+        "score": null
+      },
+      "away": {
+        "id": "KSA",
+        "displayName": "Saudi Arabia",
+        "shortDisplayName": "Saudi Arabia",
+        "abbreviation": "KSA",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760451",
+      "date_utc": "2026-06-21T19:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Sun, June 21st at 3:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "SoFi Stadium",
+      "venue_city": "Inglewood, California",
+      "home": {
+        "id": "BEL",
+        "displayName": "Belgium",
+        "shortDisplayName": "Belgium",
+        "abbreviation": "BEL",
+        "score": null
+      },
+      "away": {
+        "id": "IRN",
+        "displayName": "Iran",
+        "shortDisplayName": "Iran",
+        "abbreviation": "IRN",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760450",
+      "date_utc": "2026-06-21T22:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Sun, June 21st at 6:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Hard Rock Stadium",
+      "venue_city": "Miami Gardens, Florida",
+      "home": {
+        "id": "URU",
+        "displayName": "Uruguay",
+        "shortDisplayName": "Uruguay",
+        "abbreviation": "URU",
+        "score": null
+      },
+      "away": {
+        "id": "CPV",
+        "displayName": "Cape Verde",
+        "shortDisplayName": "Cape Verde",
+        "abbreviation": "CPV",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760452",
+      "date_utc": "2026-06-22T01:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Sun, June 21st at 9:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "BC Place",
+      "venue_city": "Vancouver",
+      "home": {
+        "id": "NZL",
+        "displayName": "New Zealand",
+        "shortDisplayName": "New Zealand",
+        "abbreviation": "NZL",
+        "score": null
+      },
+      "away": {
+        "id": "EGY",
+        "displayName": "Egypt",
+        "shortDisplayName": "Egypt",
+        "abbreviation": "EGY",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760456",
+      "date_utc": "2026-06-22T17:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Mon, June 22nd at 1:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "AT&T Stadium",
+      "venue_city": "Arlington, Texas",
+      "home": {
+        "id": "ARG",
+        "displayName": "Argentina",
+        "shortDisplayName": "Argentina",
+        "abbreviation": "ARG",
+        "score": null
+      },
+      "away": {
+        "id": "AUT",
+        "displayName": "Austria",
+        "shortDisplayName": "Austria",
+        "abbreviation": "AUT",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760457",
+      "date_utc": "2026-06-22T21:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Mon, June 22nd at 5:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Lincoln Financial Field",
+      "venue_city": "Philadelphia, Pennsylvania",
+      "home": {
+        "id": "FRA",
+        "displayName": "France",
+        "shortDisplayName": "France",
+        "abbreviation": "FRA",
+        "score": null
+      },
+      "away": {
+        "id": "IRQ",
+        "displayName": "Iraq",
+        "shortDisplayName": "Iraq",
+        "abbreviation": "IRQ",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760454",
+      "date_utc": "2026-06-23T00:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Mon, June 22nd at 8:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "MetLife Stadium",
+      "venue_city": "East Rutherford, New Jersey",
+      "home": {
+        "id": "NOR",
+        "displayName": "Norway",
+        "shortDisplayName": "Norway",
+        "abbreviation": "NOR",
+        "score": null
+      },
+      "away": {
+        "id": "SEN",
+        "displayName": "Senegal",
+        "shortDisplayName": "Senegal",
+        "abbreviation": "SEN",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760455",
+      "date_utc": "2026-06-23T03:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Mon, June 22nd at 11:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Levi's Stadium",
+      "venue_city": "Santa Clara, California",
+      "home": {
+        "id": "JOR",
+        "displayName": "Jordan",
+        "shortDisplayName": "Jordan",
+        "abbreviation": "JOR",
+        "score": null
+      },
+      "away": {
+        "id": "ALG",
+        "displayName": "Algeria",
+        "shortDisplayName": "Algeria",
+        "abbreviation": "ALG",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760461",
+      "date_utc": "2026-06-23T17:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Tue, June 23rd at 1:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "NRG Stadium",
+      "venue_city": "Houston, Texas",
+      "home": {
+        "id": "POR",
+        "displayName": "Portugal",
+        "shortDisplayName": "Portugal",
+        "abbreviation": "POR",
+        "score": null
+      },
+      "away": {
+        "id": "UZB",
+        "displayName": "Uzbekistan",
+        "shortDisplayName": "Uzbekistan",
+        "abbreviation": "UZB",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760458",
+      "date_utc": "2026-06-23T20:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Tue, June 23rd at 4:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Gillette Stadium",
+      "venue_city": "Foxborough, Massachusetts",
+      "home": {
+        "id": "ENG",
+        "displayName": "England",
+        "shortDisplayName": "England",
+        "abbreviation": "ENG",
+        "score": null
+      },
+      "away": {
+        "id": "GHA",
+        "displayName": "Ghana",
+        "shortDisplayName": "Ghana",
+        "abbreviation": "GHA",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760460",
+      "date_utc": "2026-06-23T23:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Tue, June 23rd at 7:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "BMO Field",
+      "venue_city": "Toronto",
+      "home": {
+        "id": "PAN",
+        "displayName": "Panama",
+        "shortDisplayName": "Panama",
+        "abbreviation": "PAN",
+        "score": null
+      },
+      "away": {
+        "id": "CRO",
+        "displayName": "Croatia",
+        "shortDisplayName": "Croatia",
+        "abbreviation": "CRO",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760459",
+      "date_utc": "2026-06-24T02:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Tue, June 23rd at 10:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Estadio Akron",
+      "venue_city": "Guadalajara",
+      "home": {
+        "id": "COL",
+        "displayName": "Colombia",
+        "shortDisplayName": "Colombia",
+        "abbreviation": "COL",
+        "score": null
+      },
+      "away": {
+        "id": "COD",
+        "displayName": "Congo DR",
+        "shortDisplayName": "Congo DR",
+        "abbreviation": "COD",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760462",
+      "date_utc": "2026-06-24T19:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Wed, June 24th at 3:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Lumen Field",
+      "venue_city": "Seattle, Washington",
+      "home": {
+        "id": "BIH",
+        "displayName": "Bosnia-Herzegovina",
+        "shortDisplayName": "Bosnia-Herz",
+        "abbreviation": "BIH",
+        "score": null
+      },
+      "away": {
+        "id": "QAT",
+        "displayName": "Qatar",
+        "shortDisplayName": "Qatar",
+        "abbreviation": "QAT",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760463",
+      "date_utc": "2026-06-24T19:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Wed, June 24th at 3:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "BC Place",
+      "venue_city": "Vancouver",
+      "home": {
+        "id": "SUI",
+        "displayName": "Switzerland",
+        "shortDisplayName": "Switzerland",
+        "abbreviation": "SUI",
+        "score": null
+      },
+      "away": {
+        "id": "CAN",
+        "displayName": "Canada",
+        "shortDisplayName": "Canada",
+        "abbreviation": "CAN",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760464",
+      "date_utc": "2026-06-24T22:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Wed, June 24th at 6:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Mercedes-Benz Stadium",
+      "venue_city": "Atlanta, Georgia",
+      "home": {
+        "id": "MAR",
+        "displayName": "Morocco",
+        "shortDisplayName": "Morocco",
+        "abbreviation": "MAR",
+        "score": null
+      },
+      "away": {
+        "id": "HAI",
+        "displayName": "Haiti",
+        "shortDisplayName": "Haiti",
+        "abbreviation": "HAI",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760465",
+      "date_utc": "2026-06-24T22:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Wed, June 24th at 6:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Hard Rock Stadium",
+      "venue_city": "Miami Gardens, Florida",
+      "home": {
+        "id": "SCO",
+        "displayName": "Scotland",
+        "shortDisplayName": "Scotland",
+        "abbreviation": "SCO",
+        "score": null
+      },
+      "away": {
+        "id": "BRA",
+        "displayName": "Brazil",
+        "shortDisplayName": "Brazil",
+        "abbreviation": "BRA",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760467",
+      "date_utc": "2026-06-25T01:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Wed, June 24th at 9:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Estadio Banorte",
+      "venue_city": "Mexico City",
+      "home": {
+        "id": "CZE",
+        "displayName": "Czechia",
+        "shortDisplayName": "Czechia",
+        "abbreviation": "CZE",
+        "score": null
+      },
+      "away": {
+        "id": "MEX",
+        "displayName": "Mexico",
+        "shortDisplayName": "Mexico",
+        "abbreviation": "MEX",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760466",
+      "date_utc": "2026-06-25T01:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Wed, June 24th at 9:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Estadio BBVA",
+      "venue_city": "Guadalupe",
+      "home": {
+        "id": "RSA",
+        "displayName": "South Africa",
+        "shortDisplayName": "South Africa",
+        "abbreviation": "RSA",
+        "score": null
+      },
+      "away": {
+        "id": "KOR",
+        "displayName": "South Korea",
+        "shortDisplayName": "South Korea",
+        "abbreviation": "KOR",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760473",
+      "date_utc": "2026-06-25T20:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Thu, June 25th at 4:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Lincoln Financial Field",
+      "venue_city": "Philadelphia, Pennsylvania",
+      "home": {
+        "id": "CUW",
+        "displayName": "Curaçao",
+        "shortDisplayName": "Curaçao",
+        "abbreviation": "CUW",
+        "score": null
+      },
+      "away": {
+        "id": "CIV",
+        "displayName": "Ivory Coast",
+        "shortDisplayName": "Ivory Coast",
+        "abbreviation": "CIV",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760468",
+      "date_utc": "2026-06-25T20:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Thu, June 25th at 4:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "MetLife Stadium",
+      "venue_city": "East Rutherford, New Jersey",
+      "home": {
+        "id": "ECU",
+        "displayName": "Ecuador",
+        "shortDisplayName": "Ecuador",
+        "abbreviation": "ECU",
+        "score": null
+      },
+      "away": {
+        "id": "GER",
+        "displayName": "Germany",
+        "shortDisplayName": "Germany",
+        "abbreviation": "GER",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760471",
+      "date_utc": "2026-06-25T23:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Thu, June 25th at 7:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "AT&T Stadium",
+      "venue_city": "Arlington, Texas",
+      "home": {
+        "id": "JPN",
+        "displayName": "Japan",
+        "shortDisplayName": "Japan",
+        "abbreviation": "JPN",
+        "score": null
+      },
+      "away": {
+        "id": "SWE",
+        "displayName": "Sweden",
+        "shortDisplayName": "Sweden",
+        "abbreviation": "SWE",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760472",
+      "date_utc": "2026-06-25T23:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Thu, June 25th at 7:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "GEHA Field at Arrowhead Stadium",
+      "venue_city": "Kansas City, Missouri",
+      "home": {
+        "id": "TUN",
+        "displayName": "Tunisia",
+        "shortDisplayName": "Tunisia",
+        "abbreviation": "TUN",
+        "score": null
+      },
+      "away": {
+        "id": "NED",
+        "displayName": "Netherlands",
+        "shortDisplayName": "Netherlands",
+        "abbreviation": "NED",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760469",
+      "date_utc": "2026-06-26T02:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Thu, June 25th at 10:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Levi's Stadium",
+      "venue_city": "Santa Clara, California",
+      "home": {
+        "id": "PAR",
+        "displayName": "Paraguay",
+        "shortDisplayName": "Paraguay",
+        "abbreviation": "PAR",
+        "score": null
+      },
+      "away": {
+        "id": "AUS",
+        "displayName": "Australia",
+        "shortDisplayName": "Australia",
+        "abbreviation": "AUS",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760470",
+      "date_utc": "2026-06-26T02:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Thu, June 25th at 10:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "SoFi Stadium",
+      "venue_city": "Inglewood, California",
+      "home": {
+        "id": "TUR",
+        "displayName": "Türkiye",
+        "shortDisplayName": "Türkiye",
+        "abbreviation": "TUR",
+        "score": null
+      },
+      "away": {
+        "id": "USA",
+        "displayName": "United States",
+        "shortDisplayName": "USA",
+        "abbreviation": "USA",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760475",
+      "date_utc": "2026-06-26T19:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Fri, June 26th at 3:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Gillette Stadium",
+      "venue_city": "Foxborough, Massachusetts",
+      "home": {
+        "id": "NOR",
+        "displayName": "Norway",
+        "shortDisplayName": "Norway",
+        "abbreviation": "NOR",
+        "score": null
+      },
+      "away": {
+        "id": "FRA",
+        "displayName": "France",
+        "shortDisplayName": "France",
+        "abbreviation": "FRA",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760474",
+      "date_utc": "2026-06-26T19:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Fri, June 26th at 3:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "BMO Field",
+      "venue_city": "Toronto",
+      "home": {
+        "id": "SEN",
+        "displayName": "Senegal",
+        "shortDisplayName": "Senegal",
+        "abbreviation": "SEN",
+        "score": null
+      },
+      "away": {
+        "id": "IRQ",
+        "displayName": "Iraq",
+        "shortDisplayName": "Iraq",
+        "abbreviation": "IRQ",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760478",
+      "date_utc": "2026-06-27T00:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Fri, June 26th at 8:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "NRG Stadium",
+      "venue_city": "Houston, Texas",
+      "home": {
+        "id": "CPV",
+        "displayName": "Cape Verde",
+        "shortDisplayName": "Cape Verde",
+        "abbreviation": "CPV",
+        "score": null
+      },
+      "away": {
+        "id": "KSA",
+        "displayName": "Saudi Arabia",
+        "shortDisplayName": "Saudi Arabia",
+        "abbreviation": "KSA",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760479",
+      "date_utc": "2026-06-27T00:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Fri, June 26th at 8:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Estadio Akron",
+      "venue_city": "Guadalajara",
+      "home": {
+        "id": "URU",
+        "displayName": "Uruguay",
+        "shortDisplayName": "Uruguay",
+        "abbreviation": "URU",
+        "score": null
+      },
+      "away": {
+        "id": "ESP",
+        "displayName": "Spain",
+        "shortDisplayName": "Spain",
+        "abbreviation": "ESP",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760476",
+      "date_utc": "2026-06-27T03:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Fri, June 26th at 11:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Lumen Field",
+      "venue_city": "Seattle, Washington",
+      "home": {
+        "id": "EGY",
+        "displayName": "Egypt",
+        "shortDisplayName": "Egypt",
+        "abbreviation": "EGY",
+        "score": null
+      },
+      "away": {
+        "id": "IRN",
+        "displayName": "Iran",
+        "shortDisplayName": "Iran",
+        "abbreviation": "IRN",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760477",
+      "date_utc": "2026-06-27T03:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Fri, June 26th at 11:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "BC Place",
+      "venue_city": "Vancouver",
+      "home": {
+        "id": "NZL",
+        "displayName": "New Zealand",
+        "shortDisplayName": "New Zealand",
+        "abbreviation": "NZL",
+        "score": null
+      },
+      "away": {
+        "id": "BEL",
+        "displayName": "Belgium",
+        "shortDisplayName": "Belgium",
+        "abbreviation": "BEL",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760480",
+      "date_utc": "2026-06-27T21:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Sat, June 27th at 5:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Lincoln Financial Field",
+      "venue_city": "Philadelphia, Pennsylvania",
+      "home": {
+        "id": "CRO",
+        "displayName": "Croatia",
+        "shortDisplayName": "Croatia",
+        "abbreviation": "CRO",
+        "score": null
+      },
+      "away": {
+        "id": "GHA",
+        "displayName": "Ghana",
+        "shortDisplayName": "Ghana",
+        "abbreviation": "GHA",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760485",
+      "date_utc": "2026-06-27T21:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Sat, June 27th at 5:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "MetLife Stadium",
+      "venue_city": "East Rutherford, New Jersey",
+      "home": {
+        "id": "PAN",
+        "displayName": "Panama",
+        "shortDisplayName": "Panama",
+        "abbreviation": "PAN",
+        "score": null
+      },
+      "away": {
+        "id": "ENG",
+        "displayName": "England",
+        "shortDisplayName": "England",
+        "abbreviation": "ENG",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760481",
+      "date_utc": "2026-06-27T23:30Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Sat, June 27th at 7:30 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Hard Rock Stadium",
+      "venue_city": "Miami Gardens, Florida",
+      "home": {
+        "id": "COL",
+        "displayName": "Colombia",
+        "shortDisplayName": "Colombia",
+        "abbreviation": "COL",
+        "score": null
+      },
+      "away": {
+        "id": "POR",
+        "displayName": "Portugal",
+        "shortDisplayName": "Portugal",
+        "abbreviation": "POR",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760482",
+      "date_utc": "2026-06-27T23:30Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Sat, June 27th at 7:30 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Mercedes-Benz Stadium",
+      "venue_city": "Atlanta, Georgia",
+      "home": {
+        "id": "COD",
+        "displayName": "Congo DR",
+        "shortDisplayName": "Congo DR",
+        "abbreviation": "COD",
+        "score": null
+      },
+      "away": {
+        "id": "UZB",
+        "displayName": "Uzbekistan",
+        "shortDisplayName": "Uzbekistan",
+        "abbreviation": "UZB",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760484",
+      "date_utc": "2026-06-28T02:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Sat, June 27th at 10:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "GEHA Field at Arrowhead Stadium",
+      "venue_city": "Kansas City, Missouri",
+      "home": {
+        "id": "ALG",
+        "displayName": "Algeria",
+        "shortDisplayName": "Algeria",
+        "abbreviation": "ALG",
+        "score": null
+      },
+      "away": {
+        "id": "AUT",
+        "displayName": "Austria",
+        "shortDisplayName": "Austria",
+        "abbreviation": "AUT",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760483",
+      "date_utc": "2026-06-28T02:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Sat, June 27th at 10:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "AT&T Stadium",
+      "venue_city": "Arlington, Texas",
+      "home": {
+        "id": "JOR",
+        "displayName": "Jordan",
+        "shortDisplayName": "Jordan",
+        "abbreviation": "JOR",
+        "score": null
+      },
+      "away": {
+        "id": "ARG",
+        "displayName": "Argentina",
+        "shortDisplayName": "Argentina",
+        "abbreviation": "ARG",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760486",
+      "date_utc": "2026-06-28T19:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Sun, June 28th at 3:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "SoFi Stadium",
+      "venue_city": "Inglewood, California",
+      "home": {
+        "id": null,
+        "displayName": "Group A 2nd Place",
+        "shortDisplayName": "2A",
+        "abbreviation": "2A",
+        "score": null
+      },
+      "away": {
+        "id": null,
+        "displayName": "Group B 2nd Place",
+        "shortDisplayName": "2B",
+        "abbreviation": "2B",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760487",
+      "date_utc": "2026-06-29T17:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Mon, June 29th at 1:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "NRG Stadium",
+      "venue_city": "Houston, Texas",
+      "home": {
+        "id": null,
+        "displayName": "Group C Winner",
+        "shortDisplayName": "1C",
+        "abbreviation": "1C",
+        "score": null
+      },
+      "away": {
+        "id": null,
+        "displayName": "Group F 2nd Place",
+        "shortDisplayName": "2F",
+        "abbreviation": "2F",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760489",
+      "date_utc": "2026-06-29T20:30Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Mon, June 29th at 4:30 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Gillette Stadium",
+      "venue_city": "Foxborough, Massachusetts",
+      "home": {
+        "id": null,
+        "displayName": "Group E Winner",
+        "shortDisplayName": "1E",
+        "abbreviation": "1E",
+        "score": null
+      },
+      "away": {
+        "id": null,
+        "displayName": "Third Place Group A/B/C/D/F",
+        "shortDisplayName": "3RD A/B/C/D/F",
+        "abbreviation": "3RD",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760488",
+      "date_utc": "2026-06-30T01:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Mon, June 29th at 9:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Estadio BBVA",
+      "venue_city": "Guadalupe",
+      "home": {
+        "id": null,
+        "displayName": "Group F Winner",
+        "shortDisplayName": "1F",
+        "abbreviation": "1F",
+        "score": null
+      },
+      "away": {
+        "id": null,
+        "displayName": "Group C 2nd Place",
+        "shortDisplayName": "2C",
+        "abbreviation": "2C",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760490",
+      "date_utc": "2026-06-30T17:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Tue, June 30th at 1:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "AT&T Stadium",
+      "venue_city": "Arlington, Texas",
+      "home": {
+        "id": null,
+        "displayName": "Group E 2nd Place",
+        "shortDisplayName": "2E",
+        "abbreviation": "2E",
+        "score": null
+      },
+      "away": {
+        "id": null,
+        "displayName": "Group I 2nd Place",
+        "shortDisplayName": "2I",
+        "abbreviation": "2I",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760492",
+      "date_utc": "2026-06-30T21:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Tue, June 30th at 5:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "MetLife Stadium",
+      "venue_city": "East Rutherford, New Jersey",
+      "home": {
+        "id": null,
+        "displayName": "Group I Winner",
+        "shortDisplayName": "1I",
+        "abbreviation": "1I",
+        "score": null
+      },
+      "away": {
+        "id": null,
+        "displayName": "Third Place Group C/D/F/G/H",
+        "shortDisplayName": "3RD C/D/F/G/H",
+        "abbreviation": "3RD",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760491",
+      "date_utc": "2026-07-01T01:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Tue, June 30th at 9:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Estadio Banorte",
+      "venue_city": "Mexico City",
+      "home": {
+        "id": null,
+        "displayName": "Group A Winner",
+        "shortDisplayName": "1A",
+        "abbreviation": "1A",
+        "score": null
+      },
+      "away": {
+        "id": null,
+        "displayName": "Third Place Group C/E/F/H/I",
+        "shortDisplayName": "3RD C/E/F/H/I",
+        "abbreviation": "3RD",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760495",
+      "date_utc": "2026-07-01T16:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Wed, July 1st at 12:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Mercedes-Benz Stadium",
+      "venue_city": "Atlanta, Georgia",
+      "home": {
+        "id": null,
+        "displayName": "Group L Winner",
+        "shortDisplayName": "1L",
+        "abbreviation": "1L",
+        "score": null
+      },
+      "away": {
+        "id": null,
+        "displayName": "Third Place Group E/H/I/J/K",
+        "shortDisplayName": "3RD E/H/I/J/K",
+        "abbreviation": "3RD",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760493",
+      "date_utc": "2026-07-01T20:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Wed, July 1st at 4:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Lumen Field",
+      "venue_city": "Seattle, Washington",
+      "home": {
+        "id": null,
+        "displayName": "Group G Winner",
+        "shortDisplayName": "1G",
+        "abbreviation": "1G",
+        "score": null
+      },
+      "away": {
+        "id": null,
+        "displayName": "Third Place Group A/E/H/I/J",
+        "shortDisplayName": "3RD A/E/H/I/J",
+        "abbreviation": "3RD",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760494",
+      "date_utc": "2026-07-02T00:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Wed, July 1st at 8:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Levi's Stadium",
+      "venue_city": "Santa Clara, California",
+      "home": {
+        "id": null,
+        "displayName": "Group D Winner",
+        "shortDisplayName": "1D",
+        "abbreviation": "1D",
+        "score": null
+      },
+      "away": {
+        "id": null,
+        "displayName": "Third Place Group B/E/F/I/J",
+        "shortDisplayName": "3RD B/E/F/I/J",
+        "abbreviation": "3RD",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760497",
+      "date_utc": "2026-07-02T19:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Thu, July 2nd at 3:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "SoFi Stadium",
+      "venue_city": "Inglewood, California",
+      "home": {
+        "id": null,
+        "displayName": "Group H Winner",
+        "shortDisplayName": "1H",
+        "abbreviation": "1H",
+        "score": null
+      },
+      "away": {
+        "id": null,
+        "displayName": "Group J 2nd Place",
+        "shortDisplayName": "2J",
+        "abbreviation": "2J",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760496",
+      "date_utc": "2026-07-02T23:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Thu, July 2nd at 7:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "BMO Field",
+      "venue_city": "Toronto",
+      "home": {
+        "id": null,
+        "displayName": "Group K 2nd Place",
+        "shortDisplayName": "2K",
+        "abbreviation": "2K",
+        "score": null
+      },
+      "away": {
+        "id": null,
+        "displayName": "Group L 2nd Place",
+        "shortDisplayName": "2L",
+        "abbreviation": "2L",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760498",
+      "date_utc": "2026-07-03T03:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Thu, July 2nd at 11:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "BC Place",
+      "venue_city": "Vancouver",
+      "home": {
+        "id": null,
+        "displayName": "Group B Winner",
+        "shortDisplayName": "1B",
+        "abbreviation": "1B",
+        "score": null
+      },
+      "away": {
+        "id": null,
+        "displayName": "Third Place Group E/F/G/I/J",
+        "shortDisplayName": "3RD E/F/G/I/J",
+        "abbreviation": "3RD",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760499",
+      "date_utc": "2026-07-03T18:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Fri, July 3rd at 2:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "AT&T Stadium",
+      "venue_city": "Arlington, Texas",
+      "home": {
+        "id": null,
+        "displayName": "Group D 2nd Place",
+        "shortDisplayName": "2D",
+        "abbreviation": "2D",
+        "score": null
+      },
+      "away": {
+        "id": null,
+        "displayName": "Group G 2nd Place",
+        "shortDisplayName": "2G",
+        "abbreviation": "2G",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760500",
+      "date_utc": "2026-07-03T22:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Fri, July 3rd at 6:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Hard Rock Stadium",
+      "venue_city": "Miami Gardens, Florida",
+      "home": {
+        "id": null,
+        "displayName": "Group J Winner",
+        "shortDisplayName": "1J",
+        "abbreviation": "1J",
+        "score": null
+      },
+      "away": {
+        "id": null,
+        "displayName": "Group H 2nd Place",
+        "shortDisplayName": "2H",
+        "abbreviation": "2H",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760501",
+      "date_utc": "2026-07-04T01:30Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Fri, July 3rd at 9:30 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "GEHA Field at Arrowhead Stadium",
+      "venue_city": "Kansas City, Missouri",
+      "home": {
+        "id": null,
+        "displayName": "Group K Winner",
+        "shortDisplayName": "1K",
+        "abbreviation": "1K",
+        "score": null
+      },
+      "away": {
+        "id": null,
+        "displayName": "Third Place Group D/E/I/J/L",
+        "shortDisplayName": "3RD D/E/I/J/L",
+        "abbreviation": "3RD",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760502",
+      "date_utc": "2026-07-04T17:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Sat, July 4th at 1:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "NRG Stadium",
+      "venue_city": "Houston, Texas",
+      "home": {
+        "id": null,
+        "displayName": "Round of 32 1 Winner",
+        "shortDisplayName": "RD32 W1",
+        "abbreviation": "RD32",
+        "score": null
+      },
+      "away": {
+        "id": null,
+        "displayName": "Round of 32 3 Winner",
+        "shortDisplayName": "RD32 W3",
+        "abbreviation": "RD32",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760503",
+      "date_utc": "2026-07-04T21:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Sat, July 4th at 5:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Lincoln Financial Field",
+      "venue_city": "Philadelphia, Pennsylvania",
+      "home": {
+        "id": null,
+        "displayName": "Round of 32 2 Winner",
+        "shortDisplayName": "RD32 W2",
+        "abbreviation": "RD32",
+        "score": null
+      },
+      "away": {
+        "id": null,
+        "displayName": "Round of 32 5 Winner",
+        "shortDisplayName": "RD32 W5",
+        "abbreviation": "RD32",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760504",
+      "date_utc": "2026-07-05T20:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Sun, July 5th at 4:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "MetLife Stadium",
+      "venue_city": "East Rutherford, New Jersey",
+      "home": {
+        "id": null,
+        "displayName": "Round of 32 4 Winner",
+        "shortDisplayName": "RD32 W4",
+        "abbreviation": "RD32",
+        "score": null
+      },
+      "away": {
+        "id": null,
+        "displayName": "Round of 32 6 Winner",
+        "shortDisplayName": "RD32 W6",
+        "abbreviation": "RD32",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760505",
+      "date_utc": "2026-07-06T00:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Sun, July 5th at 8:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Estadio Banorte",
+      "venue_city": "Mexico City",
+      "home": {
+        "id": null,
+        "displayName": "Round of 32 7 Winner",
+        "shortDisplayName": "RD32 W7",
+        "abbreviation": "RD32",
+        "score": null
+      },
+      "away": {
+        "id": null,
+        "displayName": "Round of 32 8 Winner",
+        "shortDisplayName": "RD32 W8",
+        "abbreviation": "RD32",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760506",
+      "date_utc": "2026-07-06T19:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Mon, July 6th at 3:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "AT&T Stadium",
+      "venue_city": "Arlington, Texas",
+      "home": {
+        "id": null,
+        "displayName": "Round of 32 11 Winner",
+        "shortDisplayName": "RD32 W11",
+        "abbreviation": "RD32",
+        "score": null
+      },
+      "away": {
+        "id": null,
+        "displayName": "Round of 32 12 Winner",
+        "shortDisplayName": "RD32 W12",
+        "abbreviation": "RD32",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760507",
+      "date_utc": "2026-07-07T00:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Mon, July 6th at 8:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Lumen Field",
+      "venue_city": "Seattle, Washington",
+      "home": {
+        "id": null,
+        "displayName": "Round of 32 9 Winner",
+        "shortDisplayName": "RD32 W9",
+        "abbreviation": "RD32",
+        "score": null
+      },
+      "away": {
+        "id": null,
+        "displayName": "Round of 32 10 Winner",
+        "shortDisplayName": "RD32 W10",
+        "abbreviation": "RD32",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760509",
+      "date_utc": "2026-07-07T16:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Tue, July 7th at 12:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Mercedes-Benz Stadium",
+      "venue_city": "Atlanta, Georgia",
+      "home": {
+        "id": null,
+        "displayName": "Round of 32 14 Winner",
+        "shortDisplayName": "RD32 W14",
+        "abbreviation": "RD32",
+        "score": null
+      },
+      "away": {
+        "id": null,
+        "displayName": "Round of 32 16 Winner",
+        "shortDisplayName": "RD32 W16",
+        "abbreviation": "RD32",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760508",
+      "date_utc": "2026-07-07T20:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Tue, July 7th at 4:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "BC Place",
+      "venue_city": "Vancouver",
+      "home": {
+        "id": null,
+        "displayName": "Round of 32 13 Winner",
+        "shortDisplayName": "RD32 W13",
+        "abbreviation": "RD32",
+        "score": null
+      },
+      "away": {
+        "id": null,
+        "displayName": "Round of 32 15 Winner",
+        "shortDisplayName": "RD32 W15",
+        "abbreviation": "RD32",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760510",
+      "date_utc": "2026-07-09T20:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Thu, July 9th at 4:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Gillette Stadium",
+      "venue_city": "Foxborough, Massachusetts",
+      "home": {
+        "id": null,
+        "displayName": "Round of 16 1 Winner",
+        "shortDisplayName": "RD16 W1",
+        "abbreviation": "RD16 W1",
+        "score": null
+      },
+      "away": {
+        "id": null,
+        "displayName": "Round of 16 2 Winner",
+        "shortDisplayName": "RD16 W2",
+        "abbreviation": "RD16 W2",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760511",
+      "date_utc": "2026-07-10T19:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Fri, July 10th at 3:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "SoFi Stadium",
+      "venue_city": "Inglewood, California",
+      "home": {
+        "id": null,
+        "displayName": "Round of 16 5 Winner",
+        "shortDisplayName": "RD16 W5",
+        "abbreviation": "RD16 W5",
+        "score": null
+      },
+      "away": {
+        "id": null,
+        "displayName": "Round of 16 6 Winner",
+        "shortDisplayName": "RD16 W6",
+        "abbreviation": "RD16 W6",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760512",
+      "date_utc": "2026-07-11T21:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Sat, July 11th at 5:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Hard Rock Stadium",
+      "venue_city": "Miami Gardens, Florida",
+      "home": {
+        "id": null,
+        "displayName": "Round of 16 3 Winner",
+        "shortDisplayName": "RD16 W3",
+        "abbreviation": "RD16 W3",
+        "score": null
+      },
+      "away": {
+        "id": null,
+        "displayName": "Round of 16 4 Winner",
+        "shortDisplayName": "RD16 W4",
+        "abbreviation": "RD16 W4",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760513",
+      "date_utc": "2026-07-12T01:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Sat, July 11th at 9:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "GEHA Field at Arrowhead Stadium",
+      "venue_city": "Kansas City, Missouri",
+      "home": {
+        "id": null,
+        "displayName": "Round of 16 7 Winner",
+        "shortDisplayName": "RD16 W7",
+        "abbreviation": "RD16 W7",
+        "score": null
+      },
+      "away": {
+        "id": null,
+        "displayName": "Round of 16 8 Winner",
+        "shortDisplayName": "RD16 W8",
+        "abbreviation": "RD16 W8",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760514",
+      "date_utc": "2026-07-14T19:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Tue, July 14th at 3:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "AT&T Stadium",
+      "venue_city": "Arlington, Texas",
+      "home": {
+        "id": null,
+        "displayName": "Quarterfinal 1 Winner",
+        "shortDisplayName": "QF W1",
+        "abbreviation": "QFW1",
+        "score": null
+      },
+      "away": {
+        "id": null,
+        "displayName": "Quarterfinal 2 Winner",
+        "shortDisplayName": "QF W2",
+        "abbreviation": "QFW2",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760515",
+      "date_utc": "2026-07-15T19:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Wed, July 15th at 3:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Mercedes-Benz Stadium",
+      "venue_city": "Atlanta, Georgia",
+      "home": {
+        "id": null,
+        "displayName": "Quarterfinal 3 Winner",
+        "shortDisplayName": "QF W3",
+        "abbreviation": "QFW3",
+        "score": null
+      },
+      "away": {
+        "id": null,
+        "displayName": "Quarterfinal 4 Winner",
+        "shortDisplayName": "QF W4",
+        "abbreviation": "QW4",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760516",
+      "date_utc": "2026-07-18T21:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Sat, July 18th at 5:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "Hard Rock Stadium",
+      "venue_city": "Miami Gardens, Florida",
+      "home": {
+        "id": null,
+        "displayName": "Semifinal 1 Loser",
+        "shortDisplayName": "SF L1",
+        "abbreviation": "SF L1",
+        "score": null
+      },
+      "away": {
+        "id": null,
+        "displayName": "Semifinal 2 Loser",
+        "shortDisplayName": "SF L2",
+        "abbreviation": "SF L2",
+        "score": null
+      }
+    },
+    {
+      "espn_id": "760517",
+      "date_utc": "2026-07-19T19:00Z",
+      "status_name": "STATUS_SCHEDULED",
+      "status_detail": "Sun, July 19th at 3:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "in_progress": false,
+      "venue": "MetLife Stadium",
+      "venue_city": "East Rutherford, New Jersey",
+      "home": {
+        "id": null,
+        "displayName": "Semifinal 1 Winner",
+        "shortDisplayName": "SF W1",
+        "abbreviation": "SFW1",
+        "score": null
+      },
+      "away": {
+        "id": null,
+        "displayName": "Semifinal 2 Winner",
+        "shortDisplayName": "SF W2",
+        "abbreviation": "SFW2",
+        "score": null
+      }
+    }
+  ]
+}

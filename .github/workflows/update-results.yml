@@ -1,0 +1,50 @@
+name: Update live results (ESPN)
+
+# Descarrega el marcador públic d'ESPN cada 15 min durant el Mundial i, si
+# client/public/results-live.json canvia, el confirma a main. El push fa que
+# el workflow "Deploy PWA to GitHub Pages" reconstrueixi i desplegui amb les
+# dades noves. Aquest workflow NOMÉS confirma el JSON (no construeix), i el
+# deploy NO dispara aquest workflow, així que no hi ha bucle infinit.
+
+on:
+  schedule:
+    - cron: "*/15 * * * *" # cada 15 minuts (UTC)
+  workflow_dispatch:
+
+# Necessari per fer commit/push del JSON actualitzat.
+permissions:
+  contents: write
+
+# Evita execucions solapades; no cal cancel·lar la que ja corre.
+concurrency:
+  group: update-results
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      - name: Fetch and normalize ESPN scoreboard
+        run: node scripts/update-live-results.mjs
+
+      - name: Commit results-live.json if changed
+        run: |
+          if [[ -n "$(git status --porcelain client/public/results-live.json)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add client/public/results-live.json
+            git commit -m "chore(data): update live results from ESPN"
+            git push
+            echo "Resultats actualitzats i pujats."
+          else
+            echo "Sense canvis als resultats; no es fa commit."
+          fi

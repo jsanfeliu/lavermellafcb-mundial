@@ -1,7 +1,8 @@
 import { useMemo, useState } from "react";
 import { Layout, PageHeader } from "@/components/Layout";
-import { ProbBar, TeamLabel, TeamFlag, StatusPill, formatDate, MatchBarcelonaTime, toBarcelona } from "@/components/bits";
-import { MATCHES, Match } from "@/data/mundial";
+import { ProbBar, TeamLabel, TeamFlag, StatusPill, formatDate, MatchBarcelonaTime, LiveStatusChip } from "@/components/bits";
+import { Match } from "@/data/mundial";
+import { useLiveData } from "@/hooks/useLiveResults";
 import { MapPin, Clock, Tv } from "lucide-react";
 
 type Filter = "spain" | "all" | "today" | "upcoming";
@@ -47,8 +48,22 @@ function MatchRow({ m }: { m: Match }) {
         </div>
         <div className="text-center">
           {m.status === "finished" ? (
-            <span className="font-display text-lg font-bold tnum">
-              {m.homeGoals}–{m.awayGoals}
+            <span className="inline-flex flex-col items-center">
+              <span className="font-display text-xl font-bold tnum" data-testid={`score-${m.id}`}>
+                {m.homeGoals}–{m.awayGoals}
+              </span>
+              <span className="mt-0.5 text-[10px] font-medium uppercase tracking-wide text-muted-foreground">
+                Final
+              </span>
+            </span>
+          ) : m.status === "live" ? (
+            <span className="inline-flex flex-col items-center">
+              <span className="font-display text-xl font-bold tnum text-primary" data-testid={`score-${m.id}`}>
+                {m.homeGoals ?? 0}–{m.awayGoals ?? 0}
+              </span>
+              <span className="mt-0.5 inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-wide text-primary">
+                <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" /> En directe
+              </span>
             </span>
           ) : (
             <span className="inline-flex flex-col items-center">
@@ -82,7 +97,7 @@ function MatchRow({ m }: { m: Match }) {
         )}
       </div>
 
-      {m.status !== "finished" && (
+      {m.status === "upcoming" && (
         <div className="mt-3 border-t border-card-border pt-3">
           <ProbBar home={m.home} away={m.away} />
         </div>
@@ -93,14 +108,15 @@ function MatchRow({ m }: { m: Match }) {
 
 export default function Calendari() {
   const [filter, setFilter] = useState<Filter>("spain");
+  const { matches } = useLiveData();
 
   const filtered = useMemo(() => {
-    let list = [...MATCHES];
+    let list = [...matches];
     if (filter === "spain") list = list.filter((m) => m.home === "ESP" || m.away === "ESP");
     if (filter === "today") list = list.filter((m) => m.date === TODAY);
     if (filter === "upcoming") list = list.filter((m) => m.status !== "finished");
     return list.sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time));
-  }, [filter]);
+  }, [filter, matches]);
 
   // agrupa per data
   const byDate = useMemo(() => {
@@ -127,6 +143,7 @@ export default function Calendari() {
           <span className="inline-flex items-center gap-1">
             <Tv className="h-3.5 w-3.5" /> TV España · DAZN Mundial (tots) · RTVE en obert (Espanya)
           </span>
+          <LiveStatusChip />
         </p>
 
         <div className="mb-6 flex flex-wrap gap-2" role="tablist" aria-label="Filtres del calendari">

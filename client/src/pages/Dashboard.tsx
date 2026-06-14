@@ -1,9 +1,9 @@
 import { Link } from "wouter";
 import { Layout, PageHeader } from "@/components/Layout";
-import { Card, Stat, ProbBar, TeamLabel, TeamFlag, StatusPill, DemoNote, pct, formatDate, toBarcelona } from "@/components/bits";
+import { Card, Stat, ProbBar, TeamLabel, TeamFlag, StatusPill, DemoNote, LiveStatusChip, pct, formatDate, toBarcelona } from "@/components/bits";
 import { useOutlook } from "@/hooks/useOutlook";
+import { useLiveData } from "@/hooks/useLiveResults";
 import {
-  SPAIN_MATCHES,
   SPAIN_GROUP_ID,
   GROUPS,
   computeStandings,
@@ -15,12 +15,13 @@ import {
 import { ArrowRight, MapPin, Clock, Flag, TrendingUp, Tv } from "lucide-react";
 
 export default function Dashboard() {
+  const { matches, spainMatches } = useLiveData();
   const outlook = useOutlook();
-  const next = SPAIN_MATCHES.find((m) => m.status !== "finished") ?? SPAIN_MATCHES[0];
+  const next = spainMatches.find((m) => m.status !== "finished") ?? spainMatches[0];
   const nextBcn = toBarcelona(next.date, next.time, next.tz);
   const nextProb = matchProbability(next.home, next.away);
   const spainFirstId = next.home === "ESP" ? next.home : next.away;
-  const standings = computeStandings(SPAIN_GROUP_ID);
+  const standings = computeStandings(SPAIN_GROUP_ID, matches);
   const groupTeams = teamsOfGroup(SPAIN_GROUP_ID);
   const spainGroupLabel =
     GROUPS.find((g) => g.id === SPAIN_GROUP_ID)?.label ?? `Grup ${SPAIN_GROUP_ID}`;
@@ -34,9 +35,12 @@ export default function Dashboard() {
             <div className="relative px-6 py-7 sm:px-8 sm:py-9">
               <div className="pitch-stripes absolute inset-0 opacity-40" aria-hidden />
               <div className="relative">
-                <div className="mb-2 inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-medium backdrop-blur">
-                  <Flag className="h-3.5 w-3.5 text-amber-300" />
-                  {TOURNAMENT.hosts} · {formatDate(TOURNAMENT.start)} – {formatDate(TOURNAMENT.end)} 2026
+                <div className="mb-2 flex flex-wrap items-center gap-2">
+                  <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-medium backdrop-blur">
+                    <Flag className="h-3.5 w-3.5 text-amber-300" />
+                    {TOURNAMENT.hosts} · {formatDate(TOURNAMENT.start)} – {formatDate(TOURNAMENT.end)} 2026
+                  </span>
+                  <LiveStatusChip />
                 </div>
                 <h1 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">
                   El camí d'<span className="text-amber-300">Espanya</span> cap a la final
@@ -144,7 +148,9 @@ export default function Dashboard() {
                 ))}
               </ul>
               <p className="mt-3 text-xs text-muted-foreground">
-                Sense partits jugats encara: la classificació arrenca a 0. Editable al codi.
+                {standings.some((r) => r.p > 0)
+                  ? "Classificació calculada amb resultats reals (ESPN)."
+                  : "Encara sense partits jugats: la classificació arrenca a 0."}
               </p>
               <Link
                 href="/grups"
@@ -159,7 +165,7 @@ export default function Dashboard() {
           {/* CAMÍ PROBABLE */}
           <Card title="Camí probable d'Espanya a la fase de grups" className="mt-5">
             <div className="grid gap-3 sm:grid-cols-3">
-              {SPAIN_MATCHES.map((m, i) => {
+              {spainMatches.map((m, i) => {
                 const isHome = m.home === "ESP";
                 const opp = isHome ? m.away : m.home;
                 const prob = matchProbability(m.home, m.away);

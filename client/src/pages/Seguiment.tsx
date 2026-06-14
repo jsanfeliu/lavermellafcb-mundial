@@ -1,8 +1,8 @@
 import { Layout, PageHeader } from "@/components/Layout";
-import { Card, TeamFlag, DemoNote, pct, formatDate } from "@/components/bits";
+import { Card, TeamFlag, DemoNote, LiveStatusChip, pct, formatDate } from "@/components/bits";
 import { useOutlook } from "@/hooks/useOutlook";
+import { useLiveData } from "@/hooks/useLiveResults";
 import {
-  SPAIN_MATCHES,
   matchProbability,
   TOURNAMENT,
   TEAMS,
@@ -75,6 +75,7 @@ function PulseGauge({ value }: { value: number }) {
 
 export default function Seguiment() {
   const outlook = useOutlook();
+  const { spainMatches: SPAIN_MATCHES } = useLiveData();
 
   return (
     <Layout>
@@ -84,6 +85,10 @@ export default function Seguiment() {
             title="Seguiment visual del Mundial"
             subtitle="El pols del torneig i el camí d'Espanya, d'un cop d'ull."
           />
+
+          <div className="mb-5">
+            <LiveStatusChip />
+          </div>
 
           {/* Progrés del torneig */}
           <Card title="Progrés del torneig" className="mb-5">

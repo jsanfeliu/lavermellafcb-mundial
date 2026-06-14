@@ -312,7 +312,15 @@ function simulateScore(att: number, def: number) {
   return k - 1;
 }
 
-export function groupOutlook(groupId: string, focusId: TeamId, runs = 4000): GroupOutlook {
+// Resultat real fix d'un partit ja jugat (per congelar-lo a la simulació).
+interface FixedResult { gh: number; ga: number; }
+
+export function groupOutlook(
+  groupId: string,
+  focusId: TeamId,
+  runs = 4000,
+  matches: Match[] = MATCHES,
+): GroupOutlook {
   const grp = GROUPS.find((g) => g.id === groupId)!;
   const teams = grp.teams;
   // tots els enfrontaments de la lligueta
@@ -321,6 +329,20 @@ export function groupOutlook(groupId: string, focusId: TeamId, runs = 4000): Gro
   fixtures.push([teams[0], teams[1], 1], [teams[2], teams[3], 1]);
   fixtures.push([teams[0], teams[2], 2], [teams[3], teams[1], 2]);
   fixtures.push([teams[0], teams[3], 3], [teams[1], teams[2], 3]);
+
+  // Resultats reals ja jugats: es congelen (no es simulen). Es busquen per
+  // parella d'equips (independentment de qui és local a la llavor vs ESPN).
+  const fixedByPair: Record<string, FixedResult> = {};
+  const pairKey = (a: TeamId, b: TeamId) => [a, b].sort().join("|");
+  matches
+    .filter((m) => m.group === groupId && m.status === "finished" && m.homeGoals != null && m.awayGoals != null)
+    .forEach((m) => {
+      // normalitza al sentit de la parella ordenada
+      const [k0] = [m.home, m.away].sort();
+      const goalsFor0 = m.home === k0 ? m.homeGoals! : m.awayGoals!;
+      const goalsFor1 = m.home === k0 ? m.awayGoals! : m.homeGoals!;
+      fixedByPair[pairKey(m.home, m.away)] = { gh: goalsFor0, ga: goalsFor1 };
+    });
 
   const firstByRound = [0, 0, 0];
   const advanceByRound = [0, 0, 0];
@@ -331,12 +353,20 @@ export function groupOutlook(groupId: string, focusId: TeamId, runs = 4000): Gro
     const pts: Record<string, number> = {};
     const gd: Record<string, number> = {};
     teams.forEach((t) => { pts[t] = 0; gd[t] = 0; });
-    const roundResults: Record<number, void> = {} as any;
 
     for (let round = 1; round <= 3; round++) {
       fixtures.filter((f) => f[2] === round).forEach(([h, a]) => {
-        const gh = simulateScore(TEAMS[h].strength, TEAMS[a].strength);
-        const ga = simulateScore(TEAMS[a].strength, TEAMS[h].strength);
+        const fixed = fixedByPair[pairKey(h, a)];
+        let gh: number, ga: number;
+        if (fixed) {
+          // resultat real (orientat al sentit ordenat de la parella)
+          const [k0] = [h, a].sort();
+          gh = h === k0 ? fixed.gh : fixed.ga;
+          ga = h === k0 ? fixed.ga : fixed.gh;
+        } else {
+          gh = simulateScore(TEAMS[h].strength, TEAMS[a].strength);
+          ga = simulateScore(TEAMS[a].strength, TEAMS[h].strength);
+        }
         gd[h] += gh - ga; gd[a] += ga - gh;
         if (gh > ga) pts[h] += 3;
         else if (gh < ga) pts[a] += 3;
@@ -378,13 +408,13 @@ export interface Standing {
   gf: number; ga: number; gd: number; pts: number;
 }
 
-export function computeStandings(groupId: string): Standing[] {
+export function computeStandings(groupId: string, matches: Match[] = MATCHES): Standing[] {
   const grp = GROUPS.find((g) => g.id === groupId)!;
   const table: Record<string, Standing> = {};
   grp.teams.forEach((t) => {
     table[t] = { team: t, p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0 };
   });
-  MATCHES.filter((m) => m.group === groupId && m.status === "finished").forEach((m) => {
+  matches.filter((m) => m.group === groupId && m.status === "finished").forEach((m) => {
     const h = table[m.home], a = table[m.away];
     if (!h || !a || m.homeGoals == null || m.awayGoals == null) return;
     h.p++; a.p++;
@@ -406,3 +436,89 @@ export function teamsOfGroup(groupId: string): Team[] {
 export const SPAIN_MATCHES = MATCHES.filter(
   (m) => m.home === "ESP" || m.away === "ESP"
 ).sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time));
+
+// ---------------------------------------------------------------------
+//  MERGE DE RESULTATS EN VIU (results-live.json d'ESPN)
+// ---------------------------------------------------------------------
+//  Estructura d'un esdeveniment normalitzat (vegeu scripts/update-live-results.mjs).
+export interface LiveTeam {
+  id: TeamId | null;
+  displayName: string | null;
+  shortDisplayName: string | null;
+  abbreviation: string | null;
+  score: number | null;
+}
+export interface LiveEvent {
+  espn_id: string;
+  date_utc: string;
+  status_name: string | null;
+  status_detail: string | null;
+  state: "pre" | "in" | "post" | string;
+  completed: boolean;
+  in_progress: boolean;
+  venue: string | null;
+  venue_city: string | null;
+  home: LiveTeam;
+  away: LiveTeam;
+}
+export interface LiveResults {
+  source: string;
+  source_url: string;
+  fetched_at: string;
+  event_count: number;
+  completed_count: number;
+  in_progress_count: number;
+  unmapped_teams: string[];
+  note?: string;
+  events: LiveEvent[];
+}
+
+// Clau de parella d'equips, independent de qui és local.
+function teamPairKey(a: TeamId, b: TeamId) {
+  return [a, b].sort().join("|");
+}
+
+// Fusiona els resultats reals d'ESPN sobre les dades llavor (MATCHES).
+// Coincideix per parella d'equips dins del mateix grup. Actualitza estat,
+// gols (orientats al sentit local/visitant de la llavor) i marca live/final.
+// Els partits sense dada viva es queden tal com estaven (upcoming).
+export function mergeLiveResults(live: LiveResults | null | undefined, base: Match[] = MATCHES): Match[] {
+  if (!live || !Array.isArray(live.events)) return base;
+
+  // Index d'esdeveniments vius per parella (només els que tenen tots dos equips mapejats).
+  const byPair = new Map<string, LiveEvent>();
+  for (const ev of live.events) {
+    if (!ev.home.id || !ev.away.id) continue;
+    byPair.set(teamPairKey(ev.home.id, ev.away.id), ev);
+  }
+
+  return base.map((m) => {
+    const ev = byPair.get(teamPairKey(m.home, m.away));
+    if (!ev) return m;
+
+    const status: MatchStatus = ev.completed ? "finished" : ev.in_progress ? "live" : m.status;
+
+    // Orienta els gols d'ESPN al sentit local/visitant de la nostra llavor.
+    let homeGoals = m.homeGoals;
+    let awayGoals = m.awayGoals;
+    if (ev.home.score != null && ev.away.score != null) {
+      const sameOrientation = ev.home.id === m.home;
+      homeGoals = sameOrientation ? ev.home.score : ev.away.score;
+      awayGoals = sameOrientation ? ev.away.score : ev.home.score;
+    }
+
+    return {
+      ...m,
+      status,
+      homeGoals: status === "upcoming" ? m.homeGoals : homeGoals,
+      awayGoals: status === "upcoming" ? m.awayGoals : awayGoals,
+    };
+  });
+}
+
+// Partits d'Espanya a partir d'un conjunt (per defecte la llavor estàtica).
+export function spainMatchesFrom(matches: Match[]): Match[] {
+  return matches
+    .filter((m) => m.home === "ESP" || m.away === "ESP")
+    .sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time));
+}

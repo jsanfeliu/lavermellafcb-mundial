@@ -1,5 +1,7 @@
 import { ReactNode } from "react";
 import { TEAMS, FLAG, TeamId, Match, matchProbability, flagIsGeneric } from "@/data/mundial";
+import { useLiveData } from "@/hooks/useLiveResults";
+import { Wifi, WifiOff } from "lucide-react";
 
 export function pct(x: number) {
   return `${Math.round(x * 100)}%`;
@@ -147,6 +149,37 @@ export function Card({
       )}
       <div className="p-5">{children}</div>
     </section>
+  );
+}
+
+// Xip d'estat de les dades: en viu (ESPN) o mode llavor (sense connexió).
+export function LiveStatusChip({ className = "" }: { className?: string }) {
+  const { isLive, isLoading, fetchedAt } = useLiveData();
+  const hhmm = fetchedAt
+    ? new Intl.DateTimeFormat("ca-ES", {
+        timeZone: "Europe/Madrid", hour: "2-digit", minute: "2-digit", hour12: false,
+      }).format(new Date(fetchedAt))
+    : null;
+
+  if (isLive) {
+    return (
+      <span
+        data-testid="live-status-chip"
+        className={`inline-flex items-center gap-1.5 rounded-full bg-chart-3/15 px-2.5 py-1 text-[11px] font-medium text-chart-3 ${className}`}
+      >
+        <span className="h-1.5 w-1.5 rounded-full bg-chart-3 animate-pulse" />
+        Dades en viu · ESPN{hhmm ? ` · actualitzat ${hhmm}` : ""}
+      </span>
+    );
+  }
+  return (
+    <span
+      data-testid="live-status-chip"
+      className={`inline-flex items-center gap-1.5 rounded-full bg-muted px-2.5 py-1 text-[11px] font-medium text-muted-foreground ${className}`}
+    >
+      {isLoading ? <Wifi className="h-3 w-3 animate-pulse" /> : <WifiOff className="h-3 w-3" />}
+      {isLoading ? "Carregant resultats…" : "Sense connexió · mode llavor"}
+    </span>
   );
 }
 

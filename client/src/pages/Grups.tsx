@@ -1,5 +1,6 @@
 import { Layout, PageHeader } from "@/components/Layout";
-import { TeamLabel, TeamFlag } from "@/components/bits";
+import { TeamFlag, LiveStatusChip } from "@/components/bits";
+import { useLiveData } from "@/hooks/useLiveResults";
 import {
   GROUPS,
   computeStandings,
@@ -19,7 +20,8 @@ const COLS = [
 ] as const;
 
 function GroupCard({ groupId, label }: { groupId: string; label: string }) {
-  const standings = computeStandings(groupId);
+  const { matches } = useLiveData();
+  const standings = computeStandings(groupId, matches);
   const isSpainGroup = groupId === SPAIN_GROUP_ID;
   return (
     <section
@@ -118,9 +120,10 @@ export default function Grups() {
             Posicions de classificació (top 2)
           </span>
           <span>
-            La classificació arrenca a 0 (sense partits jugats). Les dades són editables al codi
-            (<code className="rounded bg-secondary px-1">mundial.ts</code>).
+            La classificació es calcula amb els resultats reals d'ESPN; els partits
+            pendents encara no compten.
           </span>
+          <LiveStatusChip />
         </div>
 
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">

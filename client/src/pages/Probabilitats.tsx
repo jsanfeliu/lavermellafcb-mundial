@@ -1,8 +1,8 @@
 import { Layout, PageHeader } from "@/components/Layout";
-import { Card, TeamLabel, TeamFlag, DemoNote, pct, formatDate } from "@/components/bits";
+import { Card, TeamLabel, TeamFlag, DemoNote, LiveStatusChip, pct, formatDate } from "@/components/bits";
 import { useOutlook } from "@/hooks/useOutlook";
+import { useLiveData } from "@/hooks/useLiveResults";
 import {
-  SPAIN_MATCHES,
   matchProbability,
 } from "@/data/mundial";
 import {
@@ -21,18 +21,29 @@ import { Info } from "lucide-react";
 
 export default function Probabilitats() {
   const outlook = useOutlook();
+  const { spainMatches } = useLiveData();
 
-  const matchData = SPAIN_MATCHES.map((m) => {
+  const matchData = spainMatches.map((m) => {
     const isHome = m.home === "ESP";
     const opp = isHome ? m.away : m.home;
     const p = matchProbability(m.home, m.away);
+    // Si el partit ja s'ha jugat, fem servir els punts REALS d'Espanya;
+    // si no, els punts esperats del model.
+    const played = m.status === "finished" && m.homeGoals != null && m.awayGoals != null;
+    let realXp: number | null = null;
+    if (played) {
+      const esFor = isHome ? m.homeGoals! : m.awayGoals!;
+      const esAgainst = isHome ? m.awayGoals! : m.homeGoals!;
+      realXp = esFor > esAgainst ? 3 : esFor === esAgainst ? 1 : 0;
+    }
     return {
       m,
       opp,
+      played,
       win: isHome ? p.win : p.loss,
       draw: p.draw,
       loss: isHome ? p.loss : p.win,
-      xp: isHome ? p.expectedPoints : p.loss * 3 + p.draw,
+      xp: realXp ?? (isHome ? p.expectedPoints : p.loss * 3 + p.draw),
     };
   });
 
@@ -59,13 +70,18 @@ export default function Probabilitats() {
           subtitle="Estimacions partit a partit i posició final al grup."
         />
 
+        <div className="mb-4">
+          <LiveStatusChip />
+        </div>
+
         {/* Avís model */}
         <div className="mb-6 flex items-start gap-3 rounded-xl border border-amber-500/30 bg-amber-500/10 p-4">
           <Info className="mt-0.5 h-5 w-5 shrink-0 text-amber-600 dark:text-amber-400" />
           <div className="text-sm">
-            <span className="font-semibold">Estimacions d'un model de demostració.</span> Es
-            calculen amb una distribució de Poisson sobre la força relativa dels equips i una
-            simulació Monte Carlo del grup.{" "}
+            <span className="font-semibold">Probabilitats recalculades amb resultats reals + model demo per partits pendents.</span>{" "}
+            Els partits ja jugats es congelen amb el resultat real d'ESPN; els pendents es
+            simulen amb una distribució de Poisson sobre la força dels equips i una simulació
+            Monte Carlo del grup.{" "}
             <span className="font-medium">No són quotes d'apostes ni prediccions oficials.</span>
           </div>
         </div>

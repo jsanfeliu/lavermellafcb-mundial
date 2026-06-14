@@ -1,10 +1,9 @@
 import { Layout, PageHeader } from "@/components/Layout";
-import { TeamLabel } from "@/components/bits";
+import { TeamLabel, TeamFlag } from "@/components/bits";
 import {
   GROUPS,
   computeStandings,
   TEAMS,
-  FLAG,
   SPAIN_GROUP_ID,
 } from "@/data/mundial";
 
@@ -72,7 +71,7 @@ function GroupCard({ groupId, label }: { groupId: string; label: string }) {
                       >
                         {i + 1}
                       </span>
-                      <span className="text-base leading-none">{FLAG[TEAMS[row.team].code]}</span>
+                      <TeamFlag id={row.team} className="text-base leading-none" />
                       <span className={`truncate ${spain ? "font-semibold text-primary" : ""}`}>
                         {TEAMS[row.team].name}
                       </span>

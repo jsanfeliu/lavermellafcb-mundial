@@ -1,12 +1,11 @@
 import { Layout, PageHeader } from "@/components/Layout";
-import { Card, DemoNote, pct, formatDate } from "@/components/bits";
+import { Card, TeamFlag, DemoNote, pct, formatDate } from "@/components/bits";
 import { useOutlook } from "@/hooks/useOutlook";
 import {
   SPAIN_MATCHES,
   matchProbability,
   TOURNAMENT,
   TEAMS,
-  FLAG,
 } from "@/data/mundial";
 import { Radio, MapPin, Trophy, Flag } from "lucide-react";
 
@@ -106,7 +105,7 @@ export default function Seguiment() {
 
           <div className="grid gap-5 lg:grid-cols-3">
             {/* Pols / energia */}
-            <Card title="Pols de La Roja" className="lg:col-span-1">
+            <Card title="Pols de LaVermellaFCB" className="lg:col-span-1">
               <div className="flex flex-col items-center gap-4 py-2">
                 <PulseGauge value={outlook.pAdvanceByRound[2]} />
                 <div className="text-center">
@@ -135,7 +134,7 @@ export default function Seguiment() {
                       </span>
                       <div className="flex flex-wrap items-center justify-between gap-2 rounded-lg border border-card-border bg-background/50 p-3">
                         <div className="flex items-center gap-2">
-                          <span className="text-2xl">{FLAG[TEAMS[opp].code]}</span>
+                          <TeamFlag id={opp} className="text-2xl" />
                           <div>
                             <div className="text-sm font-medium">Espanya vs {TEAMS[opp].name}</div>
                             <div className="flex items-center gap-1 text-xs text-muted-foreground">

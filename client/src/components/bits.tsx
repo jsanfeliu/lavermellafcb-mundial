@@ -1,8 +1,30 @@
 import { ReactNode } from "react";
-import { TEAMS, FLAG, TeamId, Match, matchProbability } from "@/data/mundial";
+import { TEAMS, FLAG, TeamId, Match, matchProbability, flagIsGeneric } from "@/data/mundial";
 
 export function pct(x: number) {
   return `${Math.round(x * 100)}%`;
+}
+
+// Bandera de l'equip. Si l'emoji és genèric (p. ex. Escòcia), mostra el codi
+// com a insígnia perquè l'equip sigui identificable a tots els entorns.
+export function TeamFlag({ id, className = "" }: { id: TeamId; className?: string }) {
+  const t = TEAMS[id];
+  const flag = FLAG[t.code];
+  if (flagIsGeneric(flag)) {
+    return (
+      <span
+        className={`inline-flex items-center justify-center rounded-sm bg-muted px-1 text-[10px] font-bold leading-none text-muted-foreground ${className}`}
+        aria-label={t.name}
+      >
+        {t.code}
+      </span>
+    );
+  }
+  return (
+    <span className={className} aria-label={t.name}>
+      {flag}
+    </span>
+  );
 }
 
 export function TeamLabel({
@@ -24,7 +46,7 @@ export function TeamLabel({
       } ${className}`}
       data-testid={`team-${id}`}
     >
-      {showFlag && <span className="text-base leading-none">{FLAG[t.code] ?? "🏳️"}</span>}
+      {showFlag && <TeamFlag id={id} className="text-base leading-none" />}
       <span className="truncate">{t.name}</span>
     </span>
   );

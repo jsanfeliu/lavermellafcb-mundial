@@ -12,7 +12,7 @@ export function Logo({ className = "", size = 32 }: LogoProps) {
       viewBox="0 0 48 48"
       fill="none"
       className={className}
-      aria-label="La Roja 26"
+      aria-label="LaVermellaFCB al Mundial"
       role="img"
     >
       {/* copa */}
@@ -42,7 +42,7 @@ export function Wordmark({ className = "" }: { className?: string }) {
       <Logo size={30} className="text-foreground" />
       <div className="leading-none">
         <span className="block font-display text-base font-bold tracking-tight">
-          La Roja <span className="grad-text-gold">26</span>
+          LaVermellaFCB <span className="grad-text-gold">al Mundial</span>
         </span>
         <span className="block text-[11px] text-muted-foreground tracking-wide">
           Seguiment del Mundial

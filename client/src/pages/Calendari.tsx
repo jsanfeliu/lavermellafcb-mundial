@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { Layout, PageHeader } from "@/components/Layout";
-import { ProbBar, TeamLabel, StatusPill, formatDate } from "@/components/bits";
-import { MATCHES, TEAMS, FLAG, Match } from "@/data/mundial";
+import { ProbBar, TeamLabel, TeamFlag, StatusPill, formatDate } from "@/components/bits";
+import { MATCHES, Match } from "@/data/mundial";
 import { MapPin, Clock } from "lucide-react";
 
 type Filter = "spain" | "all" | "today" | "upcoming";
@@ -43,7 +43,7 @@ function MatchRow({ m }: { m: Match }) {
       <div className="mt-3 grid grid-cols-[1fr_auto_1fr] items-center gap-3">
         <div className="flex items-center justify-end gap-2 text-right">
           <TeamLabel id={m.home} reverse showFlag={false} className="text-sm font-medium" />
-          <span className="text-2xl">{FLAG[TEAMS[m.home].code]}</span>
+          <TeamFlag id={m.home} className="text-2xl" />
         </div>
         <div className="text-center">
           {m.status === "finished" ? (
@@ -57,7 +57,7 @@ function MatchRow({ m }: { m: Match }) {
           )}
         </div>
         <div className="flex items-center gap-2">
-          <span className="text-2xl">{FLAG[TEAMS[m.away].code]}</span>
+          <TeamFlag id={m.away} className="text-2xl" />
           <TeamLabel id={m.away} showFlag={false} className="text-sm font-medium" />
         </div>
       </div>

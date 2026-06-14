@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Layout, PageHeader } from "@/components/Layout";
-import { Card, Stat, ProbBar, TeamLabel, StatusPill, DemoNote, pct, formatDate } from "@/components/bits";
+import { Card, Stat, ProbBar, TeamLabel, TeamFlag, StatusPill, DemoNote, pct, formatDate } from "@/components/bits";
 import { useOutlook } from "@/hooks/useOutlook";
 import {
   SPAIN_MATCHES,
@@ -10,7 +10,6 @@ import {
   teamsOfGroup,
   TOURNAMENT,
   TEAMS,
-  FLAG,
 } from "@/data/mundial";
 import { ArrowRight, MapPin, Clock, Flag, TrendingUp } from "lucide-react";
 
@@ -73,7 +72,7 @@ export default function Dashboard() {
               <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
                 <div className="flex items-center gap-4">
                   <div className="text-center">
-                    <div className="text-3xl">{FLAG[TEAMS[next.home].code]}</div>
+                    <TeamFlag id={next.home} className="text-3xl" />
                     <TeamLabel id={next.home} showFlag={false} className="mt-1 text-sm" />
                   </div>
                   <div className="px-2 text-center">
@@ -81,7 +80,7 @@ export default function Dashboard() {
                     <div className="font-display text-lg font-bold text-muted-foreground">vs</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl">{FLAG[TEAMS[next.away].code]}</div>
+                    <TeamFlag id={next.away} className="text-3xl" />
                     <TeamLabel id={next.away} showFlag={false} className="mt-1 text-sm" />
                   </div>
                 </div>
@@ -162,9 +161,11 @@ export default function Dashboard() {
                       <span className="text-xs tnum text-muted-foreground">{formatDate(m.date)}</span>
                     </div>
                     <div className="mt-2 flex items-center gap-2">
-                      <span className="text-xl">{FLAG[TEAMS[opp].code]}</span>
+                      <span className="rounded bg-primary/15 px-1.5 py-0.5 text-xs font-semibold text-primary">ES</span>
+                      <span className="text-muted-foreground">vs</span>
+                      <TeamFlag id={opp} className="text-xl" />
                       <span className="text-sm">
-                        vs <TeamLabel id={opp} showFlag={false} className="font-medium" />
+                        <TeamLabel id={opp} showFlag={false} className="font-medium" />
                       </span>
                     </div>
                     <div className="mt-3 grid grid-cols-3 gap-1 text-center text-xs">

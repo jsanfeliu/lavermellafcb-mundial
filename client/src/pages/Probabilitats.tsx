@@ -1,11 +1,9 @@
 import { Layout, PageHeader } from "@/components/Layout";
-import { Card, TeamLabel, DemoNote, pct, formatDate } from "@/components/bits";
+import { Card, TeamLabel, TeamFlag, DemoNote, pct, formatDate } from "@/components/bits";
 import { useOutlook } from "@/hooks/useOutlook";
 import {
   SPAIN_MATCHES,
   matchProbability,
-  TEAMS,
-  FLAG,
 } from "@/data/mundial";
 import {
   BarChart,
@@ -77,7 +75,7 @@ export default function Probabilitats() {
           {matchData.map(({ m, opp, win, draw, loss, xp }) => (
             <Card key={m.id} title={<span>Jornada {m.round}</span>}>
               <div className="mb-3 flex items-center gap-2">
-                <span className="text-2xl">{FLAG[TEAMS[opp].code]}</span>
+                <TeamFlag id={opp} className="text-2xl" />
                 <div>
                   <div className="text-sm">
                     Espanya vs <TeamLabel id={opp} showFlag={false} className="font-medium" />

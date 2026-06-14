@@ -64,6 +64,13 @@ export const FLAG: Record<string, string> = {
   ALG: "🇩🇿", UZB: "🇺🇿", JOR: "🇯🇴", SCO: "🏴",
 };
 
+// El "🏴" pelat (sense subetiquetes regionals, com Escòcia o Anglaterra) es mostra
+// com un quadre genèric en molts entorns. Per a aquests casos preferim ensenyar el
+// codi de l'equip (p. ex. SCO) en una insígnia perquè sigui identificable arreu.
+export function flagIsGeneric(flag: string | undefined): boolean {
+  return !flag || flag === "🏴";
+}
+
 function s(rank: number) {
   // força del model derivada del rànquing (editable). 1r ≈ 92, 60è ≈ 40.
   return Math.max(34, Math.round(94 - Math.log2(rank + 1) * 9));

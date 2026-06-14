@@ -1,9 +1,9 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-14T18:18:49.254Z",
+  "fetched_at": "2026-06-14T20:07:36.732Z",
   "event_count": 104,
-  "completed_count": 8,
+  "completed_count": 9,
   "in_progress_count": 1,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
@@ -211,11 +211,11 @@
     {
       "espn_id": "760422",
       "date_utc": "2026-06-14T17:00Z",
-      "status_name": "STATUS_SECOND_HALF",
-      "status_detail": "55'",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "NRG Stadium",
       "venue_city": "Houston, Texas",
       "home": {
@@ -223,7 +223,7 @@
         "displayName": "Germany",
         "shortDisplayName": "Germany",
         "abbreviation": "GER",
-        "score": 4
+        "score": 7
       },
       "away": {
         "id": "CUW",
@@ -236,11 +236,11 @@
     {
       "espn_id": "760425",
       "date_utc": "2026-06-14T20:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Sun, June 14th at 4:00 PM EDT",
-      "state": "pre",
+      "status_name": "STATUS_FIRST_HALF",
+      "status_detail": "7'",
+      "state": "in",
       "completed": false,
-      "in_progress": false,
+      "in_progress": true,
       "venue": "AT&T Stadium",
       "venue_city": "Arlington, Texas",
       "home": {
@@ -248,14 +248,14 @@
         "displayName": "Netherlands",
         "shortDisplayName": "Netherlands",
         "abbreviation": "NED",
-        "score": null
+        "score": 0
       },
       "away": {
         "id": "JPN",
         "displayName": "Japan",
         "shortDisplayName": "Japan",
         "abbreviation": "JPN",
-        "score": null
+        "score": 0
       }
     },
     {

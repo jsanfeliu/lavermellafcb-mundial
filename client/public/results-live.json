@@ -1,7 +1,7 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-14T20:07:36.732Z",
+  "fetched_at": "2026-06-14T21:42:01.862Z",
   "event_count": 104,
   "completed_count": 9,
   "in_progress_count": 1,
@@ -236,8 +236,8 @@
     {
       "espn_id": "760425",
       "date_utc": "2026-06-14T20:00Z",
-      "status_name": "STATUS_FIRST_HALF",
-      "status_detail": "7'",
+      "status_name": "STATUS_SECOND_HALF",
+      "status_detail": "83'",
       "state": "in",
       "completed": false,
       "in_progress": true,
@@ -248,14 +248,14 @@
         "displayName": "Netherlands",
         "shortDisplayName": "Netherlands",
         "abbreviation": "NED",
-        "score": 0
+        "score": 2
       },
       "away": {
         "id": "JPN",
         "displayName": "Japan",
         "shortDisplayName": "Japan",
         "abbreviation": "JPN",
-        "score": 0
+        "score": 1
       }
     },
     {

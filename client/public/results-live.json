@@ -1,9 +1,9 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-15T16:34:19.013Z",
+  "fetched_at": "2026-06-15T20:17:27.841Z",
   "event_count": 104,
-  "completed_count": 12,
+  "completed_count": 13,
   "in_progress_count": 1,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
@@ -311,11 +311,11 @@
     {
       "espn_id": "760428",
       "date_utc": "2026-06-15T16:00Z",
-      "status_name": "STATUS_FIRST_HALF",
-      "status_detail": "33'",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "Mercedes-Benz Stadium",
       "venue_city": "Atlanta, Georgia",
       "home": {
@@ -336,11 +336,11 @@
     {
       "espn_id": "760426",
       "date_utc": "2026-06-15T19:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Mon, June 15th at 3:00 PM EDT",
-      "state": "pre",
+      "status_name": "STATUS_SECOND_HALF",
+      "status_detail": "55'",
+      "state": "in",
       "completed": false,
-      "in_progress": false,
+      "in_progress": true,
       "venue": "Lumen Field",
       "venue_city": "Seattle, Washington",
       "home": {
@@ -348,14 +348,14 @@
         "displayName": "Belgium",
         "shortDisplayName": "Belgium",
         "abbreviation": "BEL",
-        "score": null
+        "score": 0
       },
       "away": {
         "id": "EGY",
         "displayName": "Egypt",
         "shortDisplayName": "Egypt",
         "abbreviation": "EGY",
-        "score": null
+        "score": 1
       }
     },
     {

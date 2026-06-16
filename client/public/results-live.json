@@ -1,9 +1,9 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-16T00:18:58.977Z",
+  "fetched_at": "2026-06-16T06:08:42.705Z",
   "event_count": 104,
-  "completed_count": 15,
+  "completed_count": 16,
   "in_progress_count": 0,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
@@ -386,10 +386,10 @@
     {
       "espn_id": "760427",
       "date_utc": "2026-06-16T01:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Mon, June 15th at 9:00 PM EDT",
-      "state": "pre",
-      "completed": false,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
       "in_progress": false,
       "venue": "SoFi Stadium",
       "venue_city": "Inglewood, California",
@@ -398,14 +398,14 @@
         "displayName": "Iran",
         "shortDisplayName": "Iran",
         "abbreviation": "IRN",
-        "score": null
+        "score": 2
       },
       "away": {
         "id": "NZL",
         "displayName": "New Zealand",
         "shortDisplayName": "New Zealand",
         "abbreviation": "NZL",
-        "score": null
+        "score": 2
       }
     },
     {

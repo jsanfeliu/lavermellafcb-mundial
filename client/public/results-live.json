@@ -1,9 +1,9 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-16T23:51:45.022Z",
+  "fetched_at": "2026-06-17T04:20:43.211Z",
   "event_count": 104,
-  "completed_count": 17,
+  "completed_count": 19,
   "in_progress_count": 1,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
@@ -436,11 +436,11 @@
     {
       "espn_id": "760430",
       "date_utc": "2026-06-16T22:00Z",
-      "status_name": "STATUS_SECOND_HALF",
-      "status_detail": "88'",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "Gillette Stadium",
       "venue_city": "Foxborough, Massachusetts",
       "home": {
@@ -455,16 +455,16 @@
         "displayName": "Norway",
         "shortDisplayName": "Norway",
         "abbreviation": "NOR",
-        "score": 3
+        "score": 4
       }
     },
     {
       "espn_id": "760433",
       "date_utc": "2026-06-17T01:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Tue, June 16th at 9:00 PM EDT",
-      "state": "pre",
-      "completed": false,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
       "in_progress": false,
       "venue": "GEHA Field at Arrowhead Stadium",
       "venue_city": "Kansas City, Missouri",
@@ -473,24 +473,24 @@
         "displayName": "Argentina",
         "shortDisplayName": "Argentina",
         "abbreviation": "ARG",
-        "score": null
+        "score": 3
       },
       "away": {
         "id": "ALG",
         "displayName": "Algeria",
         "shortDisplayName": "Algeria",
         "abbreviation": "ALG",
-        "score": null
+        "score": 0
       }
     },
     {
       "espn_id": "760431",
       "date_utc": "2026-06-17T04:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Wed, June 16th at 12:00 AM EDT",
-      "state": "pre",
+      "status_name": "STATUS_FIRST_HALF",
+      "status_detail": "17'",
+      "state": "in",
       "completed": false,
-      "in_progress": false,
+      "in_progress": true,
       "venue": "Levi's Stadium",
       "venue_city": "Santa Clara, California",
       "home": {
@@ -498,14 +498,14 @@
         "displayName": "Austria",
         "shortDisplayName": "Austria",
         "abbreviation": "AUT",
-        "score": null
+        "score": 0
       },
       "away": {
         "id": "JOR",
         "displayName": "Jordan",
         "shortDisplayName": "Jordan",
         "abbreviation": "JOR",
-        "score": null
+        "score": 0
       }
     },
     {

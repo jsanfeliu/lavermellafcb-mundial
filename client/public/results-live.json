@@ -1,10 +1,10 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-17T04:20:43.211Z",
+  "fetched_at": "2026-06-17T09:20:31.786Z",
   "event_count": 104,
-  "completed_count": 19,
-  "in_progress_count": 1,
+  "completed_count": 20,
+  "in_progress_count": 0,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
   "events": [
@@ -486,11 +486,11 @@
     {
       "espn_id": "760431",
       "date_utc": "2026-06-17T04:00Z",
-      "status_name": "STATUS_FIRST_HALF",
-      "status_detail": "17'",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "Levi's Stadium",
       "venue_city": "Santa Clara, California",
       "home": {
@@ -498,14 +498,14 @@
         "displayName": "Austria",
         "shortDisplayName": "Austria",
         "abbreviation": "AUT",
-        "score": 0
+        "score": 3
       },
       "away": {
         "id": "JOR",
         "displayName": "Jordan",
         "shortDisplayName": "Jordan",
         "abbreviation": "JOR",
-        "score": 0
+        "score": 1
       }
     },
     {

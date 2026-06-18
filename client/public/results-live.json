@@ -1,10 +1,10 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-18T00:24:54.907Z",
+  "fetched_at": "2026-06-18T05:19:55.175Z",
   "event_count": 104,
-  "completed_count": 22,
-  "in_progress_count": 1,
+  "completed_count": 24,
+  "in_progress_count": 0,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
   "events": [
@@ -561,11 +561,11 @@
     {
       "espn_id": "760434",
       "date_utc": "2026-06-17T23:00Z",
-      "status_name": "STATUS_SECOND_HALF",
-      "status_detail": "63'",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "BMO Field",
       "venue_city": "Toronto",
       "home": {
@@ -573,7 +573,7 @@
         "displayName": "Ghana",
         "shortDisplayName": "Ghana",
         "abbreviation": "GHA",
-        "score": 0
+        "score": 1
       },
       "away": {
         "id": "PAN",
@@ -586,10 +586,10 @@
     {
       "espn_id": "760436",
       "date_utc": "2026-06-18T02:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Wed, June 17th at 10:00 PM EDT",
-      "state": "pre",
-      "completed": false,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
       "in_progress": false,
       "venue": "Estadio Banorte",
       "venue_city": "Mexico City",
@@ -598,14 +598,14 @@
         "displayName": "Uzbekistan",
         "shortDisplayName": "Uzbekistan",
         "abbreviation": "UZB",
-        "score": null
+        "score": 1
       },
       "away": {
         "id": "COL",
         "displayName": "Colombia",
         "shortDisplayName": "Colombia",
         "abbreviation": "COL",
-        "score": null
+        "score": 3
       }
     },
     {

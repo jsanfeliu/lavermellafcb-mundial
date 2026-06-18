@@ -1,9 +1,9 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-18T16:39:15.596Z",
+  "fetched_at": "2026-06-18T19:12:42.141Z",
   "event_count": 104,
-  "completed_count": 24,
+  "completed_count": 25,
   "in_progress_count": 1,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
@@ -611,11 +611,11 @@
     {
       "espn_id": "760438",
       "date_utc": "2026-06-18T16:00Z",
-      "status_name": "STATUS_FIRST_HALF",
-      "status_detail": "39'",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "Mercedes-Benz Stadium",
       "venue_city": "Atlanta, Georgia",
       "home": {
@@ -630,17 +630,17 @@
         "displayName": "South Africa",
         "shortDisplayName": "South Africa",
         "abbreviation": "RSA",
-        "score": 0
+        "score": 1
       }
     },
     {
       "espn_id": "760439",
       "date_utc": "2026-06-18T19:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Thu, June 18th at 3:00 PM EDT",
-      "state": "pre",
+      "status_name": "STATUS_FIRST_HALF",
+      "status_detail": "12'",
+      "state": "in",
       "completed": false,
-      "in_progress": false,
+      "in_progress": true,
       "venue": "SoFi Stadium",
       "venue_city": "Inglewood, California",
       "home": {
@@ -648,14 +648,14 @@
         "displayName": "Switzerland",
         "shortDisplayName": "Switzerland",
         "abbreviation": "SUI",
-        "score": null
+        "score": 0
       },
       "away": {
         "id": "BIH",
         "displayName": "Bosnia-Herzegovina",
         "shortDisplayName": "Bosnia-Herz",
         "abbreviation": "BIH",
-        "score": null
+        "score": 0
       }
     },
     {

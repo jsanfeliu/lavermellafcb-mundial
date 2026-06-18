@@ -1,10 +1,10 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-18T19:12:42.141Z",
+  "fetched_at": "2026-06-18T21:31:39.663Z",
   "event_count": 104,
-  "completed_count": 25,
-  "in_progress_count": 1,
+  "completed_count": 26,
+  "in_progress_count": 0,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
   "events": [
@@ -636,11 +636,11 @@
     {
       "espn_id": "760439",
       "date_utc": "2026-06-18T19:00Z",
-      "status_name": "STATUS_FIRST_HALF",
-      "status_detail": "12'",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "SoFi Stadium",
       "venue_city": "Inglewood, California",
       "home": {
@@ -648,14 +648,14 @@
         "displayName": "Switzerland",
         "shortDisplayName": "Switzerland",
         "abbreviation": "SUI",
-        "score": 0
+        "score": 4
       },
       "away": {
         "id": "BIH",
         "displayName": "Bosnia-Herzegovina",
         "shortDisplayName": "Bosnia-Herz",
         "abbreviation": "BIH",
-        "score": 0
+        "score": 1
       }
     },
     {

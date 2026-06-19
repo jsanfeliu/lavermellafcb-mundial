@@ -1,9 +1,9 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-19T20:53:26.442Z",
+  "fetched_at": "2026-06-19T22:07:39.493Z",
   "event_count": 104,
-  "completed_count": 28,
+  "completed_count": 29,
   "in_progress_count": 1,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
@@ -711,11 +711,11 @@
     {
       "espn_id": "760442",
       "date_utc": "2026-06-19T19:00Z",
-      "status_name": "STATUS_SECOND_HALF",
-      "status_detail": "87'",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "Lumen Field",
       "venue_city": "Seattle, Washington",
       "home": {
@@ -736,11 +736,11 @@
     {
       "espn_id": "760445",
       "date_utc": "2026-06-19T22:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Fri, June 19th at 6:00 PM EDT",
-      "state": "pre",
+      "status_name": "STATUS_FIRST_HALF",
+      "status_detail": "7'",
+      "state": "in",
       "completed": false,
-      "in_progress": false,
+      "in_progress": true,
       "venue": "Gillette Stadium",
       "venue_city": "Foxborough, Massachusetts",
       "home": {
@@ -748,14 +748,14 @@
         "displayName": "Scotland",
         "shortDisplayName": "Scotland",
         "abbreviation": "SCO",
-        "score": null
+        "score": 0
       },
       "away": {
         "id": "MAR",
         "displayName": "Morocco",
         "shortDisplayName": "Morocco",
         "abbreviation": "MAR",
-        "score": null
+        "score": 1
       }
     },
     {

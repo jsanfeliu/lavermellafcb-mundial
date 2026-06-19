@@ -1,9 +1,9 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-18T23:22:44.379Z",
+  "fetched_at": "2026-06-19T02:19:35.395Z",
   "event_count": 104,
-  "completed_count": 26,
+  "completed_count": 27,
   "in_progress_count": 1,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
@@ -661,11 +661,11 @@
     {
       "espn_id": "760440",
       "date_utc": "2026-06-18T22:00Z",
-      "status_name": "STATUS_SECOND_HALF",
-      "status_detail": "61'",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "BC Place",
       "venue_city": "Vancouver",
       "home": {
@@ -673,7 +673,7 @@
         "displayName": "Canada",
         "shortDisplayName": "Canada",
         "abbreviation": "CAN",
-        "score": 3
+        "score": 6
       },
       "away": {
         "id": "QAT",
@@ -686,11 +686,11 @@
     {
       "espn_id": "760441",
       "date_utc": "2026-06-19T01:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Thu, June 18th at 9:00 PM EDT",
-      "state": "pre",
+      "status_name": "STATUS_SECOND_HALF",
+      "status_detail": "60'",
+      "state": "in",
       "completed": false,
-      "in_progress": false,
+      "in_progress": true,
       "venue": "Estadio Akron",
       "venue_city": "Guadalajara",
       "home": {
@@ -698,14 +698,14 @@
         "displayName": "Mexico",
         "shortDisplayName": "Mexico",
         "abbreviation": "MEX",
-        "score": null
+        "score": 1
       },
       "away": {
         "id": "KOR",
         "displayName": "South Korea",
         "shortDisplayName": "South Korea",
         "abbreviation": "KOR",
-        "score": null
+        "score": 0
       }
     },
     {

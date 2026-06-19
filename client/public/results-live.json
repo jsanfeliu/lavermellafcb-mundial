@@ -1,10 +1,10 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-19T17:31:53.073Z",
+  "fetched_at": "2026-06-19T19:19:42.894Z",
   "event_count": 104,
   "completed_count": 28,
-  "in_progress_count": 0,
+  "in_progress_count": 1,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
   "events": [
@@ -711,11 +711,11 @@
     {
       "espn_id": "760442",
       "date_utc": "2026-06-19T19:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Fri, June 19th at 3:00 PM EDT",
-      "state": "pre",
+      "status_name": "STATUS_FIRST_HALF",
+      "status_detail": "18'",
+      "state": "in",
       "completed": false,
-      "in_progress": false,
+      "in_progress": true,
       "venue": "Lumen Field",
       "venue_city": "Seattle, Washington",
       "home": {
@@ -723,14 +723,14 @@
         "displayName": "United States",
         "shortDisplayName": "USA",
         "abbreviation": "USA",
-        "score": null
+        "score": 1
       },
       "away": {
         "id": "AUS",
         "displayName": "Australia",
         "shortDisplayName": "Australia",
         "abbreviation": "AUS",
-        "score": null
+        "score": 0
       }
     },
     {

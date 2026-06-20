@@ -1,9 +1,9 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-19T23:17:03.219Z",
+  "fetched_at": "2026-06-20T01:37:28.219Z",
   "event_count": 104,
-  "completed_count": 29,
+  "completed_count": 30,
   "in_progress_count": 1,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
@@ -736,11 +736,11 @@
     {
       "espn_id": "760445",
       "date_utc": "2026-06-19T22:00Z",
-      "status_name": "STATUS_SECOND_HALF",
-      "status_detail": "54'",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "Gillette Stadium",
       "venue_city": "Foxborough, Massachusetts",
       "home": {
@@ -761,11 +761,11 @@
     {
       "espn_id": "760444",
       "date_utc": "2026-06-20T00:30Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Fri, June 19th at 8:30 PM EDT",
-      "state": "pre",
+      "status_name": "STATUS_HALFTIME",
+      "status_detail": "HT",
+      "state": "in",
       "completed": false,
-      "in_progress": false,
+      "in_progress": true,
       "venue": "Lincoln Financial Field",
       "venue_city": "Philadelphia, Pennsylvania",
       "home": {
@@ -773,14 +773,14 @@
         "displayName": "Brazil",
         "shortDisplayName": "Brazil",
         "abbreviation": "BRA",
-        "score": null
+        "score": 3
       },
       "away": {
         "id": "HAI",
         "displayName": "Haiti",
         "shortDisplayName": "Haiti",
         "abbreviation": "HAI",
-        "score": null
+        "score": 0
       }
     },
     {

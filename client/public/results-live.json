@@ -1,10 +1,10 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-20T17:29:09.608Z",
+  "fetched_at": "2026-06-20T18:57:47.152Z",
   "event_count": 104,
-  "completed_count": 32,
-  "in_progress_count": 1,
+  "completed_count": 33,
+  "in_progress_count": 0,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
   "events": [
@@ -811,11 +811,11 @@
     {
       "espn_id": "760447",
       "date_utc": "2026-06-20T17:00Z",
-      "status_name": "STATUS_FIRST_HALF",
-      "status_detail": "29'",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "NRG Stadium",
       "venue_city": "Houston, Texas",
       "home": {
@@ -823,14 +823,14 @@
         "displayName": "Netherlands",
         "shortDisplayName": "Netherlands",
         "abbreviation": "NED",
-        "score": 2
+        "score": 5
       },
       "away": {
         "id": "SWE",
         "displayName": "Sweden",
         "shortDisplayName": "Sweden",
         "abbreviation": "SWE",
-        "score": 0
+        "score": 1
       }
     },
     {

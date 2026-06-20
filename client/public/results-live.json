@@ -1,7 +1,7 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-20T20:20:42.143Z",
+  "fetched_at": "2026-06-20T21:49:40.097Z",
   "event_count": 104,
   "completed_count": 33,
   "in_progress_count": 1,
@@ -836,8 +836,8 @@
     {
       "espn_id": "760448",
       "date_utc": "2026-06-20T20:00Z",
-      "status_name": "STATUS_IN_PROGRESS",
-      "status_detail": "21'",
+      "status_name": "STATUS_SECOND_HALF",
+      "status_detail": "86'",
       "state": "in",
       "completed": false,
       "in_progress": true,
@@ -848,14 +848,14 @@
         "displayName": "Germany",
         "shortDisplayName": "Germany",
         "abbreviation": "GER",
-        "score": 0
+        "score": 1
       },
       "away": {
         "id": "CIV",
         "displayName": "Ivory Coast",
         "shortDisplayName": "Ivory Coast",
         "abbreviation": "CIV",
-        "score": 0
+        "score": 1
       }
     },
     {

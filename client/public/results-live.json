@@ -1,10 +1,10 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-21T16:23:28.781Z",
+  "fetched_at": "2026-06-21T18:07:11.826Z",
   "event_count": 104,
-  "completed_count": 36,
-  "in_progress_count": 1,
+  "completed_count": 37,
+  "in_progress_count": 0,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
   "events": [
@@ -911,11 +911,11 @@
     {
       "espn_id": "760453",
       "date_utc": "2026-06-21T16:00Z",
-      "status_name": "STATUS_FIRST_HALF",
-      "status_detail": "23'",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "Mercedes-Benz Stadium",
       "venue_city": "Atlanta, Georgia",
       "home": {
@@ -923,7 +923,7 @@
         "displayName": "Spain",
         "shortDisplayName": "Spain",
         "abbreviation": "ESP",
-        "score": 2
+        "score": 4
       },
       "away": {
         "id": "KSA",

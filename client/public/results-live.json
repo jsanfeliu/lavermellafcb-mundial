@@ -1,10 +1,10 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-22T19:49:56.443Z",
+  "fetched_at": "2026-06-22T22:06:10.950Z",
   "event_count": 104,
   "completed_count": 41,
-  "in_progress_count": 0,
+  "in_progress_count": 1,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
   "events": [
@@ -1036,11 +1036,11 @@
     {
       "espn_id": "760457",
       "date_utc": "2026-06-22T21:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Mon, June 22nd at 5:00 PM EDT",
-      "state": "pre",
+      "status_name": "STATUS_HALFTIME",
+      "status_detail": "HT",
+      "state": "in",
       "completed": false,
-      "in_progress": false,
+      "in_progress": true,
       "venue": "Lincoln Financial Field",
       "venue_city": "Philadelphia, Pennsylvania",
       "home": {
@@ -1048,14 +1048,14 @@
         "displayName": "France",
         "shortDisplayName": "France",
         "abbreviation": "FRA",
-        "score": null
+        "score": 1
       },
       "away": {
         "id": "IRQ",
         "displayName": "Iraq",
         "shortDisplayName": "Iraq",
         "abbreviation": "IRQ",
-        "score": null
+        "score": 0
       }
     },
     {

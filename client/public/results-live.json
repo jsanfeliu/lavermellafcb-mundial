@@ -1,7 +1,7 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-22T22:06:10.950Z",
+  "fetched_at": "2026-06-22T23:44:49.832Z",
   "event_count": 104,
   "completed_count": 41,
   "in_progress_count": 1,
@@ -1036,8 +1036,8 @@
     {
       "espn_id": "760457",
       "date_utc": "2026-06-22T21:00Z",
-      "status_name": "STATUS_HALFTIME",
-      "status_detail": "HT",
+      "status_name": "STATUS_DELAYED",
+      "status_detail": "45'+3'",
       "state": "in",
       "completed": false,
       "in_progress": true,

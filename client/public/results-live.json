@@ -1,9 +1,9 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-22T16:12:33.744Z",
+  "fetched_at": "2026-06-22T19:49:56.443Z",
   "event_count": 104,
-  "completed_count": 40,
+  "completed_count": 41,
   "in_progress_count": 0,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
@@ -1011,10 +1011,10 @@
     {
       "espn_id": "760456",
       "date_utc": "2026-06-22T17:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Mon, June 22nd at 1:00 PM EDT",
-      "state": "pre",
-      "completed": false,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
       "in_progress": false,
       "venue": "AT&T Stadium",
       "venue_city": "Arlington, Texas",
@@ -1023,14 +1023,14 @@
         "displayName": "Argentina",
         "shortDisplayName": "Argentina",
         "abbreviation": "ARG",
-        "score": null
+        "score": 2
       },
       "away": {
         "id": "AUT",
         "displayName": "Austria",
         "shortDisplayName": "Austria",
         "abbreviation": "AUT",
-        "score": null
+        "score": 0
       }
     },
     {

@@ -1,7 +1,7 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-23T20:19:32.917Z",
+  "fetched_at": "2026-06-23T21:58:38.079Z",
   "event_count": 104,
   "completed_count": 45,
   "in_progress_count": 1,
@@ -1136,8 +1136,8 @@
     {
       "espn_id": "760458",
       "date_utc": "2026-06-23T20:00Z",
-      "status_name": "STATUS_FIRST_HALF",
-      "status_detail": "19'",
+      "status_name": "STATUS_SECOND_HALF",
+      "status_detail": "90'+5'",
       "state": "in",
       "completed": false,
       "in_progress": true,

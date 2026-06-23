@@ -1,10 +1,10 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-23T01:50:33.089Z",
+  "fetched_at": "2026-06-23T06:11:01.366Z",
   "event_count": 104,
-  "completed_count": 42,
-  "in_progress_count": 1,
+  "completed_count": 44,
+  "in_progress_count": 0,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
   "events": [
@@ -1061,11 +1061,11 @@
     {
       "espn_id": "760454",
       "date_utc": "2026-06-23T00:00Z",
-      "status_name": "STATUS_SECOND_HALF",
-      "status_detail": "90'+1'",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "MetLife Stadium",
       "venue_city": "East Rutherford, New Jersey",
       "home": {
@@ -1080,16 +1080,16 @@
         "displayName": "Senegal",
         "shortDisplayName": "Senegal",
         "abbreviation": "SEN",
-        "score": 1
+        "score": 2
       }
     },
     {
       "espn_id": "760455",
       "date_utc": "2026-06-23T03:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Mon, June 22nd at 11:00 PM EDT",
-      "state": "pre",
-      "completed": false,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
       "in_progress": false,
       "venue": "Levi's Stadium",
       "venue_city": "Santa Clara, California",
@@ -1098,14 +1098,14 @@
         "displayName": "Jordan",
         "shortDisplayName": "Jordan",
         "abbreviation": "JOR",
-        "score": null
+        "score": 1
       },
       "away": {
         "id": "ALG",
         "displayName": "Algeria",
         "shortDisplayName": "Algeria",
         "abbreviation": "ALG",
-        "score": null
+        "score": 2
       }
     },
     {
@@ -2169,10 +2169,10 @@
       "venue": "Hard Rock Stadium",
       "venue_city": "Miami Gardens, Florida",
       "home": {
-        "id": null,
-        "displayName": "Group J Winner",
-        "shortDisplayName": "1J",
-        "abbreviation": "1J",
+        "id": "ARG",
+        "displayName": "Argentina",
+        "shortDisplayName": "Argentina",
+        "abbreviation": "ARG",
         "score": null
       },
       "away": {

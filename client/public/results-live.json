@@ -1,9 +1,9 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-22T23:44:49.832Z",
+  "fetched_at": "2026-06-23T01:50:33.089Z",
   "event_count": 104,
-  "completed_count": 41,
+  "completed_count": 42,
   "in_progress_count": 1,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
@@ -1036,11 +1036,11 @@
     {
       "espn_id": "760457",
       "date_utc": "2026-06-22T21:00Z",
-      "status_name": "STATUS_DELAYED",
-      "status_detail": "45'+3'",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "Lincoln Financial Field",
       "venue_city": "Philadelphia, Pennsylvania",
       "home": {
@@ -1048,7 +1048,7 @@
         "displayName": "France",
         "shortDisplayName": "France",
         "abbreviation": "FRA",
-        "score": 1
+        "score": 3
       },
       "away": {
         "id": "IRQ",
@@ -1061,11 +1061,11 @@
     {
       "espn_id": "760454",
       "date_utc": "2026-06-23T00:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Mon, June 22nd at 8:00 PM EDT",
-      "state": "pre",
+      "status_name": "STATUS_SECOND_HALF",
+      "status_detail": "90'+1'",
+      "state": "in",
       "completed": false,
-      "in_progress": false,
+      "in_progress": true,
       "venue": "MetLife Stadium",
       "venue_city": "East Rutherford, New Jersey",
       "home": {
@@ -1073,14 +1073,14 @@
         "displayName": "Norway",
         "shortDisplayName": "Norway",
         "abbreviation": "NOR",
-        "score": null
+        "score": 3
       },
       "away": {
         "id": "SEN",
         "displayName": "Senegal",
         "shortDisplayName": "Senegal",
         "abbreviation": "SEN",
-        "score": null
+        "score": 1
       }
     },
     {

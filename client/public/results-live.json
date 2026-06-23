@@ -1,9 +1,9 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-23T18:00:04.669Z",
+  "fetched_at": "2026-06-23T20:19:32.917Z",
   "event_count": 104,
-  "completed_count": 44,
+  "completed_count": 45,
   "in_progress_count": 1,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
@@ -1111,11 +1111,11 @@
     {
       "espn_id": "760461",
       "date_utc": "2026-06-23T17:00Z",
-      "status_name": "STATUS_HALFTIME",
-      "status_detail": "HT",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "NRG Stadium",
       "venue_city": "Houston, Texas",
       "home": {
@@ -1123,7 +1123,7 @@
         "displayName": "Portugal",
         "shortDisplayName": "Portugal",
         "abbreviation": "POR",
-        "score": 3
+        "score": 5
       },
       "away": {
         "id": "UZB",
@@ -1136,11 +1136,11 @@
     {
       "espn_id": "760458",
       "date_utc": "2026-06-23T20:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Tue, June 23rd at 4:00 PM EDT",
-      "state": "pre",
+      "status_name": "STATUS_FIRST_HALF",
+      "status_detail": "19'",
+      "state": "in",
       "completed": false,
-      "in_progress": false,
+      "in_progress": true,
       "venue": "Gillette Stadium",
       "venue_city": "Foxborough, Massachusetts",
       "home": {
@@ -1148,14 +1148,14 @@
         "displayName": "England",
         "shortDisplayName": "England",
         "abbreviation": "ENG",
-        "score": null
+        "score": 0
       },
       "away": {
         "id": "GHA",
         "displayName": "Ghana",
         "shortDisplayName": "Ghana",
         "abbreviation": "GHA",
-        "score": null
+        "score": 0
       }
     },
     {

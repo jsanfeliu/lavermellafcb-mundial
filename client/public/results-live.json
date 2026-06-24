@@ -1,10 +1,10 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-24T00:14:53.098Z",
+  "fetched_at": "2026-06-24T04:41:36.906Z",
   "event_count": 104,
-  "completed_count": 46,
-  "in_progress_count": 1,
+  "completed_count": 48,
+  "in_progress_count": 0,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
   "events": [
@@ -1161,11 +1161,11 @@
     {
       "espn_id": "760460",
       "date_utc": "2026-06-23T23:00Z",
-      "status_name": "STATUS_SECOND_HALF",
-      "status_detail": "56'",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "BMO Field",
       "venue_city": "Toronto",
       "home": {
@@ -1186,10 +1186,10 @@
     {
       "espn_id": "760459",
       "date_utc": "2026-06-24T02:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Tue, June 23rd at 10:00 PM EDT",
-      "state": "pre",
-      "completed": false,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
       "in_progress": false,
       "venue": "Estadio Akron",
       "venue_city": "Guadalajara",
@@ -1198,14 +1198,14 @@
         "displayName": "Colombia",
         "shortDisplayName": "Colombia",
         "abbreviation": "COL",
-        "score": null
+        "score": 1
       },
       "away": {
         "id": "COD",
         "displayName": "Congo DR",
         "shortDisplayName": "Congo DR",
         "abbreviation": "COD",
-        "score": null
+        "score": 0
       }
     },
     {

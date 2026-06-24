@@ -1,10 +1,10 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-24T18:10:11.207Z",
+  "fetched_at": "2026-06-24T20:11:00.714Z",
   "event_count": 104,
   "completed_count": 48,
-  "in_progress_count": 0,
+  "in_progress_count": 2,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
   "events": [
@@ -1211,11 +1211,11 @@
     {
       "espn_id": "760462",
       "date_utc": "2026-06-24T19:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Wed, June 24th at 3:00 PM EDT",
-      "state": "pre",
+      "status_name": "STATUS_SECOND_HALF",
+      "status_detail": "49'",
+      "state": "in",
       "completed": false,
-      "in_progress": false,
+      "in_progress": true,
       "venue": "Lumen Field",
       "venue_city": "Seattle, Washington",
       "home": {
@@ -1223,24 +1223,24 @@
         "displayName": "Bosnia-Herzegovina",
         "shortDisplayName": "Bosnia-Herz",
         "abbreviation": "BIH",
-        "score": null
+        "score": 2
       },
       "away": {
         "id": "QAT",
         "displayName": "Qatar",
         "shortDisplayName": "Qatar",
         "abbreviation": "QAT",
-        "score": null
+        "score": 1
       }
     },
     {
       "espn_id": "760463",
       "date_utc": "2026-06-24T19:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Wed, June 24th at 3:00 PM EDT",
-      "state": "pre",
+      "status_name": "STATUS_SECOND_HALF",
+      "status_detail": "52'",
+      "state": "in",
       "completed": false,
-      "in_progress": false,
+      "in_progress": true,
       "venue": "BC Place",
       "venue_city": "Vancouver",
       "home": {
@@ -1248,14 +1248,14 @@
         "displayName": "Switzerland",
         "shortDisplayName": "Switzerland",
         "abbreviation": "SUI",
-        "score": null
+        "score": 1
       },
       "away": {
         "id": "CAN",
         "displayName": "Canada",
         "shortDisplayName": "Canada",
         "abbreviation": "CAN",
-        "score": null
+        "score": 0
       }
     },
     {

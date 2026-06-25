@@ -1,9 +1,9 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-24T23:06:42.800Z",
+  "fetched_at": "2026-06-25T01:28:45.090Z",
   "event_count": 104,
-  "completed_count": 50,
+  "completed_count": 52,
   "in_progress_count": 2,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
@@ -1261,11 +1261,11 @@
     {
       "espn_id": "760464",
       "date_utc": "2026-06-24T22:00Z",
-      "status_name": "STATUS_HALFTIME",
-      "status_detail": "HT",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "Mercedes-Benz Stadium",
       "venue_city": "Atlanta, Georgia",
       "home": {
@@ -1273,7 +1273,7 @@
         "displayName": "Morocco",
         "shortDisplayName": "Morocco",
         "abbreviation": "MAR",
-        "score": 2
+        "score": 4
       },
       "away": {
         "id": "HAI",
@@ -1286,11 +1286,11 @@
     {
       "espn_id": "760465",
       "date_utc": "2026-06-24T22:00Z",
-      "status_name": "STATUS_HALFTIME",
-      "status_detail": "HT",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "Hard Rock Stadium",
       "venue_city": "Miami Gardens, Florida",
       "home": {
@@ -1305,17 +1305,17 @@
         "displayName": "Brazil",
         "shortDisplayName": "Brazil",
         "abbreviation": "BRA",
-        "score": 2
+        "score": 3
       }
     },
     {
       "espn_id": "760467",
       "date_utc": "2026-06-25T01:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Wed, June 24th at 9:00 PM EDT",
-      "state": "pre",
+      "status_name": "STATUS_FIRST_HALF",
+      "status_detail": "28'",
+      "state": "in",
       "completed": false,
-      "in_progress": false,
+      "in_progress": true,
       "venue": "Estadio Banorte",
       "venue_city": "Mexico City",
       "home": {
@@ -1323,24 +1323,24 @@
         "displayName": "Czechia",
         "shortDisplayName": "Czechia",
         "abbreviation": "CZE",
-        "score": null
+        "score": 0
       },
       "away": {
         "id": "MEX",
         "displayName": "Mexico",
         "shortDisplayName": "Mexico",
         "abbreviation": "MEX",
-        "score": null
+        "score": 0
       }
     },
     {
       "espn_id": "760466",
       "date_utc": "2026-06-25T01:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Wed, June 24th at 9:00 PM EDT",
-      "state": "pre",
+      "status_name": "STATUS_FIRST_HALF",
+      "status_detail": "28'",
+      "state": "in",
       "completed": false,
-      "in_progress": false,
+      "in_progress": true,
       "venue": "Estadio BBVA",
       "venue_city": "Guadalupe",
       "home": {
@@ -1348,14 +1348,14 @@
         "displayName": "South Africa",
         "shortDisplayName": "South Africa",
         "abbreviation": "RSA",
-        "score": null
+        "score": 0
       },
       "away": {
         "id": "KOR",
         "displayName": "South Korea",
         "shortDisplayName": "South Korea",
         "abbreviation": "KOR",
-        "score": null
+        "score": 0
       }
     },
     {
@@ -1844,10 +1844,10 @@
       "venue": "NRG Stadium",
       "venue_city": "Houston, Texas",
       "home": {
-        "id": null,
-        "displayName": "Group C Winner",
-        "shortDisplayName": "1C",
-        "abbreviation": "1C",
+        "id": "BRA",
+        "displayName": "Brazil",
+        "shortDisplayName": "Brazil",
+        "abbreviation": "BRA",
         "score": null
       },
       "away": {
@@ -1901,10 +1901,10 @@
         "score": null
       },
       "away": {
-        "id": null,
-        "displayName": "Group C 2nd Place",
-        "shortDisplayName": "2C",
-        "abbreviation": "2C",
+        "id": "MAR",
+        "displayName": "Morocco",
+        "shortDisplayName": "Morocco",
+        "abbreviation": "MAR",
         "score": null
       }
     },

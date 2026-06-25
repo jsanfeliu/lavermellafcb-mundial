@@ -1,10 +1,10 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-25T21:13:56.793Z",
+  "fetched_at": "2026-06-25T22:50:02.138Z",
   "event_count": 104,
-  "completed_count": 54,
-  "in_progress_count": 2,
+  "completed_count": 56,
+  "in_progress_count": 0,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
   "events": [
@@ -1361,11 +1361,11 @@
     {
       "espn_id": "760473",
       "date_utc": "2026-06-25T20:00Z",
-      "status_name": "STATUS_SECOND_HALF",
-      "status_detail": "52'",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "Lincoln Financial Field",
       "venue_city": "Philadelphia, Pennsylvania",
       "home": {
@@ -1380,17 +1380,17 @@
         "displayName": "Ivory Coast",
         "shortDisplayName": "Ivory Coast",
         "abbreviation": "CIV",
-        "score": 1
+        "score": 2
       }
     },
     {
       "espn_id": "760468",
       "date_utc": "2026-06-25T20:00Z",
-      "status_name": "STATUS_SECOND_HALF",
-      "status_detail": "53'",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "MetLife Stadium",
       "venue_city": "East Rutherford, New Jersey",
       "home": {
@@ -1398,7 +1398,7 @@
         "displayName": "Ecuador",
         "shortDisplayName": "Ecuador",
         "abbreviation": "ECU",
-        "score": 1
+        "score": 2
       },
       "away": {
         "id": "GER",
@@ -1919,10 +1919,10 @@
       "venue": "AT&T Stadium",
       "venue_city": "Arlington, Texas",
       "home": {
-        "id": null,
-        "displayName": "Group E 2nd Place",
-        "shortDisplayName": "2E",
-        "abbreviation": "2E",
+        "id": "CIV",
+        "displayName": "Ivory Coast",
+        "shortDisplayName": "Ivory Coast",
+        "abbreviation": "CIV",
         "score": null
       },
       "away": {

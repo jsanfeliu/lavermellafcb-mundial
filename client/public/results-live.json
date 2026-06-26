@@ -1,10 +1,10 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-26T19:52:37.048Z",
+  "fetched_at": "2026-06-26T21:22:17.115Z",
   "event_count": 104,
-  "completed_count": 60,
-  "in_progress_count": 2,
+  "completed_count": 62,
+  "in_progress_count": 0,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
   "events": [
@@ -1511,11 +1511,11 @@
     {
       "espn_id": "760475",
       "date_utc": "2026-06-26T19:00Z",
-      "status_name": "STATUS_HALFTIME",
-      "status_detail": "HT",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "Gillette Stadium",
       "venue_city": "Foxborough, Massachusetts",
       "home": {
@@ -1530,17 +1530,17 @@
         "displayName": "France",
         "shortDisplayName": "France",
         "abbreviation": "FRA",
-        "score": 3
+        "score": 4
       }
     },
     {
       "espn_id": "760474",
       "date_utc": "2026-06-26T19:00Z",
-      "status_name": "STATUS_FIRST_HALF",
-      "status_detail": "45'+5'",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "BMO Field",
       "venue_city": "Toronto",
       "home": {
@@ -1548,7 +1548,7 @@
         "displayName": "Senegal",
         "shortDisplayName": "Senegal",
         "abbreviation": "SEN",
-        "score": 1
+        "score": 5
       },
       "away": {
         "id": "IRQ",
@@ -1926,10 +1926,10 @@
         "score": null
       },
       "away": {
-        "id": null,
-        "displayName": "Group I 2nd Place",
-        "shortDisplayName": "2I",
-        "abbreviation": "2I",
+        "id": "NOR",
+        "displayName": "Norway",
+        "shortDisplayName": "Norway",
+        "abbreviation": "NOR",
         "score": null
       }
     },
@@ -1944,10 +1944,10 @@
       "venue": "MetLife Stadium",
       "venue_city": "East Rutherford, New Jersey",
       "home": {
-        "id": null,
-        "displayName": "Group I Winner",
-        "shortDisplayName": "1I",
-        "abbreviation": "1I",
+        "id": "FRA",
+        "displayName": "France",
+        "shortDisplayName": "France",
+        "abbreviation": "FRA",
         "score": null
       },
       "away": {

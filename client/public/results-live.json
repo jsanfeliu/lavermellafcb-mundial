@@ -1,10 +1,10 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-26T00:13:00.715Z",
+  "fetched_at": "2026-06-26T04:42:59.865Z",
   "event_count": 104,
-  "completed_count": 56,
-  "in_progress_count": 2,
+  "completed_count": 60,
+  "in_progress_count": 0,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
   "events": [
@@ -1411,11 +1411,11 @@
     {
       "espn_id": "760471",
       "date_utc": "2026-06-25T23:00Z",
-      "status_name": "STATUS_SECOND_HALF",
-      "status_detail": "52'",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "AT&T Stadium",
       "venue_city": "Arlington, Texas",
       "home": {
@@ -1423,24 +1423,24 @@
         "displayName": "Japan",
         "shortDisplayName": "Japan",
         "abbreviation": "JPN",
-        "score": 0
+        "score": 1
       },
       "away": {
         "id": "SWE",
         "displayName": "Sweden",
         "shortDisplayName": "Sweden",
         "abbreviation": "SWE",
-        "score": 0
+        "score": 1
       }
     },
     {
       "espn_id": "760472",
       "date_utc": "2026-06-25T23:00Z",
-      "status_name": "STATUS_SECOND_HALF",
-      "status_detail": "53'",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "GEHA Field at Arrowhead Stadium",
       "venue_city": "Kansas City, Missouri",
       "home": {
@@ -1448,23 +1448,23 @@
         "displayName": "Tunisia",
         "shortDisplayName": "Tunisia",
         "abbreviation": "TUN",
-        "score": 0
+        "score": 1
       },
       "away": {
         "id": "NED",
         "displayName": "Netherlands",
         "shortDisplayName": "Netherlands",
         "abbreviation": "NED",
-        "score": 2
+        "score": 3
       }
     },
     {
       "espn_id": "760469",
       "date_utc": "2026-06-26T02:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Thu, June 25th at 10:00 PM EDT",
-      "state": "pre",
-      "completed": false,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
       "in_progress": false,
       "venue": "Levi's Stadium",
       "venue_city": "Santa Clara, California",
@@ -1473,23 +1473,23 @@
         "displayName": "Paraguay",
         "shortDisplayName": "Paraguay",
         "abbreviation": "PAR",
-        "score": null
+        "score": 0
       },
       "away": {
         "id": "AUS",
         "displayName": "Australia",
         "shortDisplayName": "Australia",
         "abbreviation": "AUS",
-        "score": null
+        "score": 0
       }
     },
     {
       "espn_id": "760470",
       "date_utc": "2026-06-26T02:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Thu, June 25th at 10:00 PM EDT",
-      "state": "pre",
-      "completed": false,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
       "in_progress": false,
       "venue": "SoFi Stadium",
       "venue_city": "Inglewood, California",
@@ -1498,14 +1498,14 @@
         "displayName": "Türkiye",
         "shortDisplayName": "Türkiye",
         "abbreviation": "TUR",
-        "score": null
+        "score": 3
       },
       "away": {
         "id": "USA",
         "displayName": "United States",
         "shortDisplayName": "USA",
         "abbreviation": "USA",
-        "score": null
+        "score": 2
       }
     },
     {
@@ -1851,10 +1851,10 @@
         "score": null
       },
       "away": {
-        "id": null,
-        "displayName": "Group F 2nd Place",
-        "shortDisplayName": "2F",
-        "abbreviation": "2F",
+        "id": "JPN",
+        "displayName": "Japan",
+        "shortDisplayName": "Japan",
+        "abbreviation": "JPN",
         "score": null
       }
     },
@@ -1894,10 +1894,10 @@
       "venue": "Estadio BBVA",
       "venue_city": "Guadalupe",
       "home": {
-        "id": null,
-        "displayName": "Group F Winner",
-        "shortDisplayName": "1F",
-        "abbreviation": "1F",
+        "id": "NED",
+        "displayName": "Netherlands",
+        "shortDisplayName": "Netherlands",
+        "abbreviation": "NED",
         "score": null
       },
       "away": {
@@ -2051,10 +2051,10 @@
         "score": null
       },
       "away": {
-        "id": null,
-        "displayName": "Third Place Group B/E/F/I/J",
-        "shortDisplayName": "3RD B/E/F/I/J",
-        "abbreviation": "3RD",
+        "id": "BIH",
+        "displayName": "Bosnia-Herzegovina",
+        "shortDisplayName": "Bosnia-Herz",
+        "abbreviation": "BIH",
         "score": null
       }
     },
@@ -2144,10 +2144,10 @@
       "venue": "AT&T Stadium",
       "venue_city": "Arlington, Texas",
       "home": {
-        "id": null,
-        "displayName": "Group D 2nd Place",
-        "shortDisplayName": "2D",
-        "abbreviation": "2D",
+        "id": "AUS",
+        "displayName": "Australia",
+        "shortDisplayName": "Australia",
+        "abbreviation": "AUS",
         "score": null
       },
       "away": {

@@ -1,10 +1,10 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-25T22:50:02.138Z",
+  "fetched_at": "2026-06-26T00:13:00.715Z",
   "event_count": 104,
   "completed_count": 56,
-  "in_progress_count": 0,
+  "in_progress_count": 2,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
   "events": [
@@ -1411,11 +1411,11 @@
     {
       "espn_id": "760471",
       "date_utc": "2026-06-25T23:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Thu, June 25th at 7:00 PM EDT",
-      "state": "pre",
+      "status_name": "STATUS_SECOND_HALF",
+      "status_detail": "52'",
+      "state": "in",
       "completed": false,
-      "in_progress": false,
+      "in_progress": true,
       "venue": "AT&T Stadium",
       "venue_city": "Arlington, Texas",
       "home": {
@@ -1423,24 +1423,24 @@
         "displayName": "Japan",
         "shortDisplayName": "Japan",
         "abbreviation": "JPN",
-        "score": null
+        "score": 0
       },
       "away": {
         "id": "SWE",
         "displayName": "Sweden",
         "shortDisplayName": "Sweden",
         "abbreviation": "SWE",
-        "score": null
+        "score": 0
       }
     },
     {
       "espn_id": "760472",
       "date_utc": "2026-06-25T23:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Thu, June 25th at 7:00 PM EDT",
-      "state": "pre",
+      "status_name": "STATUS_SECOND_HALF",
+      "status_detail": "53'",
+      "state": "in",
       "completed": false,
-      "in_progress": false,
+      "in_progress": true,
       "venue": "GEHA Field at Arrowhead Stadium",
       "venue_city": "Kansas City, Missouri",
       "home": {
@@ -1448,14 +1448,14 @@
         "displayName": "Tunisia",
         "shortDisplayName": "Tunisia",
         "abbreviation": "TUN",
-        "score": null
+        "score": 0
       },
       "away": {
         "id": "NED",
         "displayName": "Netherlands",
         "shortDisplayName": "Netherlands",
         "abbreviation": "NED",
-        "score": null
+        "score": 2
       }
     },
     {

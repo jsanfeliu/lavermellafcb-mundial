@@ -1,10 +1,10 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-26T17:51:34.399Z",
+  "fetched_at": "2026-06-26T19:52:37.048Z",
   "event_count": 104,
   "completed_count": 60,
-  "in_progress_count": 0,
+  "in_progress_count": 2,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
   "events": [
@@ -1511,11 +1511,11 @@
     {
       "espn_id": "760475",
       "date_utc": "2026-06-26T19:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Fri, June 26th at 3:00 PM EDT",
-      "state": "pre",
+      "status_name": "STATUS_HALFTIME",
+      "status_detail": "HT",
+      "state": "in",
       "completed": false,
-      "in_progress": false,
+      "in_progress": true,
       "venue": "Gillette Stadium",
       "venue_city": "Foxborough, Massachusetts",
       "home": {
@@ -1523,24 +1523,24 @@
         "displayName": "Norway",
         "shortDisplayName": "Norway",
         "abbreviation": "NOR",
-        "score": null
+        "score": 1
       },
       "away": {
         "id": "FRA",
         "displayName": "France",
         "shortDisplayName": "France",
         "abbreviation": "FRA",
-        "score": null
+        "score": 3
       }
     },
     {
       "espn_id": "760474",
       "date_utc": "2026-06-26T19:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Fri, June 26th at 3:00 PM EDT",
-      "state": "pre",
+      "status_name": "STATUS_FIRST_HALF",
+      "status_detail": "45'+5'",
+      "state": "in",
       "completed": false,
-      "in_progress": false,
+      "in_progress": true,
       "venue": "BMO Field",
       "venue_city": "Toronto",
       "home": {
@@ -1548,14 +1548,14 @@
         "displayName": "Senegal",
         "shortDisplayName": "Senegal",
         "abbreviation": "SEN",
-        "score": null
+        "score": 1
       },
       "away": {
         "id": "IRQ",
         "displayName": "Iraq",
         "shortDisplayName": "Iraq",
         "abbreviation": "IRQ",
-        "score": null
+        "score": 0
       }
     },
     {

@@ -1,9 +1,9 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-27T22:32:44.000Z",
+  "fetched_at": "2026-06-27T23:44:00.345Z",
   "event_count": 104,
-  "completed_count": 66,
+  "completed_count": 68,
   "in_progress_count": 2,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
@@ -1661,11 +1661,11 @@
     {
       "espn_id": "760480",
       "date_utc": "2026-06-27T21:00Z",
-      "status_name": "STATUS_SECOND_HALF",
-      "status_detail": "71'",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "Lincoln Financial Field",
       "venue_city": "Philadelphia, Pennsylvania",
       "home": {
@@ -1673,24 +1673,24 @@
         "displayName": "Croatia",
         "shortDisplayName": "Croatia",
         "abbreviation": "CRO",
-        "score": 1
+        "score": 2
       },
       "away": {
         "id": "GHA",
         "displayName": "Ghana",
         "shortDisplayName": "Ghana",
         "abbreviation": "GHA",
-        "score": 0
+        "score": 1
       }
     },
     {
       "espn_id": "760485",
       "date_utc": "2026-06-27T21:00Z",
-      "status_name": "STATUS_SECOND_HALF",
-      "status_detail": "73'",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "MetLife Stadium",
       "venue_city": "East Rutherford, New Jersey",
       "home": {
@@ -1711,11 +1711,11 @@
     {
       "espn_id": "760481",
       "date_utc": "2026-06-27T23:30Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Sat, June 27th at 7:30 PM EDT",
-      "state": "pre",
+      "status_name": "STATUS_IN_PROGRESS",
+      "status_detail": "13'",
+      "state": "in",
       "completed": false,
-      "in_progress": false,
+      "in_progress": true,
       "venue": "Hard Rock Stadium",
       "venue_city": "Miami Gardens, Florida",
       "home": {
@@ -1723,24 +1723,24 @@
         "displayName": "Colombia",
         "shortDisplayName": "Colombia",
         "abbreviation": "COL",
-        "score": null
+        "score": 0
       },
       "away": {
         "id": "POR",
         "displayName": "Portugal",
         "shortDisplayName": "Portugal",
         "abbreviation": "POR",
-        "score": null
+        "score": 0
       }
     },
     {
       "espn_id": "760482",
       "date_utc": "2026-06-27T23:30Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Sat, June 27th at 7:30 PM EDT",
-      "state": "pre",
+      "status_name": "STATUS_FIRST_HALF",
+      "status_detail": "12'",
+      "state": "in",
       "completed": false,
-      "in_progress": false,
+      "in_progress": true,
       "venue": "Mercedes-Benz Stadium",
       "venue_city": "Atlanta, Georgia",
       "home": {
@@ -1748,14 +1748,14 @@
         "displayName": "Congo DR",
         "shortDisplayName": "Congo DR",
         "abbreviation": "COD",
-        "score": null
+        "score": 0
       },
       "away": {
         "id": "UZB",
         "displayName": "Uzbekistan",
         "shortDisplayName": "Uzbekistan",
         "abbreviation": "UZB",
-        "score": null
+        "score": 1
       }
     },
     {
@@ -1976,10 +1976,10 @@
         "score": null
       },
       "away": {
-        "id": null,
-        "displayName": "Third Place Group C/E/F/H/I",
-        "shortDisplayName": "3RD C/E/F/H/I",
-        "abbreviation": "3RD",
+        "id": "ECU",
+        "displayName": "Ecuador",
+        "shortDisplayName": "Ecuador",
+        "abbreviation": "ECU",
         "score": null
       }
     },
@@ -1994,10 +1994,10 @@
       "venue": "Mercedes-Benz Stadium",
       "venue_city": "Atlanta, Georgia",
       "home": {
-        "id": null,
-        "displayName": "Group L Winner",
-        "shortDisplayName": "1L",
-        "abbreviation": "1L",
+        "id": "ENG",
+        "displayName": "England",
+        "shortDisplayName": "England",
+        "abbreviation": "ENG",
         "score": null
       },
       "away": {
@@ -2101,10 +2101,10 @@
         "score": null
       },
       "away": {
-        "id": null,
-        "displayName": "Group L 2nd Place",
-        "shortDisplayName": "2L",
-        "abbreviation": "2L",
+        "id": "CRO",
+        "displayName": "Croatia",
+        "shortDisplayName": "Croatia",
+        "abbreviation": "CRO",
         "score": null
       }
     },
@@ -2201,10 +2201,10 @@
         "score": null
       },
       "away": {
-        "id": null,
-        "displayName": "Third Place Group D/E/I/J/L",
-        "shortDisplayName": "3RD D/E/I/J/L",
-        "abbreviation": "3RD",
+        "id": "GHA",
+        "displayName": "Ghana",
+        "shortDisplayName": "Ghana",
+        "abbreviation": "GHA",
         "score": null
       }
     },

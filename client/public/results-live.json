@@ -1,10 +1,10 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-27T19:59:28.587Z",
+  "fetched_at": "2026-06-27T21:15:26.346Z",
   "event_count": 104,
   "completed_count": 66,
-  "in_progress_count": 0,
+  "in_progress_count": 2,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
   "events": [
@@ -1661,11 +1661,11 @@
     {
       "espn_id": "760480",
       "date_utc": "2026-06-27T21:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Sat, June 27th at 5:00 PM EDT",
-      "state": "pre",
+      "status_name": "STATUS_FIRST_HALF",
+      "status_detail": "13'",
+      "state": "in",
       "completed": false,
-      "in_progress": false,
+      "in_progress": true,
       "venue": "Lincoln Financial Field",
       "venue_city": "Philadelphia, Pennsylvania",
       "home": {
@@ -1673,24 +1673,24 @@
         "displayName": "Croatia",
         "shortDisplayName": "Croatia",
         "abbreviation": "CRO",
-        "score": null
+        "score": 0
       },
       "away": {
         "id": "GHA",
         "displayName": "Ghana",
         "shortDisplayName": "Ghana",
         "abbreviation": "GHA",
-        "score": null
+        "score": 0
       }
     },
     {
       "espn_id": "760485",
       "date_utc": "2026-06-27T21:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Sat, June 27th at 5:00 PM EDT",
-      "state": "pre",
+      "status_name": "STATUS_IN_PROGRESS",
+      "status_detail": "14'",
+      "state": "in",
       "completed": false,
-      "in_progress": false,
+      "in_progress": true,
       "venue": "MetLife Stadium",
       "venue_city": "East Rutherford, New Jersey",
       "home": {
@@ -1698,14 +1698,14 @@
         "displayName": "Panama",
         "shortDisplayName": "Panama",
         "abbreviation": "PAN",
-        "score": null
+        "score": 0
       },
       "away": {
         "id": "ENG",
         "displayName": "England",
         "shortDisplayName": "England",
         "abbreviation": "ENG",
-        "score": null
+        "score": 0
       }
     },
     {

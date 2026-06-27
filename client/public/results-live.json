@@ -1,10 +1,10 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-26T22:46:49.857Z",
+  "fetched_at": "2026-06-27T00:11:43.022Z",
   "event_count": 104,
   "completed_count": 62,
-  "in_progress_count": 0,
+  "in_progress_count": 2,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
   "events": [
@@ -1561,11 +1561,11 @@
     {
       "espn_id": "760478",
       "date_utc": "2026-06-27T00:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Fri, June 26th at 8:00 PM EDT",
-      "state": "pre",
+      "status_name": "STATUS_FIRST_HALF",
+      "status_detail": "10'",
+      "state": "in",
       "completed": false,
-      "in_progress": false,
+      "in_progress": true,
       "venue": "NRG Stadium",
       "venue_city": "Houston, Texas",
       "home": {
@@ -1573,24 +1573,24 @@
         "displayName": "Cape Verde",
         "shortDisplayName": "Cape Verde",
         "abbreviation": "CPV",
-        "score": null
+        "score": 0
       },
       "away": {
         "id": "KSA",
         "displayName": "Saudi Arabia",
         "shortDisplayName": "Saudi Arabia",
         "abbreviation": "KSA",
-        "score": null
+        "score": 0
       }
     },
     {
       "espn_id": "760479",
       "date_utc": "2026-06-27T00:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Fri, June 26th at 8:00 PM EDT",
-      "state": "pre",
+      "status_name": "STATUS_FIRST_HALF",
+      "status_detail": "10'",
+      "state": "in",
       "completed": false,
-      "in_progress": false,
+      "in_progress": true,
       "venue": "Estadio Akron",
       "venue_city": "Guadalajara",
       "home": {
@@ -1598,14 +1598,14 @@
         "displayName": "Uruguay",
         "shortDisplayName": "Uruguay",
         "abbreviation": "URU",
-        "score": null
+        "score": 0
       },
       "away": {
         "id": "ESP",
         "displayName": "Spain",
         "shortDisplayName": "Spain",
         "abbreviation": "ESP",
-        "score": null
+        "score": 0
       }
     },
     {

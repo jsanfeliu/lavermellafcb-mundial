@@ -1,10 +1,10 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-27T04:18:12.813Z",
+  "fetched_at": "2026-06-27T07:36:54.592Z",
   "event_count": 104,
-  "completed_count": 64,
-  "in_progress_count": 2,
+  "completed_count": 66,
+  "in_progress_count": 0,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
   "events": [
@@ -1611,11 +1611,11 @@
     {
       "espn_id": "760476",
       "date_utc": "2026-06-27T03:00Z",
-      "status_name": "STATUS_SECOND_HALF",
-      "status_detail": "54'",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "Lumen Field",
       "venue_city": "Seattle, Washington",
       "home": {
@@ -1636,11 +1636,11 @@
     {
       "espn_id": "760477",
       "date_utc": "2026-06-27T03:00Z",
-      "status_name": "STATUS_SECOND_HALF",
-      "status_detail": "55'",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "BC Place",
       "venue_city": "Vancouver",
       "home": {
@@ -1648,14 +1648,14 @@
         "displayName": "New Zealand",
         "shortDisplayName": "New Zealand",
         "abbreviation": "NZL",
-        "score": 0
+        "score": 1
       },
       "away": {
         "id": "BEL",
         "displayName": "Belgium",
         "shortDisplayName": "Belgium",
         "abbreviation": "BEL",
-        "score": 2
+        "score": 5
       }
     },
     {
@@ -2019,10 +2019,10 @@
       "venue": "Lumen Field",
       "venue_city": "Seattle, Washington",
       "home": {
-        "id": null,
-        "displayName": "Group G Winner",
-        "shortDisplayName": "1G",
-        "abbreviation": "1G",
+        "id": "BEL",
+        "displayName": "Belgium",
+        "shortDisplayName": "Belgium",
+        "abbreviation": "BEL",
         "score": null
       },
       "away": {
@@ -2151,10 +2151,10 @@
         "score": null
       },
       "away": {
-        "id": null,
-        "displayName": "Group G 2nd Place",
-        "shortDisplayName": "2G",
-        "abbreviation": "2G",
+        "id": "EGY",
+        "displayName": "Egypt",
+        "shortDisplayName": "Egypt",
+        "abbreviation": "EGY",
         "score": null
       }
     },

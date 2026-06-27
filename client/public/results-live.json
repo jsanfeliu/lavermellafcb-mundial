@@ -1,9 +1,9 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-27T00:11:43.022Z",
+  "fetched_at": "2026-06-27T04:18:12.813Z",
   "event_count": 104,
-  "completed_count": 62,
+  "completed_count": 64,
   "in_progress_count": 2,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
@@ -1561,11 +1561,11 @@
     {
       "espn_id": "760478",
       "date_utc": "2026-06-27T00:00Z",
-      "status_name": "STATUS_FIRST_HALF",
-      "status_detail": "10'",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "NRG Stadium",
       "venue_city": "Houston, Texas",
       "home": {
@@ -1586,11 +1586,11 @@
     {
       "espn_id": "760479",
       "date_utc": "2026-06-27T00:00Z",
-      "status_name": "STATUS_FIRST_HALF",
-      "status_detail": "10'",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "Estadio Akron",
       "venue_city": "Guadalajara",
       "home": {
@@ -1605,17 +1605,17 @@
         "displayName": "Spain",
         "shortDisplayName": "Spain",
         "abbreviation": "ESP",
-        "score": 0
+        "score": 1
       }
     },
     {
       "espn_id": "760476",
       "date_utc": "2026-06-27T03:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Fri, June 26th at 11:00 PM EDT",
-      "state": "pre",
+      "status_name": "STATUS_SECOND_HALF",
+      "status_detail": "54'",
+      "state": "in",
       "completed": false,
-      "in_progress": false,
+      "in_progress": true,
       "venue": "Lumen Field",
       "venue_city": "Seattle, Washington",
       "home": {
@@ -1623,24 +1623,24 @@
         "displayName": "Egypt",
         "shortDisplayName": "Egypt",
         "abbreviation": "EGY",
-        "score": null
+        "score": 1
       },
       "away": {
         "id": "IRN",
         "displayName": "Iran",
         "shortDisplayName": "Iran",
         "abbreviation": "IRN",
-        "score": null
+        "score": 1
       }
     },
     {
       "espn_id": "760477",
       "date_utc": "2026-06-27T03:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Fri, June 26th at 11:00 PM EDT",
-      "state": "pre",
+      "status_name": "STATUS_SECOND_HALF",
+      "status_detail": "55'",
+      "state": "in",
       "completed": false,
-      "in_progress": false,
+      "in_progress": true,
       "venue": "BC Place",
       "venue_city": "Vancouver",
       "home": {
@@ -1648,14 +1648,14 @@
         "displayName": "New Zealand",
         "shortDisplayName": "New Zealand",
         "abbreviation": "NZL",
-        "score": null
+        "score": 0
       },
       "away": {
         "id": "BEL",
         "displayName": "Belgium",
         "shortDisplayName": "Belgium",
         "abbreviation": "BEL",
-        "score": null
+        "score": 2
       }
     },
     {
@@ -1876,10 +1876,10 @@
         "score": null
       },
       "away": {
-        "id": null,
-        "displayName": "Third Place Group A/B/C/D/F",
-        "shortDisplayName": "3RD A/B/C/D/F",
-        "abbreviation": "3RD",
+        "id": "PAR",
+        "displayName": "Paraguay",
+        "shortDisplayName": "Paraguay",
+        "abbreviation": "PAR",
         "score": null
       }
     },
@@ -1951,10 +1951,10 @@
         "score": null
       },
       "away": {
-        "id": null,
-        "displayName": "Third Place Group C/D/F/G/H",
-        "shortDisplayName": "3RD C/D/F/G/H",
-        "abbreviation": "3RD",
+        "id": "SWE",
+        "displayName": "Sweden",
+        "shortDisplayName": "Sweden",
+        "abbreviation": "SWE",
         "score": null
       }
     },
@@ -2069,10 +2069,10 @@
       "venue": "SoFi Stadium",
       "venue_city": "Inglewood, California",
       "home": {
-        "id": null,
-        "displayName": "Group H Winner",
-        "shortDisplayName": "1H",
-        "abbreviation": "1H",
+        "id": "ESP",
+        "displayName": "Spain",
+        "shortDisplayName": "Spain",
+        "abbreviation": "ESP",
         "score": null
       },
       "away": {
@@ -2176,10 +2176,10 @@
         "score": null
       },
       "away": {
-        "id": null,
-        "displayName": "Group H 2nd Place",
-        "shortDisplayName": "2H",
-        "abbreviation": "2H",
+        "id": "CPV",
+        "displayName": "Cape Verde",
+        "shortDisplayName": "Cape Verde",
+        "abbreviation": "CPV",
         "score": null
       }
     },

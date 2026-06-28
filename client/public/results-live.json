@@ -1,10 +1,10 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-27T23:44:00.345Z",
+  "fetched_at": "2026-06-28T01:56:17.927Z",
   "event_count": 104,
-  "completed_count": 68,
-  "in_progress_count": 2,
+  "completed_count": 70,
+  "in_progress_count": 0,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
   "events": [
@@ -1711,11 +1711,11 @@
     {
       "espn_id": "760481",
       "date_utc": "2026-06-27T23:30Z",
-      "status_name": "STATUS_IN_PROGRESS",
-      "status_detail": "13'",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "Hard Rock Stadium",
       "venue_city": "Miami Gardens, Florida",
       "home": {
@@ -1736,11 +1736,11 @@
     {
       "espn_id": "760482",
       "date_utc": "2026-06-27T23:30Z",
-      "status_name": "STATUS_FIRST_HALF",
-      "status_detail": "12'",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "Mercedes-Benz Stadium",
       "venue_city": "Atlanta, Georgia",
       "home": {
@@ -1748,7 +1748,7 @@
         "displayName": "Congo DR",
         "shortDisplayName": "Congo DR",
         "abbreviation": "COD",
-        "score": 0
+        "score": 3
       },
       "away": {
         "id": "UZB",
@@ -2001,10 +2001,10 @@
         "score": null
       },
       "away": {
-        "id": null,
-        "displayName": "Third Place Group E/H/I/J/K",
-        "shortDisplayName": "3RD E/H/I/J/K",
-        "abbreviation": "3RD",
+        "id": "COD",
+        "displayName": "Congo DR",
+        "shortDisplayName": "Congo DR",
+        "abbreviation": "COD",
         "score": null
       }
     },
@@ -2026,10 +2026,10 @@
         "score": null
       },
       "away": {
-        "id": null,
-        "displayName": "Third Place Group A/E/H/I/J",
-        "shortDisplayName": "3RD A/E/H/I/J",
-        "abbreviation": "3RD",
+        "id": "SEN",
+        "displayName": "Senegal",
+        "shortDisplayName": "Senegal",
+        "abbreviation": "SEN",
         "score": null
       }
     },
@@ -2094,10 +2094,10 @@
       "venue": "BMO Field",
       "venue_city": "Toronto",
       "home": {
-        "id": null,
-        "displayName": "Group K 2nd Place",
-        "shortDisplayName": "2K",
-        "abbreviation": "2K",
+        "id": "POR",
+        "displayName": "Portugal",
+        "shortDisplayName": "Portugal",
+        "abbreviation": "POR",
         "score": null
       },
       "away": {
@@ -2194,10 +2194,10 @@
       "venue": "GEHA Field at Arrowhead Stadium",
       "venue_city": "Kansas City, Missouri",
       "home": {
-        "id": null,
-        "displayName": "Group K Winner",
-        "shortDisplayName": "1K",
-        "abbreviation": "1K",
+        "id": "COL",
+        "displayName": "Colombia",
+        "shortDisplayName": "Colombia",
+        "abbreviation": "COL",
         "score": null
       },
       "away": {

@@ -1,9 +1,9 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-29T16:47:00.226Z",
+  "fetched_at": "2026-06-29T19:06:44.009Z",
   "event_count": 104,
-  "completed_count": 73,
+  "completed_count": 74,
   "in_progress_count": 0,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
@@ -1836,10 +1836,10 @@
     {
       "espn_id": "760487",
       "date_utc": "2026-06-29T17:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Mon, June 29th at 1:00 PM EDT",
-      "state": "pre",
-      "completed": false,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
       "in_progress": false,
       "venue": "NRG Stadium",
       "venue_city": "Houston, Texas",
@@ -1848,14 +1848,14 @@
         "displayName": "Brazil",
         "shortDisplayName": "Brazil",
         "abbreviation": "BRA",
-        "score": null
+        "score": 2
       },
       "away": {
         "id": "JPN",
         "displayName": "Japan",
         "shortDisplayName": "Japan",
         "abbreviation": "JPN",
-        "score": null
+        "score": 1
       }
     },
     {
@@ -2269,10 +2269,10 @@
       "venue": "MetLife Stadium",
       "venue_city": "East Rutherford, New Jersey",
       "home": {
-        "id": null,
-        "displayName": "Round of 32 4 Winner",
-        "shortDisplayName": "RD32 W4",
-        "abbreviation": "RD32",
+        "id": "BRA",
+        "displayName": "Brazil",
+        "shortDisplayName": "Brazil",
+        "abbreviation": "BRA",
         "score": null
       },
       "away": {

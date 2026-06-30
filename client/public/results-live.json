@@ -1,10 +1,10 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-06-30T17:18:24.444Z",
+  "fetched_at": "2026-06-30T19:20:33.123Z",
   "event_count": 104,
-  "completed_count": 76,
-  "in_progress_count": 1,
+  "completed_count": 77,
+  "in_progress_count": 0,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
   "events": [
@@ -1911,11 +1911,11 @@
     {
       "espn_id": "760490",
       "date_utc": "2026-06-30T17:00Z",
-      "status_name": "STATUS_IN_PROGRESS",
-      "status_detail": "18'",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "AT&T Stadium",
       "venue_city": "Arlington, Texas",
       "home": {
@@ -1923,14 +1923,14 @@
         "displayName": "Ivory Coast",
         "shortDisplayName": "Ivory Coast",
         "abbreviation": "CIV",
-        "score": 0
+        "score": 1
       },
       "away": {
         "id": "NOR",
         "displayName": "Norway",
         "shortDisplayName": "Norway",
         "abbreviation": "NOR",
-        "score": 0
+        "score": 2
       }
     },
     {
@@ -2276,10 +2276,10 @@
         "score": null
       },
       "away": {
-        "id": null,
-        "displayName": "Round of 32 6 Winner",
-        "shortDisplayName": "RD32 W6",
-        "abbreviation": "RD32",
+        "id": "NOR",
+        "displayName": "Norway",
+        "shortDisplayName": "Norway",
+        "abbreviation": "NOR",
         "score": null
       }
     },

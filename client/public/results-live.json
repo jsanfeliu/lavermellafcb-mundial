@@ -1,10 +1,10 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-07-01T22:06:12.400Z",
+  "fetched_at": "2026-07-01T23:45:02.216Z",
   "event_count": 104,
-  "completed_count": 80,
-  "in_progress_count": 1,
+  "completed_count": 81,
+  "in_progress_count": 0,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
   "events": [
@@ -2011,11 +2011,11 @@
     {
       "espn_id": "760493",
       "date_utc": "2026-07-01T20:00Z",
-      "status_name": "STATUS_OVERTIME",
-      "status_detail": "91'",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FINAL_AET",
+      "status_detail": "AET",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "Lumen Field",
       "venue_city": "Seattle, Washington",
       "home": {
@@ -2023,7 +2023,7 @@
         "displayName": "Belgium",
         "shortDisplayName": "Belgium",
         "abbreviation": "BEL",
-        "score": 2
+        "score": 3
       },
       "away": {
         "id": "SEN",
@@ -2351,10 +2351,10 @@
         "score": null
       },
       "away": {
-        "id": null,
-        "displayName": "Round of 32 10 Winner",
-        "shortDisplayName": "RD32 W10",
-        "abbreviation": "RD32",
+        "id": "BEL",
+        "displayName": "Belgium",
+        "shortDisplayName": "Belgium",
+        "abbreviation": "BEL",
         "score": null
       }
     },

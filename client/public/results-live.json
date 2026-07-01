@@ -1,10 +1,10 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-07-01T18:29:15.204Z",
+  "fetched_at": "2026-07-01T20:28:07.842Z",
   "event_count": 104,
   "completed_count": 80,
-  "in_progress_count": 0,
+  "in_progress_count": 1,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
   "events": [
@@ -2011,11 +2011,11 @@
     {
       "espn_id": "760493",
       "date_utc": "2026-07-01T20:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Wed, July 1st at 4:00 PM EDT",
-      "state": "pre",
+      "status_name": "STATUS_FIRST_HALF",
+      "status_detail": "27'",
+      "state": "in",
       "completed": false,
-      "in_progress": false,
+      "in_progress": true,
       "venue": "Lumen Field",
       "venue_city": "Seattle, Washington",
       "home": {
@@ -2023,14 +2023,14 @@
         "displayName": "Belgium",
         "shortDisplayName": "Belgium",
         "abbreviation": "BEL",
-        "score": null
+        "score": 0
       },
       "away": {
         "id": "SEN",
         "displayName": "Senegal",
         "shortDisplayName": "Senegal",
         "abbreviation": "SEN",
-        "score": null
+        "score": 1
       }
     },
     {

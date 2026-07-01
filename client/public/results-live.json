@@ -1,7 +1,7 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-07-01T20:28:07.842Z",
+  "fetched_at": "2026-07-01T22:06:12.400Z",
   "event_count": 104,
   "completed_count": 80,
   "in_progress_count": 1,
@@ -2011,8 +2011,8 @@
     {
       "espn_id": "760493",
       "date_utc": "2026-07-01T20:00Z",
-      "status_name": "STATUS_FIRST_HALF",
-      "status_detail": "27'",
+      "status_name": "STATUS_OVERTIME",
+      "status_detail": "91'",
       "state": "in",
       "completed": false,
       "in_progress": true,
@@ -2023,14 +2023,14 @@
         "displayName": "Belgium",
         "shortDisplayName": "Belgium",
         "abbreviation": "BEL",
-        "score": 0
+        "score": 2
       },
       "away": {
         "id": "SEN",
         "displayName": "Senegal",
         "shortDisplayName": "Senegal",
         "abbreviation": "SEN",
-        "score": 1
+        "score": 2
       }
     },
     {

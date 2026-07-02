@@ -1,7 +1,7 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-07-02T09:34:06.367Z",
+  "fetched_at": "2026-07-02T11:57:59.359Z",
   "event_count": 104,
   "completed_count": 82,
   "in_progress_count": 0,

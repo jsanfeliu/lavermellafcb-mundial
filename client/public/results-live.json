@@ -1,10 +1,10 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-07-02T19:56:55.416Z",
+  "fetched_at": "2026-07-02T21:12:28.095Z",
   "event_count": 104,
-  "completed_count": 82,
-  "in_progress_count": 1,
+  "completed_count": 83,
+  "in_progress_count": 0,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
   "events": [
@@ -2061,11 +2061,11 @@
     {
       "espn_id": "760497",
       "date_utc": "2026-07-02T19:00Z",
-      "status_name": "STATUS_HALFTIME",
-      "status_detail": "HT",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "SoFi Stadium",
       "venue_city": "Inglewood, California",
       "home": {
@@ -2073,7 +2073,7 @@
         "displayName": "Spain",
         "shortDisplayName": "Spain",
         "abbreviation": "ESP",
-        "score": 1
+        "score": 3
       },
       "away": {
         "id": "AUT",
@@ -2326,10 +2326,10 @@
         "score": null
       },
       "away": {
-        "id": null,
-        "displayName": "Round of 32 12 Winner",
-        "shortDisplayName": "RD32 W12",
-        "abbreviation": "RD32",
+        "id": "ESP",
+        "displayName": "Spain",
+        "shortDisplayName": "Spain",
+        "abbreviation": "ESP",
         "score": null
       }
     },

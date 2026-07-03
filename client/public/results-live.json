@@ -1,9 +1,9 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-07-03T01:19:12.044Z",
+  "fetched_at": "2026-07-03T05:29:22.797Z",
   "event_count": 104,
-  "completed_count": 84,
+  "completed_count": 85,
   "in_progress_count": 0,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
@@ -2111,10 +2111,10 @@
     {
       "espn_id": "760498",
       "date_utc": "2026-07-03T03:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Thu, July 2nd at 11:00 PM EDT",
-      "state": "pre",
-      "completed": false,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
       "in_progress": false,
       "venue": "BC Place",
       "venue_city": "Vancouver",
@@ -2123,14 +2123,14 @@
         "displayName": "Switzerland",
         "shortDisplayName": "Switzerland",
         "abbreviation": "SUI",
-        "score": null
+        "score": 2
       },
       "away": {
         "id": "ALG",
         "displayName": "Algeria",
         "shortDisplayName": "Algeria",
         "abbreviation": "ALG",
-        "score": null
+        "score": 0
       }
     },
     {
@@ -2394,10 +2394,10 @@
       "venue": "BC Place",
       "venue_city": "Vancouver",
       "home": {
-        "id": null,
-        "displayName": "Round of 32 13 Winner",
-        "shortDisplayName": "RD32 W13",
-        "abbreviation": "RD32",
+        "id": "SUI",
+        "displayName": "Switzerland",
+        "shortDisplayName": "Switzerland",
+        "abbreviation": "SUI",
         "score": null
       },
       "away": {

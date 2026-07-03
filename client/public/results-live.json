@@ -1,10 +1,10 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-07-03T20:05:03.026Z",
+  "fetched_at": "2026-07-03T21:33:25.982Z",
   "event_count": 104,
-  "completed_count": 85,
-  "in_progress_count": 1,
+  "completed_count": 86,
+  "in_progress_count": 0,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
   "events": [
@@ -2136,11 +2136,11 @@
     {
       "espn_id": "760499",
       "date_utc": "2026-07-03T18:00Z",
-      "status_name": "STATUS_OVERTIME",
-      "status_detail": "92'",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FINAL_PEN",
+      "status_detail": "FT-Pens",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "AT&T Stadium",
       "venue_city": "Arlington, Texas",
       "home": {
@@ -2376,10 +2376,10 @@
         "score": null
       },
       "away": {
-        "id": null,
-        "displayName": "Round of 32 16 Winner",
-        "shortDisplayName": "RD32 W16",
-        "abbreviation": "RD32",
+        "id": "EGY",
+        "displayName": "Egypt",
+        "shortDisplayName": "Egypt",
+        "abbreviation": "EGY",
         "score": null
       }
     },

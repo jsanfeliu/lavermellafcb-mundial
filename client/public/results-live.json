@@ -1,10 +1,10 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-07-04T20:30:44.048Z",
+  "fetched_at": "2026-07-04T21:33:18.644Z",
   "event_count": 104,
   "completed_count": 89,
-  "in_progress_count": 0,
+  "in_progress_count": 1,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
   "events": [
@@ -2236,11 +2236,11 @@
     {
       "espn_id": "760503",
       "date_utc": "2026-07-04T21:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Sat, July 4th at 5:00 PM EDT",
-      "state": "pre",
+      "status_name": "STATUS_FIRST_HALF",
+      "status_detail": "29'",
+      "state": "in",
       "completed": false,
-      "in_progress": false,
+      "in_progress": true,
       "venue": "Lincoln Financial Field",
       "venue_city": "Philadelphia, Pennsylvania",
       "home": {
@@ -2248,14 +2248,14 @@
         "displayName": "Paraguay",
         "shortDisplayName": "Paraguay",
         "abbreviation": "PAR",
-        "score": null
+        "score": 0
       },
       "away": {
         "id": "FRA",
         "displayName": "France",
         "shortDisplayName": "France",
         "abbreviation": "FRA",
-        "score": null
+        "score": 0
       }
     },
     {

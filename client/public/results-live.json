@@ -1,10 +1,10 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-07-04T16:44:06.768Z",
+  "fetched_at": "2026-07-04T17:48:37.169Z",
   "event_count": 104,
   "completed_count": 88,
-  "in_progress_count": 0,
+  "in_progress_count": 1,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
   "events": [
@@ -2211,11 +2211,11 @@
     {
       "espn_id": "760502",
       "date_utc": "2026-07-04T17:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Sat, July 4th at 1:00 PM EDT",
-      "state": "pre",
+      "status_name": "STATUS_IN_PROGRESS",
+      "status_detail": "45'+2'",
+      "state": "in",
       "completed": false,
-      "in_progress": false,
+      "in_progress": true,
       "venue": "NRG Stadium",
       "venue_city": "Houston, Texas",
       "home": {
@@ -2223,14 +2223,14 @@
         "displayName": "Canada",
         "shortDisplayName": "Canada",
         "abbreviation": "CAN",
-        "score": null
+        "score": 0
       },
       "away": {
         "id": "MAR",
         "displayName": "Morocco",
         "shortDisplayName": "Morocco",
         "abbreviation": "MAR",
-        "score": null
+        "score": 0
       }
     },
     {

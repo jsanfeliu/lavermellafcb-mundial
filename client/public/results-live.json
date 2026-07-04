@@ -1,10 +1,10 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-07-04T22:41:45.122Z",
+  "fetched_at": "2026-07-04T23:44:59.692Z",
   "event_count": 104,
-  "completed_count": 89,
-  "in_progress_count": 1,
+  "completed_count": 90,
+  "in_progress_count": 0,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
   "events": [
@@ -2236,11 +2236,11 @@
     {
       "espn_id": "760503",
       "date_utc": "2026-07-04T21:00Z",
-      "status_name": "STATUS_SECOND_HALF",
-      "status_detail": "77'",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "Lincoln Financial Field",
       "venue_city": "Philadelphia, Pennsylvania",
       "home": {
@@ -2419,10 +2419,10 @@
       "venue": "Gillette Stadium",
       "venue_city": "Foxborough, Massachusetts",
       "home": {
-        "id": null,
-        "displayName": "Round of 16 1 Winner",
-        "shortDisplayName": "RD16 W1",
-        "abbreviation": "RD16 W1",
+        "id": "FRA",
+        "displayName": "France",
+        "shortDisplayName": "France",
+        "abbreviation": "FRA",
         "score": null
       },
       "away": {

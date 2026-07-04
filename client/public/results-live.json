@@ -1,9 +1,9 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-07-03T23:46:56.431Z",
+  "fetched_at": "2026-07-04T03:22:10.775Z",
   "event_count": 104,
-  "completed_count": 86,
+  "completed_count": 87,
   "in_progress_count": 1,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
@@ -2161,11 +2161,11 @@
     {
       "espn_id": "760500",
       "date_utc": "2026-07-03T22:00Z",
-      "status_name": "STATUS_SECOND_HALF",
-      "status_detail": "86'",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FINAL_AET",
+      "status_detail": "AET",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "Hard Rock Stadium",
       "venue_city": "Miami Gardens, Florida",
       "home": {
@@ -2173,24 +2173,24 @@
         "displayName": "Argentina",
         "shortDisplayName": "Argentina",
         "abbreviation": "ARG",
-        "score": 1
+        "score": 3
       },
       "away": {
         "id": "CPV",
         "displayName": "Cape Verde",
         "shortDisplayName": "Cape Verde",
         "abbreviation": "CPV",
-        "score": 1
+        "score": 2
       }
     },
     {
       "espn_id": "760501",
       "date_utc": "2026-07-04T01:30Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Fri, July 3rd at 9:30 PM EDT",
-      "state": "pre",
+      "status_name": "STATUS_SECOND_HALF",
+      "status_detail": "88'",
+      "state": "in",
       "completed": false,
-      "in_progress": false,
+      "in_progress": true,
       "venue": "GEHA Field at Arrowhead Stadium",
       "venue_city": "Kansas City, Missouri",
       "home": {
@@ -2198,14 +2198,14 @@
         "displayName": "Colombia",
         "shortDisplayName": "Colombia",
         "abbreviation": "COL",
-        "score": null
+        "score": 1
       },
       "away": {
         "id": "GHA",
         "displayName": "Ghana",
         "shortDisplayName": "Ghana",
         "abbreviation": "GHA",
-        "score": null
+        "score": 0
       }
     },
     {
@@ -2369,10 +2369,10 @@
       "venue": "Mercedes-Benz Stadium",
       "venue_city": "Atlanta, Georgia",
       "home": {
-        "id": null,
-        "displayName": "Round of 32 14 Winner",
-        "shortDisplayName": "RD32 W14",
-        "abbreviation": "RD32",
+        "id": "ARG",
+        "displayName": "Argentina",
+        "shortDisplayName": "Argentina",
+        "abbreviation": "ARG",
         "score": null
       },
       "away": {

@@ -1,7 +1,7 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-07-05T22:15:06.836Z",
+  "fetched_at": "2026-07-05T23:31:45.456Z",
   "event_count": 104,
   "completed_count": 91,
   "in_progress_count": 0,
@@ -2285,9 +2285,9 @@
     },
     {
       "espn_id": "760505",
-      "date_utc": "2026-07-06T00:00Z",
+      "date_utc": "2026-07-06T01:00Z",
       "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Sun, July 5th at 8:00 PM EDT",
+      "status_detail": "Sun, July 5th at 9:00 PM EDT",
       "state": "pre",
       "completed": false,
       "in_progress": false,

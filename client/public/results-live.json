@@ -1,10 +1,10 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-07-05T21:04:34.630Z",
+  "fetched_at": "2026-07-05T22:15:06.836Z",
   "event_count": 104,
-  "completed_count": 90,
-  "in_progress_count": 1,
+  "completed_count": 91,
+  "in_progress_count": 0,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
   "events": [
@@ -2261,11 +2261,11 @@
     {
       "espn_id": "760504",
       "date_utc": "2026-07-05T20:00Z",
-      "status_name": "STATUS_HALFTIME",
-      "status_detail": "HT",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "MetLife Stadium",
       "venue_city": "East Rutherford, New Jersey",
       "home": {
@@ -2273,14 +2273,14 @@
         "displayName": "Brazil",
         "shortDisplayName": "Brazil",
         "abbreviation": "BRA",
-        "score": 0
+        "score": 1
       },
       "away": {
         "id": "NOR",
         "displayName": "Norway",
         "shortDisplayName": "Norway",
         "abbreviation": "NOR",
-        "score": 0
+        "score": 2
       }
     },
     {
@@ -2469,10 +2469,10 @@
       "venue": "Hard Rock Stadium",
       "venue_city": "Miami Gardens, Florida",
       "home": {
-        "id": null,
-        "displayName": "Round of 16 3 Winner",
-        "shortDisplayName": "RD16 W3",
-        "abbreviation": "RD16 W3",
+        "id": "NOR",
+        "displayName": "Norway",
+        "shortDisplayName": "Norway",
+        "abbreviation": "NOR",
         "score": null
       },
       "away": {

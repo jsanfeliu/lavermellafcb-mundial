@@ -1,10 +1,10 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-07-06T17:23:54.783Z",
+  "fetched_at": "2026-07-06T19:18:39.922Z",
   "event_count": 104,
   "completed_count": 92,
-  "in_progress_count": 0,
+  "in_progress_count": 1,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
   "events": [
@@ -2311,11 +2311,11 @@
     {
       "espn_id": "760506",
       "date_utc": "2026-07-06T19:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Mon, July 6th at 3:00 PM EDT",
-      "state": "pre",
+      "status_name": "STATUS_FIRST_HALF",
+      "status_detail": "18'",
+      "state": "in",
       "completed": false,
-      "in_progress": false,
+      "in_progress": true,
       "venue": "AT&T Stadium",
       "venue_city": "Arlington, Texas",
       "home": {
@@ -2323,14 +2323,14 @@
         "displayName": "Portugal",
         "shortDisplayName": "Portugal",
         "abbreviation": "POR",
-        "score": null
+        "score": 0
       },
       "away": {
         "id": "ESP",
         "displayName": "Spain",
         "shortDisplayName": "Spain",
         "abbreviation": "ESP",
-        "score": null
+        "score": 0
       }
     },
     {

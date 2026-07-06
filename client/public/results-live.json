@@ -1,10 +1,10 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-07-06T01:26:11.507Z",
+  "fetched_at": "2026-07-06T06:00:07.096Z",
   "event_count": 104,
-  "completed_count": 91,
-  "in_progress_count": 1,
+  "completed_count": 92,
+  "in_progress_count": 0,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
   "events": [
@@ -2286,11 +2286,11 @@
     {
       "espn_id": "760505",
       "date_utc": "2026-07-06T01:00Z",
-      "status_name": "STATUS_FIRST_HALF",
-      "status_detail": "26'",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "Estadio Banorte",
       "venue_city": "Mexico City",
       "home": {
@@ -2298,14 +2298,14 @@
         "displayName": "Mexico",
         "shortDisplayName": "Mexico",
         "abbreviation": "MEX",
-        "score": 0
+        "score": 2
       },
       "away": {
         "id": "ENG",
         "displayName": "England",
         "shortDisplayName": "England",
         "abbreviation": "ENG",
-        "score": 0
+        "score": 3
       }
     },
     {
@@ -2476,10 +2476,10 @@
         "score": null
       },
       "away": {
-        "id": null,
-        "displayName": "Round of 16 4 Winner",
-        "shortDisplayName": "RD16 W4",
-        "abbreviation": "RD16 W4",
+        "id": "ENG",
+        "displayName": "England",
+        "shortDisplayName": "England",
+        "abbreviation": "ENG",
         "score": null
       }
     },

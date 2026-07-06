@@ -1,10 +1,10 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-07-05T23:31:45.456Z",
+  "fetched_at": "2026-07-06T01:26:11.507Z",
   "event_count": 104,
   "completed_count": 91,
-  "in_progress_count": 0,
+  "in_progress_count": 1,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
   "events": [
@@ -2286,11 +2286,11 @@
     {
       "espn_id": "760505",
       "date_utc": "2026-07-06T01:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Sun, July 5th at 9:00 PM EDT",
-      "state": "pre",
+      "status_name": "STATUS_FIRST_HALF",
+      "status_detail": "26'",
+      "state": "in",
       "completed": false,
-      "in_progress": false,
+      "in_progress": true,
       "venue": "Estadio Banorte",
       "venue_city": "Mexico City",
       "home": {
@@ -2298,14 +2298,14 @@
         "displayName": "Mexico",
         "shortDisplayName": "Mexico",
         "abbreviation": "MEX",
-        "score": null
+        "score": 0
       },
       "away": {
         "id": "ENG",
         "displayName": "England",
         "shortDisplayName": "England",
         "abbreviation": "ENG",
-        "score": null
+        "score": 0
       }
     },
     {

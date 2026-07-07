@@ -1,10 +1,10 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-07-07T15:52:33.115Z",
+  "fetched_at": "2026-07-07T18:03:06.398Z",
   "event_count": 104,
   "completed_count": 94,
-  "in_progress_count": 0,
+  "in_progress_count": 1,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
   "events": [
@@ -2361,11 +2361,11 @@
     {
       "espn_id": "760509",
       "date_utc": "2026-07-07T16:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Tue, July 7th at 12:00 PM EDT",
-      "state": "pre",
+      "status_name": "STATUS_SECOND_HALF",
+      "status_detail": "90'+9'",
+      "state": "in",
       "completed": false,
-      "in_progress": false,
+      "in_progress": true,
       "venue": "Mercedes-Benz Stadium",
       "venue_city": "Atlanta, Georgia",
       "home": {
@@ -2373,14 +2373,14 @@
         "displayName": "Argentina",
         "shortDisplayName": "Argentina",
         "abbreviation": "ARG",
-        "score": null
+        "score": 3
       },
       "away": {
         "id": "EGY",
         "displayName": "Egypt",
         "shortDisplayName": "Egypt",
         "abbreviation": "EGY",
-        "score": null
+        "score": 2
       }
     },
     {

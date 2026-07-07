@@ -1,9 +1,9 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-07-07T18:03:06.398Z",
+  "fetched_at": "2026-07-07T20:16:52.941Z",
   "event_count": 104,
-  "completed_count": 94,
+  "completed_count": 95,
   "in_progress_count": 1,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
@@ -2361,11 +2361,11 @@
     {
       "espn_id": "760509",
       "date_utc": "2026-07-07T16:00Z",
-      "status_name": "STATUS_SECOND_HALF",
-      "status_detail": "90'+9'",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "Mercedes-Benz Stadium",
       "venue_city": "Atlanta, Georgia",
       "home": {
@@ -2386,11 +2386,11 @@
     {
       "espn_id": "760508",
       "date_utc": "2026-07-07T20:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Tue, July 7th at 4:00 PM EDT",
-      "state": "pre",
+      "status_name": "STATUS_FIRST_HALF",
+      "status_detail": "16'",
+      "state": "in",
       "completed": false,
-      "in_progress": false,
+      "in_progress": true,
       "venue": "BC Place",
       "venue_city": "Vancouver",
       "home": {
@@ -2398,14 +2398,14 @@
         "displayName": "Switzerland",
         "shortDisplayName": "Switzerland",
         "abbreviation": "SUI",
-        "score": null
+        "score": 0
       },
       "away": {
         "id": "COL",
         "displayName": "Colombia",
         "shortDisplayName": "Colombia",
         "abbreviation": "COL",
-        "score": null
+        "score": 0
       }
     },
     {
@@ -2494,10 +2494,10 @@
       "venue": "GEHA Field at Arrowhead Stadium",
       "venue_city": "Kansas City, Missouri",
       "home": {
-        "id": null,
-        "displayName": "Round of 16 7 Winner",
-        "shortDisplayName": "RD16 W7",
-        "abbreviation": "RD16 W7",
+        "id": "ARG",
+        "displayName": "Argentina",
+        "shortDisplayName": "Argentina",
+        "abbreviation": "ARG",
         "score": null
       },
       "away": {

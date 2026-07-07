@@ -1,9 +1,9 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-07-06T23:47:26.210Z",
+  "fetched_at": "2026-07-07T03:37:07.277Z",
   "event_count": 104,
-  "completed_count": 93,
+  "completed_count": 94,
   "in_progress_count": 0,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
@@ -2336,10 +2336,10 @@
     {
       "espn_id": "760507",
       "date_utc": "2026-07-07T00:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Mon, July 6th at 8:00 PM EDT",
-      "state": "pre",
-      "completed": false,
+      "status_name": "STATUS_FULL_TIME",
+      "status_detail": "FT",
+      "state": "post",
+      "completed": true,
       "in_progress": false,
       "venue": "Lumen Field",
       "venue_city": "Seattle, Washington",
@@ -2348,14 +2348,14 @@
         "displayName": "United States",
         "shortDisplayName": "USA",
         "abbreviation": "USA",
-        "score": null
+        "score": 1
       },
       "away": {
         "id": "BEL",
         "displayName": "Belgium",
         "shortDisplayName": "Belgium",
         "abbreviation": "BEL",
-        "score": null
+        "score": 4
       }
     },
     {
@@ -2451,10 +2451,10 @@
         "score": null
       },
       "away": {
-        "id": null,
-        "displayName": "Round of 16 6 Winner",
-        "shortDisplayName": "RD16 W6",
-        "abbreviation": "RD16 W6",
+        "id": "BEL",
+        "displayName": "Belgium",
+        "shortDisplayName": "Belgium",
+        "abbreviation": "BEL",
         "score": null
       }
     },

@@ -1,10 +1,10 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-07-10T18:03:06.455Z",
+  "fetched_at": "2026-07-10T19:54:10.267Z",
   "event_count": 104,
   "completed_count": 97,
-  "in_progress_count": 0,
+  "in_progress_count": 1,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
   "events": [
@@ -2436,11 +2436,11 @@
     {
       "espn_id": "760511",
       "date_utc": "2026-07-10T19:00Z",
-      "status_name": "STATUS_SCHEDULED",
-      "status_detail": "Fri, July 10th at 3:00 PM EDT",
-      "state": "pre",
+      "status_name": "STATUS_HALFTIME",
+      "status_detail": "HT",
+      "state": "in",
       "completed": false,
-      "in_progress": false,
+      "in_progress": true,
       "venue": "SoFi Stadium",
       "venue_city": "Inglewood, California",
       "home": {
@@ -2448,14 +2448,14 @@
         "displayName": "Spain",
         "shortDisplayName": "Spain",
         "abbreviation": "ESP",
-        "score": null
+        "score": 1
       },
       "away": {
         "id": "BEL",
         "displayName": "Belgium",
         "shortDisplayName": "Belgium",
         "abbreviation": "BEL",
-        "score": null
+        "score": 1
       }
     },
     {

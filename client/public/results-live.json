@@ -1,10 +1,10 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-07-11T22:52:38.213Z",
+  "fetched_at": "2026-07-11T23:58:27.291Z",
   "event_count": 104,
-  "completed_count": 98,
-  "in_progress_count": 1,
+  "completed_count": 99,
+  "in_progress_count": 0,
   "unmapped_teams": [],
   "note": "Resultats reals d'ESPN (públic). Les probabilitats del frontend són un model de demostració, no quotes d'apostes ni prediccions oficials.",
   "events": [
@@ -2461,11 +2461,11 @@
     {
       "espn_id": "760512",
       "date_utc": "2026-07-11T21:00Z",
-      "status_name": "STATUS_SECOND_HALF",
-      "status_detail": "90'",
-      "state": "in",
-      "completed": false,
-      "in_progress": true,
+      "status_name": "STATUS_FINAL_AET",
+      "status_detail": "AET",
+      "state": "post",
+      "completed": true,
+      "in_progress": false,
       "venue": "Hard Rock Stadium",
       "venue_city": "Miami Gardens, Florida",
       "home": {
@@ -2480,7 +2480,7 @@
         "displayName": "England",
         "shortDisplayName": "England",
         "abbreviation": "ENG",
-        "score": 1
+        "score": 2
       }
     },
     {
@@ -2544,10 +2544,10 @@
       "venue": "Mercedes-Benz Stadium",
       "venue_city": "Atlanta, Georgia",
       "home": {
-        "id": null,
-        "displayName": "Quarterfinal 3 Winner",
-        "shortDisplayName": "QF W3",
-        "abbreviation": "QFW3",
+        "id": "ENG",
+        "displayName": "England",
+        "shortDisplayName": "England",
+        "abbreviation": "ENG",
         "score": null
       },
       "away": {

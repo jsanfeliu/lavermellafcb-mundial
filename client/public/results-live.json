@@ -1,7 +1,7 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-07-14T21:04:55.551Z",
+  "fetched_at": "2026-07-14T22:14:14.717Z",
   "event_count": 104,
   "completed_count": 101,
   "in_progress_count": 0,
@@ -2569,10 +2569,10 @@
       "venue": "Hard Rock Stadium",
       "venue_city": "Miami Gardens, Florida",
       "home": {
-        "id": null,
-        "displayName": "Semifinal 1 Loser",
-        "shortDisplayName": "SF L1",
-        "abbreviation": "SF L1",
+        "id": "FRA",
+        "displayName": "France",
+        "shortDisplayName": "France",
+        "abbreviation": "FRA",
         "score": null
       },
       "away": {
@@ -2594,10 +2594,10 @@
       "venue": "MetLife Stadium",
       "venue_city": "East Rutherford, New Jersey",
       "home": {
-        "id": null,
-        "displayName": "Semifinal 1 Winner",
-        "shortDisplayName": "SF W1",
-        "abbreviation": "SFW1",
+        "id": "ESP",
+        "displayName": "Spain",
+        "shortDisplayName": "Spain",
+        "abbreviation": "ESP",
         "score": null
       },
       "away": {

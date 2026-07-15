@@ -1,7 +1,7 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-07-15T21:03:39.662Z",
+  "fetched_at": "2026-07-15T22:14:26.860Z",
   "event_count": 104,
   "completed_count": 102,
   "in_progress_count": 0,
@@ -2576,10 +2576,10 @@
         "score": null
       },
       "away": {
-        "id": null,
-        "displayName": "Semifinal 2 Loser",
-        "shortDisplayName": "SF L2",
-        "abbreviation": "SF L2",
+        "id": "ENG",
+        "displayName": "England",
+        "shortDisplayName": "England",
+        "abbreviation": "ENG",
         "score": null
       }
     },
@@ -2601,10 +2601,10 @@
         "score": null
       },
       "away": {
-        "id": null,
-        "displayName": "Semifinal 2 Winner",
-        "shortDisplayName": "SF W2",
-        "abbreviation": "SFW2",
+        "id": "ARG",
+        "displayName": "Argentina",
+        "shortDisplayName": "Argentina",
+        "abbreviation": "ARG",
         "score": null
       }
     }

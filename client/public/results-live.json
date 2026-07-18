@@ -1,7 +1,7 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-07-18T21:53:49.762Z",
+  "fetched_at": "2026-07-18T22:53:51.910Z",
   "event_count": 104,
   "completed_count": 102,
   "in_progress_count": 1,
@@ -2561,8 +2561,8 @@
     {
       "espn_id": "760516",
       "date_utc": "2026-07-18T21:00Z",
-      "status_name": "STATUS_HALFTIME",
-      "status_detail": "HT",
+      "status_name": "STATUS_SECOND_HALF",
+      "status_detail": "90'+1'",
       "state": "in",
       "completed": false,
       "in_progress": true,
@@ -2573,14 +2573,14 @@
         "displayName": "France",
         "shortDisplayName": "France",
         "abbreviation": "FRA",
-        "score": 0
+        "score": 3
       },
       "away": {
         "id": "ENG",
         "displayName": "England",
         "shortDisplayName": "England",
         "abbreviation": "ENG",
-        "score": 4
+        "score": 5
       }
     },
     {

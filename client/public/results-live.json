@@ -1,7 +1,7 @@
 {
   "source": "ESPN public scoreboard",
   "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200",
-  "fetched_at": "2026-07-19T20:53:46.795Z",
+  "fetched_at": "2026-07-19T21:55:40.726Z",
   "event_count": 104,
   "completed_count": 103,
   "in_progress_count": 1,
@@ -2586,8 +2586,8 @@
     {
       "espn_id": "760517",
       "date_utc": "2026-07-19T19:00Z",
-      "status_name": "STATUS_SECOND_HALF",
-      "status_detail": "76'",
+      "status_name": "STATUS_OVERTIME",
+      "status_detail": "119'",
       "state": "in",
       "completed": false,
       "in_progress": true,
@@ -2598,7 +2598,7 @@
         "displayName": "Spain",
         "shortDisplayName": "Spain",
         "abbreviation": "ESP",
-        "score": 0
+        "score": 1
       },
       "away": {
         "id": "ARG",
